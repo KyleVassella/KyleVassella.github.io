@@ -9,7 +9,6 @@ body {
 header {
 	height: 200px;
 	background-color: #6ab47b;
-	border-color: #599a68;
 	border-bottom: 5px solid #000 ;
 }
 
@@ -38,7 +37,7 @@ a {
 
 footer {
 	background-color: #6ab47b;
-	border-color: #599a68;
-	border-top: 5px solid #599a68;
+	border-top: 5px solid #000;
 	height: 100px;
+	text-align: center;
 }
