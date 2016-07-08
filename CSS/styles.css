@@ -10,7 +10,7 @@ header {
 	height: 200px;
 	background-color: #6ab47b;
 	border-color: #599a68;
-	border-bottom: 5px solid #6ab47b ;
+	border-bottom: 5px solid #000 ;
 }
 
 h1 {
@@ -18,7 +18,7 @@ h1 {
 	font-size: 60px;
 	color: #fff;
 	margin: 0;
-	padding-top: 40px;
+	padding-top: 55px;
 	
 }
 
