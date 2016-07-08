@@ -15,7 +15,7 @@ header {
 
 h1 {
 	text-align: center;
-	font-size: 65px;
+	font-size: 75px;
 	color: #fff;
 	margin: 0;
 	padding-top: 65px;
@@ -28,6 +28,7 @@ h2 {
 }
 
 h3 {
+	margin-top: 15px;
 	padding-left: 10px;
 }
 
