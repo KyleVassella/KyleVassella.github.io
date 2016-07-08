@@ -38,6 +38,7 @@ a {
 footer {
 	background-color: #6ab47b;
 	border-top: 5px solid #000;
-	height: 100px;
+	height: 75px;
 	text-align: center;
+	margin-top: 90%;
 }
