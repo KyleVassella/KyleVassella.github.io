@@ -14,8 +14,9 @@ header {
 }
 
 h1 {
-	display: inline-block;
+	display: block;
 	font-size: 60px;
+	color: #fff;
 	margin: 0 auto;
 }
 
