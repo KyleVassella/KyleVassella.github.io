@@ -5,7 +5,8 @@ body {
 }
 
 header {
-	height: 400px;
+	height: 200px;
+	border-color: #599a68;
 }
 
 h1 {
