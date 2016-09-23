@@ -1,24 +1,83 @@
+<!-- IMPROVEMENTS:
+• Test on actual devices immediately after upload
+• optomize images for web (load time)
+• Use a Fonts folder and upload fonts rather than online google fonts (load time?)
+• Find a nicer looking font
+• Upload minified files eventually
+• Hover & current page state for header nav
+• Refactor/structure code properly
+• Cool Colors:
+#1C1D21  - dark steel
+-->
+
+
 <!DOCTYPE html>
 <html>
 	<head>
  		<meta charset="utf-8"> 
-   	 		<title>Kyle Vassella | Designer</title>
-       		<link href='https://fonts.googleapis.com/css?family=Quicksand:400,700,300|Anton' rel='stylesheet' type='text/css'>
-       		<link rel = "stylesheet" href = "CSS/styles.css">
+	 	<title>Kyle Vassella | Web Designer</title>
+		<link href="https://fonts.googleapis.com/css?family=Hind:300,600" rel="stylesheet">
+   		<link rel = "stylesheet" href = "css/styles.css">
 	</head>
 	<body>
-		<header>
-			<h1>Kyle Vassella</h1>
-			<!--<h2>Treehouse full stack JavaScript student</h2>-->
-		</header>
-				<nav>
-					<h3>Tech Degree Projects:</h3>
-					<ol>
-						<li><a href="https://kylevassella.github.io/P1_RandomQuoteGenerator/">Random Quote Generator</a></li>
-					</ol>
-				</nav>
-				<footer
-				 	<p class="copyright">&copy; 2016 Kyle Vassella.</p>
-				</footer>
+		<div class="wrap">
+			<header>
+
+
+				<h1 class="mainHeader">KYLE <span style="font-weight: 600;">V</span>ASSELLA</h1>
+				<div class ="headerMenu">
+					<div class='nav'>
+						<nav>
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="portfolio.html">Portfolio</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="socialDiv">
+						<a href="https://github.com/kylevassella" class="socialGithub" alt="Github logo" target="_blank"></a>
+						<a href="http://teamtreehouse.com/kylevassella/" class="socialTreehouse" alt="TeamTreehouse logo" target="_blank"></a>
+						<a href="https://www.linkedin.com/in/kyle-vassella-64619371" class="socialLinkedin" alt="Linkedin logo" target="_blank"></a>
+						<a href="http://stackoverflow.com/users/6647188/kyle-vassella?tab=profile" class="socialStackoverflow" alt="Stackoverflow logo" target="_blank"></a>
+					</div>
+				</div>
+			</header>
+						<div class="mobileNav isHidden">
+							<nav>
+								<ul>
+									<li><a href="index.html">Home</a></li>
+									<li><a href="portfolio.html">Portfolio</a></li>
+									<li><a href="contact.html">Contact</a></li>
+								</ul>
+							</nav>
+						</div>
+
+
+			<section class="coverPic"></section>
+			
+			<div class="coverPicMobile isHidden">		<!-- coverPic for mobile (hidden in desktop view) -->
+				<img src="media/Desk2Compressed.png">
+				<section class="blackBarMobile">
+					<span class="portfolioHeaderMobile"><a href="https://kylevassella.github.io/portfolio.html">my projects:</a></span>
+				</section>
+			</div>		
+
+
+			<section class="blackBar">
+				<span class="portfolioHeader"><a href="https://kylevassella.github.io/portfolio.html">my projects:</a></span>
+			</section>
+
+
+			<section class="primaryContent">
+				<div class="tileWrap"><a href="https://kylevassella.github.io/JC-Realty/" class="tileJCRealty" alt="J&C Realty tile" target="_blank"></a></div>
+				<div class="tileWrap"><a href="https://kylevassella.github.io/randomQuoteGenerator.html" class="tileProject1" alt="Project 1 tile" target="_blank"></a></div>
+				<div class="tileWrap"><a href="https://kylevassella.github.io/dynamicPaginatedSearch.html" class="tileProject2" alt="Project 2 tile" target="_blank"></a></div>
+				<div class="tileWrap"><a href="https://kylevassella.github.io/interactiveShoppingForm.html" class="tileProject3" alt="Project 3 tile" target="_blank"></a></div>
+			</section>
+		</div>
+		<footer>
+		 	<p class="copyright">&copy; 2016 Kyle Vassella.</p>
+		</footer>
 	</body>
 </html>

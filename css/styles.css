@@ -1,0 +1,532 @@
+body {
+	background-color: rgb(249, 249, 249);
+	font-family: 'Hind', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+.wrap {
+	min-height: calc(100vh - 115px);
+}
+
+h2 {
+	text-align: center;
+	font-size: 22px;
+}
+
+
+
+/******************************
+        	Heading
+******************************/
+header {
+	height: 55px;
+	background-color: #090302;
+}
+
+h1.mainHeader {
+	position: relative;
+	left: 20px;
+    float: left;
+    margin:0;
+	font-weight: 300;
+	font-size: 2.5em;
+	color: #fff;
+	white-space: pre;	/* preserves white space in the browser */
+}
+
+.headerMenu {
+	float: right;
+}
+
+
+
+/******************************
+        Navigation
+******************************/
+.nav {
+	position: relative;
+	bottom: 8.5px;
+	color: white;
+	display: inline-block;
+	list-style: none;
+	margin-right: 10px;
+	margin-top: 0;
+}
+
+nav ul {
+	margin: 0;
+}
+
+nav ul li {		/*targets all descendant elements of <nav>*/
+	display: inline;
+	list-style: none;
+	font-weight: lighter;
+	font-size: 1.3em;
+	padding-left: 8px;
+}
+
+a {
+	text-decoration: none;
+ 	color: inherit;
+}
+
+
+
+/******************************
+        Social Media
+******************************/
+.socialDiv {
+	display: inline-block;
+	margin-right: 15px;
+	margin-top: 3px;
+}
+
+.socialGithub {
+	height: 48px;
+	width: 48px;
+	display: inline-block;
+  	background:transparent url("../media/socialGithub2.png") center no-repeat;
+  	background-size: 48px 48px;
+}
+
+.socialGithub:hover {
+   background-image: url("../media/socialGithubHOVER.png");
+   background-size: 48px 48px;
+}
+
+ .socialTreehouse {
+	height: 48px;
+	width: 48px;
+	display: inline-block;
+  	background:transparent url("../media/socialTreehouse.png") center no-repeat;
+  	background-size: 48px 48px;
+}
+
+.socialTreehouse:hover {
+   background-image: url("../media/socialTreehouseHOVER.png");
+   background-size: 48px 48px;
+}
+
+.socialLinkedin {
+	height: 48px;
+	width: 48px;
+	display: inline-block;
+  	background:transparent url("../media/socialLinkedin.png") center no-repeat;
+  	background-size: 48px 48px;
+}
+
+.socialLinkedin:hover {
+   background-image: url("../media/socialLinkedinHOVER.png");
+   background-size: 48px 48px;
+}
+
+.socialStackoverflow {
+	height: 48px;
+	width: 48px;
+	display: inline-block;
+  	background:transparent url("../media/socialStackoverflow.png") center no-repeat;
+  	background-size: 48px 48px;
+}
+
+.socialStackoverflow:hover {
+   background-image: url("../media/socialStackoverflowHOVER.png");
+   background-size: 48px 48px;
+}
+
+.contactIcon {
+	display: inline;
+	margin-right: 30px;
+	width: 8vw;
+	position: relative;
+	top: 13px;
+}
+
+.contactContent {
+	padding-top: 200px;
+	text-align: left;
+	font-size: 4vw;
+}
+
+
+
+/******************************
+       Desktop Portfolio
+******************************/
+.coverPic {
+    background-image: url(../media/Desk2Compressed.png);      /*background-image: linear-gradient(140deg,rgba(24,46,74,.8),rgba(70,174,195,.5)),url(../media/Desk2.jpg);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: calc(100vh - 55px);
+}
+
+
+
+/******************************
+       	   Page Body
+******************************/
+.blackBar {
+	height: 200px;
+	background-color: black;		/*#1C1D21*/
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.primaryContent {
+	text-align: center;
+	max-width: 80%;
+	margin: 0 auto 40px auto;
+}
+
+.portfolioHeader {
+	font-size: 6.5em;
+	font-weight: 600;
+	display: block;
+	padding-top: 17px;
+	color: rgb(249, 249, 249);
+}
+
+.portfolioPageTitle {
+	font-size: 6.5em;
+	font-weight: 600;
+	display: block;
+	padding-top: 17px;
+	color: black;
+}
+
+
+
+/*-------Project JC Realty-------*/
+
+.tileJCRealty {
+	width: 600px;
+	height: 423px;
+	display: inline-block;
+  	background:transparent url("../media/tileJCRealty.png") center no-repeat;
+  	background-size: 100% auto;
+}
+
+.tileJCRealty:hover {
+   background-image: url("../media/tileJCRealtyHOVER.png");
+   background-size: 100% auto;
+}
+
+/*-------Project 1-------*/
+
+.tileProject1 {
+	width: 600px;
+	height: 423px;
+	display: inline-block;
+  	background:transparent url("../media/tileProject1.png") center no-repeat;
+  	background-size: 100% auto;
+}
+
+.tileProject1:hover {
+   background-image: url("../media/tileProject1HOVER.png");
+   background-size: 100% auto;
+}
+
+/*-------Project 2-------*/
+
+.tileProject2 {
+	width: 600px;
+	height: 423px;
+	display: inline-block;
+  	background:transparent url("../media/tileProject2.png") center no-repeat;
+  	background-size: 100% auto;
+}
+
+.tileProject2:hover {
+   background-image: url("../media/tileProject2HOVER.png");
+   background-size: 100% auto;
+}
+
+.tileWrap {
+	width: 25%;
+	display: inline;
+}
+
+/*-------Project 3-------*/
+
+.tileProject3 {
+	width: 600px;
+	height: 423px;
+	display: inline-block;
+  	background:transparent url("../media/tileProject3.png") center no-repeat;
+  	background-size: 100% auto;
+}
+
+.tileProject3:hover {
+   background-image: url("../media/tileProject3HOVER.png");
+   background-size: 100% auto;
+}
+
+
+
+/******************************
+		Project Pages
+******************************/
+.projectH1 {
+	font-size: 6.5em;
+	font-weight: 600;
+	margin-top: 30px;
+	margin-bottom: 0;
+}
+
+.projectH2 {
+	margin-top: 0;
+	margin-bottom: 100px;
+}
+
+
+.demoButton{
+	-moz-box-shadow:inset 0px 1px 0px 0px #cf866c;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #cf866c;
+	box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315));
+	background:-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background:-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background:-o-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background:-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0);
+	background-color:#d0451b;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:5em;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #854629;
+	margin-bottom: 50px;
+}
+.demoButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #d0451b));
+	background:-moz-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:-webkit-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:-o-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:-ms-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc3315', endColorstr='#d0451b',GradientType=0);
+	background-color:#bc3315;
+}
+.demoButton:active {
+	position:relative;
+	top:1px;
+}
+
+.programIcon {
+	margin-left: 15px;
+}
+
+.githubLink {
+	color: blue;
+	margin-left: 5px;
+}
+
+p.noMarginTop span {
+	display: block;
+}
+
+.textboxHTML {
+	height: 135px;
+	width: 275px;
+}
+
+i:before {		/*apparently, <i> is may not be ideal for icons but I'm using it here because it's natively inline and my p.noMarginTop span selector prevents me from using span*/
+	content: "\2705";
+	font-style: normal;
+	margin-right: 13px;
+}
+
+
+
+/******************************
+Good Class Names Are Like Adjectives!
+******************************/
+.noMarginTop {
+	margin-top: 0;
+}
+
+.noMarginBottom {
+	margin-bottom: 0;
+}
+
+.inline {
+	display: inline;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.textLeft {
+	text-align: left;
+}
+
+.isHidden {
+	display: none;
+}
+
+
+
+/******************************
+        	Footer
+******************************/
+footer {
+	background-color: black;
+	height: 70px;
+	color: #fff;
+	font-size: 1.25em;
+	font-weight: 300;
+	text-align: center;
+	margin: 0;
+}
+
+.copyright {
+	padding-top: 20px;
+	margin-top: 0;
+}
+
+
+
+/******************************
+        Media Queries
+******************************/
+@media screen and (max-width: 768px) {
+
+	.nav {
+		display: none;
+	}
+
+	.mobileNav {
+		display: block;
+		height: 25px;
+		width: 100vw;
+		background-color: rgba(0, 0, 0, 1);
+		text-align: center;
+		color: #fff;
+		font-size: .8em;
+	}
+
+	.mobileNav ul {
+		padding: 0;
+	}
+
+	.mobileNav li {
+		padding-right: 10px;
+		position: relative;
+		left: 10px;
+		bottom: 1px;
+	}
+
+	.primaryContent {
+		max-width: 90%;
+		text-align: center;
+	}
+
+	.projectH1 {
+		font-size: 4em;
+		font-weight: 600;
+		margin-top: 30px;
+		margin-bottom: 0;
+	}
+
+	.coverPic {
+		display: none;
+	}
+
+	.blackBar {
+		display: none;
+	}
+
+	.coverPicMobile {
+		display: inline-block;
+	}
+
+	.coverPicMobile img {
+		width: 100vw;
+		height: auto;
+	}
+
+	.blackBarMobile {
+		height: 200px;
+		background-color: black;		/*#1C1D21*/
+		margin-bottom: 40px;
+		text-align: center;
+		position: relative;		/* sloppy hack to remove mysterious white line. LOOK INTO WHAT THAT LINE IS CAUSED BY - SO ENDLESSLY MYSTERIOUS */
+		bottom: 9px;
+	}
+	
+	.portfolioHeaderMobile {
+		display: block;
+		font-size: 4em;
+		padding-top: 45px;
+		font-weight: 600;
+		color: rgb(249, 249, 249);
+	}
+}
+
+
+@media screen and (max-width: 667px) {
+
+	.projectH1 {
+		font-size: 3.5em;
+		font-weight: 600;
+		margin-top: 30px;
+		margin-bottom: 0;
+	}
+
+	.projectH2 {
+		margin-bottom: 70px;
+	}
+
+	.demoButton{
+		-moz-box-shadow:inset 0px 1px 0px 0px #cf866c;
+		-webkit-box-shadow:inset 0px 1px 0px 0px #cf866c;
+		box-shadow:inset 0px 1px 0px 0px #cf866c;
+		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315));
+		background:-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+		background:-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+		background:-o-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+		background:-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+		background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0);
+		background-color:#d0451b;
+		-moz-border-radius:3px;
+		-webkit-border-radius:3px;
+		border-radius:3px;
+		border:1px solid #942911;
+		display:inline-block;
+		cursor:pointer;
+		color:#ffffff;
+		font-family:Arial;
+		font-size:3em;
+		padding:6px 24px;
+		text-decoration:none;
+		text-shadow:0px 1px 0px #854629;
+		margin-bottom: 50px;
+	}
+}
+
+
+
+@media screen and (max-width: 320px) {			/*------Iphone 4------*/
+
+
+}
+
+
+
+
+
