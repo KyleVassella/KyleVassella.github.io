@@ -294,7 +294,7 @@ a {
 	width: 600px;
 	height: 423px;
 	display: inline-block;
-  	background:transparent url("../media/tileJCRealtyWeb.png") center no-repeat;
+  	background:transparent url("../media/tileJCRealtyWeb.gif") center no-repeat;
   	background-size: 100% auto;
 }
 
@@ -309,7 +309,7 @@ a {
 	width: 600px;
 	height: 423px;
 	display: inline-block;
-  	background:transparent url("../media/tileProject1Web.png") center no-repeat;
+  	background:transparent url("../media/tileProject1Web.gif") center no-repeat;
   	background-size: 100% auto;
 }
 
@@ -324,7 +324,7 @@ a {
 	width: 600px;
 	height: 423px;
 	display: inline-block;
-  	background:transparent url("../media/tileProject2Web.png") center no-repeat;
+  	background:transparent url("../media/tileProject2Web.gif") center no-repeat;
   	background-size: 100% auto;
 }
 
@@ -344,7 +344,7 @@ a {
 	width: 600px;
 	height: 423px;
 	display: inline-block;
-  	background:transparent url("../media/tileProject3Web.png") center no-repeat;
+  	background:transparent url("../media/tileProject3Web.gif") center no-repeat;
   	background-size: 100% auto;
 }
 
@@ -691,7 +691,7 @@ footer {
 	.tileJCRealty {
 		width: 100vw;
 		display: inline-block;
-	  	background:transparent url("../media/tileJCRealtyWeb.png") center no-repeat;
+	  	background:transparent url("../media/tileJCRealtyWeb.gif") center no-repeat;
 	  	background-size: contain;
 	}
 
@@ -703,7 +703,7 @@ footer {
 	.tileProject1 {
 		width: 100vw;
 		display: inline-block;
-	  	background:transparent url("../media/tileProject1Web.png") center no-repeat;
+	  	background:transparent url("../media/tileProject1Web.gif") center no-repeat;
 	  	background-size: 100vw;
 		}
 
@@ -715,7 +715,7 @@ footer {
 	.tileProject2 {
 		width: 100%;
 		display: inline-block;
-	  	background:transparent url("../media/tileProject2Web.png") center no-repeat;
+	  	background:transparent url("../media/tileProject2Web.gif") center no-repeat;
 	  	background-size: 100vw;
 	}
 
@@ -727,7 +727,7 @@ footer {
 	.tileProject3 {
 		width: 100%;
 		display: inline-block;
-	  	background:transparent url("../media/tileProject3Web.png") center no-repeat;
+	  	background:transparent url("../media/tileProject3Web.gif") center no-repeat;
 	  	background-size: 100vw;
 	}
 
