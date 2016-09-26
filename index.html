@@ -1,4 +1,6 @@
 <!-- IMPROVEMENTS:
+• project tiles height need adjusting on iphone 4, and anything < 600px wide! */
+• CSS refactoring
 • Test on actual devices immediately after upload
 • optomize images for web (load time)
 • Use a Fonts folder and upload fonts rather than online google fonts (load time?)
@@ -13,7 +15,7 @@
 
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
  		<meta charset="utf-8"> 
 	 	<title>Kyle Vassella | Web Designer</title>
@@ -22,7 +24,7 @@
 	</head>
 	<body>
 		<div class="wrap">
-			<header>
+			<header class="group">
 
 
 				<h1 class="mainHeader">KYLE <span style="font-weight: 600;">V</span>ASSELLA</h1>
@@ -30,9 +32,9 @@
 					<div class='nav'>
 						<nav>
 							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li><a href="portfolio.html">Portfolio</a></li>
-								<li><a href="contact.html">Contact</a></li>
+								<li class="index selectedIndex"><a href="index.html">Home</a></li>
+								<li class="portfolio"><a href="portfolio.html">Portfolio</a></li>
+								<li class="contact"><a href="contact.html">Contact</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -47,9 +49,9 @@
 						<div class="mobileNav isHidden">
 							<nav>
 								<ul>
-									<li><a href="index.html">Home</a></li>
-									<li><a href="portfolio.html">Portfolio</a></li>
-									<li><a href="contact.html">Contact</a></li>
+									<li class="indexMobile selectedIndexMobile"><a href="index.html">Home</a></li>
+									<li class="portfolioMobile"><a href="portfolio.html">Portfolio</a></li>
+									<li class="contactMobile"><a href="contact.html">Contact</a></li>
 								</ul>
 							</nav>
 						</div>
