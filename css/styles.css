@@ -1,3 +1,6 @@
+/*IMPROVEMENTS:
+- project tiles anchor tag height needs to be adjusted somehow on browser widths < 600px wide! */
+
 body {
 	background-color: rgb(249, 249, 249);
 	font-family: 'Hind', sans-serif;
@@ -6,7 +9,13 @@ body {
 }
 
 .wrap {
-	min-height: calc(100vh - 115px);
+	min-height: calc(100vh - 70px);
+}
+
+.group:after {
+	content: “ “;
+	display: table;
+	clear: both;
 }
 
 h2 {
@@ -22,6 +31,7 @@ h2 {
 header {
 	height: 55px;
 	background-color: #090302;
+	overflow: hidden;
 }
 
 h1.mainHeader {
@@ -32,7 +42,7 @@ h1.mainHeader {
 	font-weight: 300;
 	font-size: 2.5em;
 	color: #fff;
-	white-space: pre;	/* preserves white space in the browser */
+	white-space: pre;	/* preserves white space (extra spaces in text) in the browser */
 }
 
 .headerMenu {
@@ -46,7 +56,7 @@ h1.mainHeader {
 ******************************/
 .nav {
 	position: relative;
-	bottom: 8.5px;
+	bottom: 6.5px;
 	color: white;
 	display: inline-block;
 	list-style: none;
@@ -58,12 +68,93 @@ nav ul {
 	margin: 0;
 }
 
-nav ul li {		/*targets all descendant elements of <nav>*/
+nav ul li {		/* targets all descendant elements of <nav> */
 	display: inline;
 	list-style: none;
 	font-weight: lighter;
 	font-size: 1.3em;
 	padding-left: 8px;
+}
+
+li.index:hover:after {		/* nav hover and selected states */
+	position: absolute; 
+	content:''; 
+  	width:46px; 
+  	height:1px; 
+  	background: white; 
+  	top: 27px;
+  	right: 174px;
+}
+
+li.portfolio:hover:after {
+	position: absolute; 
+	content:''; 
+  	width:70px; 
+  	height:1px; 
+  	background: white; 
+  	top: 27px;
+  	right: 86px;
+}
+
+li.contact:hover:after {
+	position: absolute; 
+	content:''; 
+  	width:60px; 
+  	height:1px; 
+  	background: white; 
+  	top: 27px;
+  	right: 5px;
+}
+
+li.selectedIndex:visited:after {
+	position: absolute; 
+	content:''; 
+  	width:45px; 
+  	height:1px; 
+  	background: white; 
+  	top: 27px;
+  	right: 174px;
+}
+
+li.selectedPortfolio:after {
+	position: absolute; 
+	content:''; 
+  	width:70px; 
+  	height:1px; 
+  	background: white; 
+  	top: 27px;
+  	right: 86px;
+}
+
+li.selectedContact:after {
+	position: absolute; 
+	content:''; 
+  	width:60px; 
+  	height:1px; 
+  	background: white; 
+  	top: 27px;
+  	right: 5px;
+}
+
+/*nav ul li a:hover:after {
+	content:''; 
+  	width:60px; 
+  	height:4px; 
+  	background: white; 
+  	position: absolute; 
+  	bottom:-4px;
+}*/
+
+/*	border-bottom: 1px solid white;
+	margin-bottom: -15px;*/
+	/*color: black;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;*/
+
+nav ul li.selected {
+	border-bottom: 1px solid white;
+	margin-bottom: -10px;
+/*	color: black;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;*/
 }
 
 a {
@@ -78,7 +169,7 @@ a {
 ******************************/
 .socialDiv {
 	display: inline-block;
-	margin-right: 15px;
+	margin-right: 10px;
 	margin-top: 3px;
 }
 
@@ -154,7 +245,7 @@ a {
        Desktop Portfolio
 ******************************/
 .coverPic {
-    background-image: url(../media/Desk2Compressed.png);      /*background-image: linear-gradient(140deg,rgba(24,46,74,.8),rgba(70,174,195,.5)),url(../media/Desk2.jpg);*/
+    background-image: url(../media/Desk2Compressed.png);      /* background-image: linear-gradient(140deg,rgba(24,46,74,.8),rgba(70,174,195,.5)),url(../media/Desk2.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -169,14 +260,14 @@ a {
 .blackBar {
 	height: 200px;
 	background-color: black;		/*#1C1D21*/
-	margin-bottom: 40px;
+	margin-bottom: 8px;
 	text-align: center;
 }
 
 .primaryContent {
 	text-align: center;
 	max-width: 80%;
-	margin: 0 auto 40px auto;
+	margin: 0 auto 0 auto;
 }
 
 .portfolioHeader {
@@ -280,7 +371,7 @@ a {
 }
 
 
-.demoButton{
+.demoButton {
 	-moz-box-shadow:inset 0px 1px 0px 0px #cf866c;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #cf866c;
 	box-shadow:inset 0px 1px 0px 0px #cf866c;
@@ -403,7 +494,11 @@ footer {
 /******************************
         Media Queries
 ******************************/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {			/*------iPad-----*/
+
+	header {
+		height: 55px;
+	}
 
 	.nav {
 		display: none;
@@ -430,9 +525,70 @@ footer {
 		bottom: 1px;
 	}
 
+	.mobileNav li.indexMobile:hover:after {		/* mobile nav hover and selected states */
+		position: absolute; 
+		content:''; 
+	  	width:45px; 
+	  	height:1px; 
+	  	background: white; 
+	  	top: 22px;
+	  	right: 8px;
+	}
+
+	.mobileNav li.portfolioMobile:hover:after {
+		position: absolute; 
+		content:''; 
+	  	width:60px; 
+	  	height:1px; 
+	  	background: white; 
+	  	top: 22px;
+	  	right: 10px;
+	}
+
+	.mobileNav li.contactMobile:hover:after {
+		position: absolute; 
+		content:''; 
+	  	width:55px; 
+	  	height:1px; 
+	  	background: white; 
+	  	top: 22px;
+	  	right: 10px;
+	}
+
+/*	.selectedIndexMobile:after {
+			position: absolute; 
+			content:''; 
+		  	width:45px; 
+		  	height:1px; 
+		  	background: white; 
+		  	top: 22px;
+		  	right: 8px;
+	}*/
+
+	.selectedPortfolioMobile:after {
+			position: absolute; 
+			content:''; 
+		  	width:60px; 
+		  	height:1px; 
+		  	background: white; 
+		  	top: 22px;
+		  	right: 10px;
+	}
+
+	.selectedContactMobile:after {
+			position: absolute; 
+			content:''; 
+		  	width:55px; 
+		  	height:1px; 
+		  	background: white; 
+		  	top: 22px;
+		  	right: 10px;
+	}
+
+
+
 	.primaryContent {
 		max-width: 90%;
-		text-align: center;
 	}
 
 	.projectH1 {
@@ -462,7 +618,7 @@ footer {
 	.blackBarMobile {
 		height: 200px;
 		background-color: black;		/*#1C1D21*/
-		margin-bottom: 40px;
+/*		margin-bottom: 40px;*/
 		text-align: center;
 		position: relative;		/* sloppy hack to remove mysterious white line. LOOK INTO WHAT THAT LINE IS CAUSED BY - SO ENDLESSLY MYSTERIOUS */
 		bottom: 9px;
@@ -475,6 +631,12 @@ footer {
 		font-weight: 600;
 		color: rgb(249, 249, 249);
 	}
+
+	.tileWrap {
+		width: 100%;
+		display: inline-block;
+	}
+
 }
 
 
@@ -517,16 +679,167 @@ footer {
 		text-shadow:0px 1px 0px #854629;
 		margin-bottom: 50px;
 	}
+
+		.primaryContent {		/*------Narrow Browser un-centered tiles fix-----*/
+		max-width: 100%;
+	}
 }
 
 
+@media screen and (max-width: 599px) {			/*------THIS NEEDS FIXING & UNIT CONSISTENCY - dynamic project tile sizes for when browser becomes less wide than static 600px project tiles------*/
+		
+	.tileJCRealty {
+		width: 100vw;
+		display: inline-block;
+	  	background:transparent url("../media/tileJCRealty.png") center no-repeat;
+	  	background-size: contain;
+	}
 
-@media screen and (max-width: 320px) {			/*------Iphone 4------*/
+	.tileJCRealty:hover {
+	   background-image: url("../media/tileJCRealtyHOVER.png");
+	   background-size: 100vw;
+	}
 
+	.tileProject1 {
+		width: 100vw;
+		display: inline-block;
+	  	background:transparent url("../media/tileProject1.png") center no-repeat;
+	  	background-size: 100vw;
+		}
+
+	.tileProject1:hover {
+	   background-image: url("../media/tileProject1HOVER.png");
+	   background-size: 100vw;
+	}
+
+	.tileProject2 {
+		width: 100%;
+		display: inline-block;
+	  	background:transparent url("../media/tileProject2.png") center no-repeat;
+	  	background-size: 100vw;
+	}
+
+	.tileProject2:hover {
+	   background-image: url("../media/tileProject2HOVER.png");
+	   background-size: 100vw;
+	}
+
+	.tileProject3 {
+		width: 100%;
+		display: inline-block;
+	  	background:transparent url("../media/tileProject3.png") center no-repeat;
+	  	background-size: 100vw;
+	}
+
+	.tileProject3:hover {
+	   background-image: url("../media/tileProject3HOVER.png");
+	   background-size: 100vw;
+	}
+}
+
+
+@media screen and (max-width: 532px) {			/*------Narrow browser, Iphone 4 (320px), other small viewport widths------*/
+	
+	h1.mainHeader {
+		font-size: 1.75em;
+	}
+
+	header {
+		height: 40px;
+	}
+
+	.socialGithub, .socialTreehouse, .socialLinkedin, .socialStackoverflow {
+		width: 35px;
+		height: 35px;
+		background-size: 35px 35px;
+	}
+
+	.socialGithub:hover, .socialTreehouse:hover, .socialLinkedin:hover, .socialStackoverflow:hover {
+		background-size: 35px 35px;
+}
+
+	nav ul li {
+		font-size: 1.25em;
+	}
 
 }
 
 
+@media screen and (max-width: 377px) {			/*------Firefox super narrow browser window------*/
+	
+	h1.mainHeader {
+		font-size: 1.40em;
+	}
 
+	header {
+		height: 35px;
+	}
+
+	.mobileNav li.indexMobile:hover:after {		/* mobile nav hover and selected states */
+		position: absolute; 
+		content:''; 
+	  	width:39px; 
+	  	height:1px; 
+	  	background: white; 
+	  	top: 20px;
+	  	right: 9px;
+	}
+
+	.mobileNav li.portfolioMobile:hover:after {
+		position: absolute; 
+		content:''; 
+	  	width:58px; 
+	  	height:1px; 
+	  	background: white; 
+	  	top: 20px;
+	  	right: 8px;
+	}
+
+	.mobileNav li.contactMobile:hover:after {
+		position: absolute; 
+		content:''; 
+	  	width:53px; 
+	  	height:1px; 
+	  	background: white; 
+	  	top: 20px;
+	  	right: 8px;
+	}
+
+	.selectedPortfolioMobile:after {
+		position: absolute; 
+		content:''; 
+	  	width:58px; 
+	  	height:1px; 
+	  	background: white; 
+	  	top: 20px;
+	  	right: 8px;
+	}
+
+	.selectedContactMobile:after {
+		position: absolute; 
+		content:''; 
+	  	width:53px; 
+	  	height:1px; 
+	  	background: white; 
+	  	top: 20px;
+	  	right: 8px;
+	}
+
+	.socialGithub, .socialTreehouse, .socialLinkedin, .socialStackoverflow {
+		width: 25px;
+		height: 25px;
+		background-size: 25px 25px;
+	}
+
+	.socialGithub:hover, .socialTreehouse:hover, .socialLinkedin:hover, .socialStackoverflow:hover {
+		background-size: 25px 25px;
+	}
+
+	nav ul li {
+		font-size: 1.15em;
+		top: 1px;
+	}
+
+}
 
 
