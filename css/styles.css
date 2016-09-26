@@ -177,12 +177,12 @@ a {
 	height: 48px;
 	width: 48px;
 	display: inline-block;
-  	background:transparent url("../media/socialGithub2.png") center no-repeat;
+  	background:transparent url("../media/socialGithubWeb.gif") center no-repeat;
   	background-size: 48px 48px;
 }
 
 .socialGithub:hover {
-   background-image: url("../media/socialGithubHOVER.png");
+   background-image: url("../media/socialGithubHOVERWeb.gif");
    background-size: 48px 48px;
 }
 
@@ -190,12 +190,12 @@ a {
 	height: 48px;
 	width: 48px;
 	display: inline-block;
-  	background:transparent url("../media/socialTreehouse.png") center no-repeat;
+  	background:transparent url("../media/socialTreehouseWeb.gif") center no-repeat;
   	background-size: 48px 48px;
 }
 
 .socialTreehouse:hover {
-   background-image: url("../media/socialTreehouseHOVER.png");
+   background-image: url("../media/socialTreehouseHOVERWeb.gif");
    background-size: 48px 48px;
 }
 
@@ -203,12 +203,12 @@ a {
 	height: 48px;
 	width: 48px;
 	display: inline-block;
-  	background:transparent url("../media/socialLinkedin.png") center no-repeat;
+  	background:transparent url("../media/socialLinkedinWeb.gif") center no-repeat;
   	background-size: 48px 48px;
 }
 
 .socialLinkedin:hover {
-   background-image: url("../media/socialLinkedinHOVER.png");
+   background-image: url("../media/socialLinkedinHOVERWeb.gif");
    background-size: 48px 48px;
 }
 
@@ -216,12 +216,12 @@ a {
 	height: 48px;
 	width: 48px;
 	display: inline-block;
-  	background:transparent url("../media/socialStackoverflow.png") center no-repeat;
+  	background:transparent url("../media/socialStackoverflowWeb.gif") center no-repeat;
   	background-size: 48px 48px;
 }
 
 .socialStackoverflow:hover {
-   background-image: url("../media/socialStackoverflowHOVER.png");
+   background-image: url("../media/socialStackoverflowHOVERWeb.gif");
    background-size: 48px 48px;
 }
 
@@ -245,7 +245,7 @@ a {
        Desktop Portfolio
 ******************************/
 .coverPic {
-    background-image: url(../media/Desk2Compressed.gif);      /* background-image: linear-gradient(140deg,rgba(24,46,74,.8),rgba(70,174,195,.5)),url(../media/Desk2.jpg); */
+    background-image: url(../media/Desk2Compressed2.jpg);      /* background-image: linear-gradient(140deg,rgba(24,46,74,.8),rgba(70,174,195,.5)),url(../media/Desk2.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -299,7 +299,7 @@ a {
 }
 
 .tileJCRealty:hover {
-   background-image: url("../media/tileJCRealtyHOVER.png");
+   background-image: url("../media/tileJCRealtyHOVERWeb.gif");
    background-size: 100% auto;
 }
 
@@ -314,7 +314,7 @@ a {
 }
 
 .tileProject1:hover {
-   background-image: url("../media/tileProject1HOVER.png");
+   background-image: url("../media/tileProject1HOVERWeb.gif");
    background-size: 100% auto;
 }
 
@@ -329,7 +329,7 @@ a {
 }
 
 .tileProject2:hover {
-   background-image: url("../media/tileProject2HOVER.png");
+   background-image: url("../media/tileProject2HOVERWeb.gif");
    background-size: 100% auto;
 }
 
@@ -349,7 +349,7 @@ a {
 }
 
 .tileProject3:hover {
-   background-image: url("../media/tileProject3HOVER.png");
+   background-image: url("../media/tileProject3HOVERWeb.gif");
    background-size: 100% auto;
 }
 
@@ -696,7 +696,7 @@ footer {
 	}
 
 	.tileJCRealty:hover {
-	   background-image: url("../media/tileJCRealtyHOVER.png");
+	   background-image: url("../media/tileJCRealtyWeb.gif");
 	   background-size: 100vw;
 	}
 
@@ -708,7 +708,7 @@ footer {
 		}
 
 	.tileProject1:hover {
-	   background-image: url("../media/tileProject1HOVER.png");
+	   background-image: url("../media/tileProject1HOVERWeb.gif");
 	   background-size: 100vw;
 	}
 
@@ -720,7 +720,7 @@ footer {
 	}
 
 	.tileProject2:hover {
-	   background-image: url("../media/tileProject2HOVER.png");
+	   background-image: url("../media/tileProject2HOVERWeb.gif");
 	   background-size: 100vw;
 	}
 
@@ -732,7 +732,7 @@ footer {
 	}
 
 	.tileProject3:hover {
-	   background-image: url("../media/tileProject3HOVER.png");
+	   background-image: url("../media/tileProject3HOVERWeb.gif");
 	   background-size: 100vw;
 	}
 }
