@@ -8,6 +8,11 @@ body {
 	margin: 0;
 }
 
+body:after {		/* pre-load hover images to avoid first time load delay when hovering over social icons & project tiles */
+ display:none;
+ content: url(../media/socialGithubHOVERWeb.gif) url(../media/socialTreehouseHOVERWeb.gif) url(../media/socialLinkedinHOVERWeb.gif) url(../media/socialStackoverflowHOVERWeb.gif) url(../media/tileJCRealtyHOVERWeb.gif) url(../media/tileProject1HOVERWeb.gif) url(../media/tileProject2HOVERWeb.gif) url(../media/tileProject3HOVERWeb.gif);
+}
+
 .wrap {
 	min-height: calc(100vh - 70px);
 }
@@ -177,12 +182,12 @@ a {
 	height: 48px;
 	width: 48px;
 	display: inline-block;
-  	background:transparent url("../media/socialGithubWeb.gif") center no-repeat;
+  	background:transparent url(../media/socialGithubWeb.gif) center no-repeat;
   	background-size: 48px 48px;
 }
 
 .socialGithub:hover {
-   background-image: url("../media/socialGithubHOVERWeb.gif");
+   background-image: url(../media/socialGithubHOVERWeb.gif);
    background-size: 48px 48px;
 }
 
@@ -190,12 +195,12 @@ a {
 	height: 48px;
 	width: 48px;
 	display: inline-block;
-  	background:transparent url("../media/socialTreehouseWeb.gif") center no-repeat;
+  	background:transparent url(../media/socialTreehouseWeb.gif) center no-repeat;
   	background-size: 48px 48px;
 }
 
 .socialTreehouse:hover {
-   background-image: url("../media/socialTreehouseHOVERWeb.gif");
+   background-image: url(../media/socialTreehouseHOVERWeb.gif);
    background-size: 48px 48px;
 }
 
@@ -203,12 +208,12 @@ a {
 	height: 48px;
 	width: 48px;
 	display: inline-block;
-  	background:transparent url("../media/socialLinkedinWeb2.gif") center no-repeat;
+  	background:transparent url(../media/socialLinkedinWeb2.gif) center no-repeat;
   	background-size: 48px 48px;
 }
 
 .socialLinkedin:hover {
-   background-image: url("../media/socialLinkedinHOVERWeb.gif");
+   background-image: url(../media/socialLinkedinHOVERWeb.gif);
    background-size: 48px 48px;
 }
 
@@ -216,12 +221,12 @@ a {
 	height: 48px;
 	width: 48px;
 	display: inline-block;
-  	background:transparent url("../media/socialStackoverflowWeb.gif") center no-repeat;
+  	background:transparent url(../media/socialStackoverflowWeb.gif) center no-repeat;
   	background-size: 48px 48px;
 }
 
 .socialStackoverflow:hover {
-   background-image: url("../media/socialStackoverflowHOVERWeb.gif");
+   background-image: url(../media/socialStackoverflowHOVERWeb.gif);
    background-size: 48px 48px;
 }
 
@@ -294,12 +299,12 @@ a {
 	width: 600px;
 	height: 423px;
 	display: inline-block;
-  	background:transparent url("../media/tileJCRealtyWeb.gif") center no-repeat;
+  	background:transparent url(../media/tileJCRealtyWeb.gif) center no-repeat;
   	background-size: 100% auto;
 }
 
 .tileJCRealty:hover {
-   background-image: url("../media/tileJCRealtyHOVERWeb.gif");
+   background-image: url(../media/tileJCRealtyHOVERWeb.gif);
    background-size: 100% auto;
 }
 
@@ -309,12 +314,12 @@ a {
 	width: 600px;
 	height: 423px;
 	display: inline-block;
-  	background:transparent url("../media/tileProject1Web.gif") center no-repeat;
+  	background:transparent url(../media/tileProject1Web.gif) center no-repeat;
   	background-size: 100% auto;
 }
 
 .tileProject1:hover {
-   background-image: url("../media/tileProject1HOVERWeb.gif");
+   background-image: url(../media/tileProject1HOVERWeb.gif);
    background-size: 100% auto;
 }
 
@@ -324,12 +329,12 @@ a {
 	width: 600px;
 	height: 423px;
 	display: inline-block;
-  	background:transparent url("../media/tileProject2Web.gif") center no-repeat;
+  	background:transparent url(../media/tileProject2Web.gif) center no-repeat;
   	background-size: 100% auto;
 }
 
 .tileProject2:hover {
-   background-image: url("../media/tileProject2HOVERWeb.gif");
+   background-image: url(../media/tileProject2HOVERWeb.gif);
    background-size: 100% auto;
 }
 
@@ -344,12 +349,12 @@ a {
 	width: 600px;
 	height: 423px;
 	display: inline-block;
-  	background:transparent url("../media/tileProject3Web.gif") center no-repeat;
+  	background:transparent url(../media/tileProject3Web.gif) center no-repeat;
   	background-size: 100% auto;
 }
 
 .tileProject3:hover {
-   background-image: url("../media/tileProject3HOVERWeb.gif");
+   background-image: url(../media/tileProject3HOVERWeb.gif);
    background-size: 100% auto;
 }
 
@@ -691,48 +696,48 @@ footer {
 	.tileJCRealty {
 		width: 100vw;
 		display: inline-block;
-	  	background:transparent url("../media/tileJCRealtyWeb.gif") center no-repeat;
+	  	background:transparent url(../media/tileJCRealtyWeb.gif) center no-repeat;
 	  	background-size: contain;
 	}
 
 	.tileJCRealty:hover {
-	   background-image: url("../media/tileJCRealtyWeb.gif");
+	   background-image: url(../media/tileJCRealtyWeb.gif);
 	   background-size: 100vw;
 	}
 
 	.tileProject1 {
 		width: 100vw;
 		display: inline-block;
-	  	background:transparent url("../media/tileProject1Web.gif") center no-repeat;
+	  	background:transparent url(../media/tileProject1Web.gif) center no-repeat;
 	  	background-size: 100vw;
 		}
 
 	.tileProject1:hover {
-	   background-image: url("../media/tileProject1HOVERWeb.gif");
+	   background-image: url(../media/tileProject1HOVERWeb.gif);
 	   background-size: 100vw;
 	}
 
 	.tileProject2 {
 		width: 100%;
 		display: inline-block;
-	  	background:transparent url("../media/tileProject2Web.gif") center no-repeat;
+	  	background:transparent url(../media/tileProject2Web.gif) center no-repeat;
 	  	background-size: 100vw;
 	}
 
 	.tileProject2:hover {
-	   background-image: url("../media/tileProject2HOVERWeb.gif");
+	   background-image: url(../media/tileProject2HOVERWeb.gif);
 	   background-size: 100vw;
 	}
 
 	.tileProject3 {
 		width: 100%;
 		display: inline-block;
-	  	background:transparent url("../media/tileProject3Web.gif") center no-repeat;
+	  	background:transparent url(../media/tileProject3Web.gif) center no-repeat;
 	  	background-size: 100vw;
 	}
 
 	.tileProject3:hover {
-	   background-image: url("../media/tileProject3HOVERWeb.gif");
+	   background-image: url(../media/tileProject3HOVERWeb.gif);
 	   background-size: 100vw;
 	}
 }
