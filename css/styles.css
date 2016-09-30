@@ -244,7 +244,6 @@ a {
 
 .contactContent {
 	padding-top: 75px;
-	text-align: left;
 	font-size: 4vw;
 }
 
@@ -508,6 +507,19 @@ footer {
 /******************************
         Media Queries
 ******************************/
+@media screen and (min-width: 1562px) {		/*------optimizes Contact page on large screens------*/
+	
+	.contactIcon {
+		width: 130px;
+	}
+
+	.contactContent {
+		padding-top: 75px;
+		font-size: 60px;
+	}
+}
+
+
 @media screen and (max-width: 768px) {			/*------iPad-----*/
 
 	header {
