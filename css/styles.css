@@ -2,7 +2,34 @@
 - project tiles anchor tag height needs to be adjusted somehow on browser widths < 600px wide!
 - optimize headshot sticky footer height for ios safari (back button toolbar blocks pic) 
 - optimize sticky footer for Firefox desktop (gap) */
+* {
+  font-family: 'Open Sans', sans-serif;     /* raleway was original font */
+      font-weight: 400;
+}
 
+.fw300 {
+	font-weight: 300;
+}
+
+.fw700 {
+	font-weight: 700;
+}
+
+.underline {
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: #000000;
+    margin: 10px auto 45px auto;
+}
+
+.underlineWhite {
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: rgb(249, 249, 249);
+    margin: 10px auto 45px auto;
+}
 
 body {
 	background-color: rgb(249, 249, 249);
@@ -78,14 +105,14 @@ h1.mainHeader {
 
 nav ul {
 	margin: 0;
+	padding-right: 5px;
 }
 
 nav ul li {		/* targets all descendant elements of <nav> */
 	display: inline;
 	list-style: none;
 	font-weight: lighter;
-	font-size: 1.3em;
-	padding-left: 8px;
+	font-size: 1.2em;
 }
 
 li.index:hover:after {		/* nav hover and selected states */
@@ -95,7 +122,11 @@ li.index:hover:after {		/* nav hover and selected states */
   	height:1px; 
   	background: white; 
   	top: 27px;
-  	right: 174px;
+  	right: 224px;
+}
+
+li.portfolio {
+	padding: 0 11px;
 }
 
 li.portfolio:hover:after {
@@ -105,7 +136,7 @@ li.portfolio:hover:after {
   	height:1px; 
   	background: white; 
   	top: 27px;
-  	right: 86px;
+  	right: 120px;
 }
 
 li.contact:hover:after {
@@ -115,7 +146,7 @@ li.contact:hover:after {
   	height:1px; 
   	background: white; 
   	top: 27px;
-  	right: 5px;
+  	right: 16px;
 }
 
 li.selectedIndex:visited:after {
@@ -135,7 +166,7 @@ li.selectedPortfolio:after {
   	height:1px; 
   	background: white; 
   	top: 27px;
-  	right: 86px;
+  	right: 120px;
 }
 
 li.selectedContact:after {
@@ -145,7 +176,7 @@ li.selectedContact:after {
   	height:1px; 
   	background: white; 
   	top: 27px;
-  	right: 5px;
+  	right: 16px;
 }
 
 /*nav ul li a:hover:after {
@@ -297,18 +328,10 @@ a {
 
 .portfolioHeader {
 	font-size: 6.5em;
-	font-weight: 600;
+	letter-spacing: 6px;
 	display: block;
 	padding-top: 17px;
 	color: rgb(249, 249, 249);
-}
-
-.portfolioPageTitle {
-	font-size: 6.5em;
-	font-weight: 600;
-	display: block;
-	padding-top: 17px;
-	color: black;
 }
 
 
@@ -383,10 +406,13 @@ a {
 /******************************
 		Project Pages
 ******************************/
-.projectH1 {
+
+.portfolioPageTitle {
 	font-size: 6.5em;
-	font-weight: 600;
-	margin-top: 30px;
+	letter-spacing: 4px;
+	display: block;
+	padding-top: 17px;
+	color: black;
 	margin-bottom: 0;
 }
 
@@ -537,7 +563,11 @@ footer {
 }
 
 
-@media screen and (max-width: 768px) {			/*------iPad-----*/
+@media screen and (max-width: 823px) {			/*------Narrow Desktop and iPad (768px)-----*/
+
+	.parallax {
+		display: none;
+	}
 
 	header {
 		height: 55px;
@@ -568,14 +598,14 @@ footer {
 		bottom: 1px;
 	}
 
-	.mobileNav li.indexMobile:hover:after {		/* mobile nav hover and selected states */
+	.mobileNav li.indexMobile:hover:after {		/* ipad nav hover and selected states */
 		position: absolute; 
 		content:''; 
 	  	width:45px; 
 	  	height:1px; 
 	  	background: white; 
 	  	top: 22px;
-	  	right: 8px;
+	  	right: 9px;
 	}
 
 	.mobileNav li.portfolioMobile:hover:after {
@@ -585,7 +615,7 @@ footer {
 	  	height:1px; 
 	  	background: white; 
 	  	top: 22px;
-	  	right: 10px;
+	  	right: 22px;
 	}
 
 	.mobileNav li.contactMobile:hover:after {
@@ -595,7 +625,7 @@ footer {
 	  	height:1px; 
 	  	background: white; 
 	  	top: 22px;
-	  	right: 10px;
+	  	right: 16.5px;
 	}
 
 /*	.selectedIndexMobile:after {
@@ -615,7 +645,7 @@ footer {
 		  	height:1px; 
 		  	background: white; 
 		  	top: 22px;
-		  	right: 10px;
+		  	right: 22px;
 	}
 
 	.selectedContactMobile:after {
@@ -625,7 +655,7 @@ footer {
 		  	height:1px; 
 		  	background: white; 
 		  	top: 22px;
-		  	right: 10px;
+		  	right: 16.5px;
 	}
 
 
@@ -652,6 +682,20 @@ footer {
 	.coverPicMobile {
 		display: inline-block;
 	}
+
+	.parallaxMobile {
+	    /* The image used */
+    background-image: url(../media/Desk4Web.gif);
+
+    /* Set a specific height */
+    min-height: calc(100vh - 70px);
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 	.coverPicMobile img {
 		width: 100vw;
@@ -683,11 +727,10 @@ footer {
 }
 
 
-@media screen and (max-width: 667px) {
+@media screen and (max-width: 667px) {	/* ---- Iphone 6 ---- */
 
 	.projectH1 {
 		font-size: 3.5em;
-		font-weight: 600;
 		margin-top: 30px;
 		margin-bottom: 0;
 	}
