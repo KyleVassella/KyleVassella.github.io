@@ -296,7 +296,7 @@ a {
 
 .parallax {
 	    /* The image used */
-    background-image: url(../media/Desk4Web.gif);
+    background-image: url(../media/dot.svg), url(../media/Hero2.jpeg);
 
     /* Set a specific height */
     min-height: calc(100vh - 55px);
@@ -304,8 +304,8 @@ a {
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+   /* background-repeat: no-repeat;*/
+    background-size: 5px, cover;
 }
 
 
@@ -343,7 +343,7 @@ a {
 	height: 423px;
 	display: inline-block;
   	background:transparent url(../media/tileJCRealtyWeb.gif) center no-repeat;
-  	background-size: 100% auto;
+  	background-size: contain;
 }
 
 .tileJCRealty:hover {
@@ -569,6 +569,21 @@ footer {
 		display: none;
 	}
 
+	.parallaxMobile {
+	display: block;
+	    /* The image used */
+    background-image: url(../media/dot.svg), url(../media/hero2Web.jpg);
+
+    /* Set a specific height */
+    min-height: calc(100vh - 70px);
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    /*background-repeat: no-repeat;*/
+    background-size: 5px, cover;
+	}
+
 	header {
 		height: 55px;
 	}
@@ -671,38 +686,14 @@ footer {
 		margin-bottom: 0;
 	}
 
-	.coverPic {
-		display: none;
-	}
-
 	.blackBar {
 		display: none;
 	}
 
-	.coverPicMobile {
-		display: inline-block;
-	}
-
-	.parallaxMobile {
-	    /* The image used */
-    background-image: url(../media/Desk4Web.gif);
-
-    /* Set a specific height */
-    min-height: calc(100vh - 70px);
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-	.coverPicMobile img {
-		width: 100vw;
-		height: auto;
-	}
 
 	.blackBarMobile {
+		display: block;
+		width: 100vw;
 		height: 200px;
 		background-color: black;		/*#1C1D21*/
 /*		margin-bottom: 40px;*/
@@ -720,8 +711,9 @@ footer {
 	}
 
 	.tileWrap {
-		width: 100%;
+		width: 100vw;
 		display: inline-block;
+		padding: 0;
 	}
 
 }
@@ -826,6 +818,10 @@ footer {
 
 @media screen and (max-width: 532px) {			/*------Narrow browser, Iphone 4 (320px), other small viewport widths------*/
 	
+	.parallaxMobile {
+		min-height: calc(100vh - 55px);
+	}
+
 	h1.mainHeader {
 		font-size: 1.75em;
 	}
