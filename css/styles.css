@@ -52,6 +52,7 @@ body:after {		/* pre-load hover images to avoid first time load delay when hover
 
 .wrap {
 	min-height: calc(100vh - 70px);
+	background-color: black;
 }
 
 .wrapContact {
@@ -323,7 +324,7 @@ a {
 .blackBar {
 	height: 200px;
 	background-color: black;		/*#1C1D21*/
-	margin-bottom: 8px;
+/*	margin-bottom: 8px;*/
 	text-align: center;
 }
 
@@ -331,6 +332,7 @@ a {
 	text-align: center;
 	width: 100vw;
 	margin: 0 auto 0 auto;
+	background-color: black;
 }
 
 .portfolioHeader {
@@ -350,7 +352,7 @@ a {
 	height: 423px;
 	display: inline-block;
   	background:transparent url(../media/tileJCRealtyWeb.gif) center no-repeat;
-  	background-size: contain;
+  	background-size: 100% auto;
 }
 
 .tileJCRealty:hover {
@@ -790,11 +792,11 @@ footer {
 		width: 100vw;
 		display: inline-block;
 	  	background:transparent url(../media/tileJCRealtyWeb.gif) center no-repeat;
-	  	background-size: contain;
+	  	background-size: 100vw;
 	}
 
 	.tileJCRealty:hover {
-	   background-image: url(../media/tileJCRealtyWeb.gif);
+	   background-image: url(../media/tileJCRealtyHOVERWeb.gif);
 	   background-size: 100vw;
 	}
 
