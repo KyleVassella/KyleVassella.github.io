@@ -9,6 +9,8 @@
 
 html,body        /*fix whitespace on right side*/
 {
+  width: 100%;		/* fix Safari viewport ineptitude */
+  height: 100%;		/* fix Safari viewport ineptitude */
   overflow-x: hidden; 
 }
 
