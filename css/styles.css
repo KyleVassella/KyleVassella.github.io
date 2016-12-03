@@ -585,14 +585,14 @@ footer {
 	.herobgMobile {
 		background-image: url(../media/dot.svg), url(../media/Hero2CroppedWeb.jpg);
 		background-size: 5px, cover;
-	    min-height: calc(100vh - 70px);
+	    min-height: calc(100vh - 69px);
 
 	}
 
-/*	.parallaxMobile {
+	.parallaxMobile {
 	display: block;
 
-    background-image: url(../media/dot.svg), url(../media/hero2Web.jpg);
+    background-image: url(../media/dot.svg), url(../media/Hero2CroppedWeb.jpg);
 
 
     min-height: calc(100vh - 70px);
@@ -602,7 +602,7 @@ footer {
     background-position: center;
 
     background-size: 5px, cover;
-	}*/
+	}
 
 	header {
 		height: 55px;
