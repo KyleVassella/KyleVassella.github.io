@@ -22,6 +22,10 @@ html,body        /*fix whitespace on right side*/
 	font-weight: 700;
 }
 
+.whiteBG {
+	background-color: rgb(249, 249, 249);
+}
+
 .underline {
     display: block;
     width: 100px;
@@ -52,18 +56,19 @@ body:after {		/* pre-load hover images to avoid first time load delay when hover
 
 .wrap {
 	min-height: calc(100vh - 70px);
-	background-color: black;
+	/*background-color: black;*/
 }
 
 .wrapContact {
 	min-height: calc(100vh - 520px);
 }
 
-.group:after {
+/*?????*/
+/*.group:after {
 	content: “ “;
 	display: table;
 	clear: both;
-}
+}*/
 
 h2 {
 	text-align: center;
@@ -77,7 +82,7 @@ h2 {
 ******************************/
 header {
 	height: 55px;
-	background-color: #090302;
+/*	background-color: #090302;*/
 	overflow: hidden;
 }
 
@@ -88,7 +93,7 @@ h1.mainHeader {
     margin:0;
 	font-weight: 300;
 	font-size: 2.5em;
-	color: #fff;
+	color: #000;
 	white-space: pre;	/* preserves white space (extra spaces in text) in the browser */
 }
 
@@ -104,7 +109,7 @@ h1.mainHeader {
 .nav {
 	position: relative;
 	bottom: 6.5px;
-	color: white;
+	color: #000;
 	display: inline-block;
 	list-style: none;
 	margin-right: 10px;
@@ -284,10 +289,6 @@ a {
 	top: 13px;
 }
 
-.contactContent {
-	padding-top: 75px;
-	font-size: 4vw;
-}
 
 
 
@@ -307,7 +308,7 @@ a {
     background-image: url(../media/dot.svg), url(../media/hero2.jpg);
 
     /* Set a specific height */
-    min-height: calc(100vh - 55px);
+    min-height: calc(100vh);
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -335,6 +336,13 @@ a {
 	background-color: black;
 }
 
+.primaryContentWhite {
+	text-align: center;
+	width: 100vw;
+	margin: 0 auto 0 auto;
+	background-color: rgb(249, 249, 249);
+}
+
 .portfolioHeader {
 	font-size: 6.5em;
 	letter-spacing: 6px;
@@ -342,6 +350,16 @@ a {
 	padding-top: 17px;
 	color: rgb(249, 249, 249);
 }
+
+.contactContent {
+	text-align: center;
+	width: 100vw;
+	margin: 0 auto 0 auto;
+	background-color: rgb(249, 249, 249);	/* offwhite */
+	padding-top: 75px;
+	font-size: 4vw;
+}
+
 
 
 
