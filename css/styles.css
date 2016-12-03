@@ -7,6 +7,11 @@
       font-weight: 400;
 }
 
+html,body        /*fix whitespace on right side*/
+{
+  overflow-x: hidden; 
+}
+
 .fw300 {
 	font-weight: 300;
 }
@@ -322,7 +327,7 @@ a {
 
 .primaryContent {
 	text-align: center;
-	max-width: 80%;
+	width: 100vw;
 	margin: 0 auto 0 auto;
 }
 
@@ -382,7 +387,7 @@ a {
 }
 
 .tileWrap {
-	width: 25%;
+	width: 25vw;
 	display: inline;
 }
 
@@ -569,20 +574,33 @@ footer {
 		display: none;
 	}
 
-	.parallaxMobile {
+/*	.heroMobile {
+		display: block;
+		width: 100vw;
+		opacity: .8;
+	}*/
+
+	.herobgMobile {
+		background-image: url(../media/dot.svg), url(../media/hero2CroppedWeb.jpg);
+		background-size: 5px, cover;
+	    min-height: calc(100vh - 70px);
+
+	}
+
+/*	.parallaxMobile {
 	display: block;
-	    /* The image used */
+
     background-image: url(../media/dot.svg), url(../media/hero2Web.jpg);
 
-    /* Set a specific height */
+
     min-height: calc(100vh - 70px);
 
-    /* Create the parallax scrolling effect */
+
     background-attachment: fixed;
     background-position: center;
-    /*background-repeat: no-repeat;*/
+
     background-size: 5px, cover;
-	}
+	}*/
 
 	header {
 		height: 55px;
@@ -711,9 +729,9 @@ footer {
 	}
 
 	.tileWrap {
-		width: 100vw;
-		display: inline-block;
-		padding: 0;
+		width: 100%;
+		display: block;
+		margin: 0 auto;
 	}
 
 }
@@ -818,7 +836,7 @@ footer {
 
 @media screen and (max-width: 532px) {			/*------Narrow browser, Iphone 4 (320px), other small viewport widths------*/
 	
-	.parallaxMobile {
+	.herobgMobile {
 		min-height: calc(100vh - 55px);
 	}
 
@@ -838,7 +856,7 @@ footer {
 
 	.socialGithub:hover, .socialTreehouse:hover, .socialLinkedin:hover, .socialStackoverflow:hover {
 		background-size: 35px 35px;
-}
+	}
 
 	nav ul li {
 		font-size: 1.25em;
