@@ -582,12 +582,12 @@ footer {
 		opacity: .8;
 	}*/
 
-	.herobgMobile {
+/*	.herobgMobile {
 		background-image: url(../media/dot.svg), url(../media/Hero2CroppedWeb.jpg);
 		background-size: 5px, cover;
 	    min-height: calc(100vh - 69px);
 
-	}
+	}*/
 
 	.parallaxMobile {
 	display: block;
