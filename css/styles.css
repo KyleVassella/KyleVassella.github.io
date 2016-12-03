@@ -581,7 +581,7 @@ footer {
 	}*/
 
 	.herobgMobile {
-		background-image: url(../media/dot.svg), url(../media/hero2CroppedWeb.jpg);
+		background-image: url(../media/dot.svg), url(../media/Hero2CroppedWeb.jpg);
 		background-size: 5px, cover;
 	    min-height: calc(100vh - 70px);
 
