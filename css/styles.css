@@ -296,7 +296,7 @@ a {
 
 .parallax {
 	    /* The image used */
-    background-image: url(../media/dot.svg), url(../media/Hero2.jpg);
+    background-image: url(../media/dot.svg), url(../media/hero2.jpg);
 
     /* Set a specific height */
     min-height: calc(100vh - 55px);
