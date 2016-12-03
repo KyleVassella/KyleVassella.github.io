@@ -595,7 +595,7 @@ footer {
     background-image: url(../media/dot.svg), url(../media/Hero2CroppedWeb.jpg);
 
 
-    min-height: calc(100vh - 70px);
+    min-height: calc(100vh - 68px);
 
 
     background-attachment: fixed;
