@@ -24,7 +24,7 @@ body {
 
 body:after {		/* pre-load hover images to avoid first time load delay when hovering over social icons & project tiles */
  display:none;
- content: url(../media/socialGithubHOVERWeb.gif) url(../media/socialTreehouseHOVERWeb.gif) url(../media/socialLinkedinHOVERWeb.gif) url(../media/socialStackoverflowHOVERWeb.gif) url(../media/tileJCRealtyHOVERWeb.gif) url(../media/tileProject1HOVERWeb.gif) url(../media/tileProject2HOVERWeb.gif) url(../media/tileProject3HOVERWeb.gif);
+ content: url(../media/newSocial/socialGithubHOVER.gif) url(../media/newSocial/socialTreehouseHOVER.gif) url(../media/newSocial/socialLinkedinHOVER.gif) url(../media/newSocial/socialStackoverflowHOVER.gif) url(../media/tileJCRealtyHOVERWeb.gif) url(../media/tileProject1HOVERWeb.gif) url(../media/tileProject2HOVERWeb.gif) url(../media/tileProject3HOVERWeb.gif);
 }
 
 /******************************
