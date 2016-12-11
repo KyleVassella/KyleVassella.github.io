@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
- 		<meta charset="utf-8"> 
+ 		<meta charset="utf-8">
+<!--  		<meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 	 	<title>Kyle Vassella | Web Developer</title>
+		<!-- <link href="https://fonts.googleapis.com/css?family=Hind:300,600" rel="stylesheet"> -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
-   		<link rel = "stylesheet" href = "css/styles.css">
+   		<link rel = "stylesheet" href = "assets/css/styles.css">
 	</head>
-	<body>
+	<body ng-app="singlePage">
 		<div class="wrap">
-			<header>
 
-				<h1 class="mainHeader"><a class="fw300" href="https://kylevassella.github.io">KYLE <span class="fw700">V</span>ASSELLA</a></h1>
-			<div class ="headerMenu">
-				<div class='nav'>
-					<nav>
-						<ul>
-							<li class="index"><a class="fw300" href="index.html">HOME</a></li>
-							<li class="portfolio"><a class="fw300" href="portfolio.html">PORTFOLIO</a></li>
-							<li class="contact"><a class="fw300" href="contact.html">CONTACT</a></li>
-						</ul>
-					</nav>
+			<header class="group">
+				<h1 id="home" class="mainHeader"><a class="fw300" href="https://kylevassella.github.io">KYLE<span class="fw700">V</span>ASSELLA</a></h1>
+				<div class ="headerMenu">
+					<div class='nav'>
+						<nav>
+							<ul>
+								<li class="index selectedIndex"><a class="smoothScroll animatedLine fw300" href="https://kylevassella.github.io/#home">HOME</a></li>
+								<li class="portfolio"><a class="smoothScroll animatedLine fw300" href="https://kylevassella.github.io/#portfolio">PORTFOLIO</a></li>
+								<li class="contact"><a class="smoothScroll animatedLine fw300" href="https://kylevassella.github.io/#contact">CONTACT</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="socialDiv">
+						<a href="https://github.com/kylevassella" class="socialGithub" alt="Github logo" target="_blank"></a>
+						<a href="http://teamtreehouse.com/kylevassella/" class="socialTreehouse" alt="TeamTreehouse logo" target="_blank"></a>
+						<a href="https://www.linkedin.com/in/kyle-vassella-64619371" class="socialLinkedin" alt="Linkedin logo" target="_blank"></a>
+						<a href="http://stackoverflow.com/users/6647188/kyle-vassella?tab=profile" class="socialStackoverflow" alt="Stackoverflow logo" target="_blank"></a>
+					</div>
 				</div>
-
-				<div class="socialDiv">
-					<a href="https://github.com/kylevassella" class="socialGithub" alt="Github logo" target="_blank"></a>
-					<a href="http://teamtreehouse.com/kylevassella/" class="socialTreehouse" alt="TeamTreehouse logo" target="_blank"></a>
-					<a href="https://www.linkedin.com/in/kyle-vassella-64619371" class="socialLinkedin" alt="Linkedin logo" target="_blank"></a>
-					<a href="http://stackoverflow.com/users/6647188/kyle-vassella?tab=profile" class="socialStackoverflow" alt="Stackoverflow logo" target="_blank"></a>
-				</div>
-			</div>
 			</header>
-						<div class="mobileNav isHidden">
-							<nav>
-								<ul>
-									<li class="indexMobile"><a class="fw300" href="index.html">HOME</a></li>
-									<li class="portfolioMobile"><a class="fw300" href="portfolio.html">PORTFOLIO</a></li>
-									<li class='contactMobile'><a class="fw300" href="contact.html">CONTACT</a></li>
-								</ul>
-							</nav>
-						</div>
+					<div class="mobileNav isHidden">
+						<nav>
+							<ul>
+								<li class="indexMobile selectedIndexMobile"><a class="smoothScroll animatedLine fw300" href="https://kylevassella.github.io/#home">HOME</a></li>
+								<li class="portfolioMobile"><a class="smoothScroll animatedLine fw300" href="https://kylevassella.github.io/#portfolio">PORTFOLIO</a></li>
+								<li class="contactMobile"><a class="smoothScroll animatedLine fw300" href="https://kylevassella.github.io/#contact">CONTACT</a></li>
+							</ul>
+						</nav>
+					</div>
 
 			
 			<section class="primaryContentWhite">
@@ -52,23 +53,23 @@
 				</form>
 
 				
-				<h3>Tools Used:</h3>
+				<h3>Tools used:</h3>
 					<p class="noMarginBottom">
 						<span class="iconSpan">
-							<img class="programIcon" src="media/iconHTML5.png">
-							<img class="programIcon" src="media/iconCSS3.png">
-							<img class="programIcon" src="media/iconJS.png">
+							<img class="programIcon" src="./assets/media/iconHTML5.png">
+							<img class="programIcon" src="./assets/media/iconCSS3.png">
+							<img class="programIcon" src="./assets/media/iconJS.png">
 						</span>
 					</p>
 					<p class="noMarginTop">HTML5, CSS3, JavaScript (vanilla)</p>
 				
-				<h3 class="inline">Github:</h3> <a class="githubLink" href="https://github.com/KyleVassella/Interactive-Shopping-Form/tree/gh-pages" target="_blank">https://github.com/KyleVassella/Interactive-Shopping-Form/tree/gh-pages</a>
+				<h3 class="inline">GitHub repository:</h3> <a class="githubLink" href="https://github.com/KyleVassella/Interactive-Shopping-Form/tree/gh-pages" target="_blank">https://github.com/KyleVassella/Interactive-Shopping-Form/tree/gh-pages</a>
 
-				<h3 class="noMarginBottom">Project Description:</h3>
-					<p class="noMarginTop textLeft">In this project, you’ll create an interactive registration form for “FullStack Conf”. Using the supplied HTML and CSS files, you’ll use JavaScript to enhance the form by adding interactivity. Added form field validation, credit card & email validation with Regex patterns, onclick adding/summation of activity pricing, removal of conflicting activity, success message upon completion.</p>
+				<h3 class="noMarginBottom">Project description:</h3>
+					<p class="textLeft">In this project, you’ll create an interactive registration form for “FullStack Conf”. Using the supplied HTML and CSS files, you’ll use JavaScript to enhance the form by adding interactivity. Added form field validation, credit card & email validation with Regex patterns, onclick adding/summation of activity pricing, removal of conflicting activity, success message upon completion.</p>
 				
-				<h3 class="noMarginBottom">Project Requirements:</h3>
-					<p class="noMarginTop textLeft"><i></i>Set focus on the first text field. When the page loads, give focus to the first text field.
+				<h3 class="noMarginBottom">Project requirements:</h3>
+					<p class="textLeft"><i></i>Set focus on the first text field. When the page loads, give focus to the first text field.
 					<span><i></i>Reveal a text field when the "Other" option is selected from the "Job Role" drop down menu. Make sure you add an text input field. Use the id of "other-title" for the field. Add placeholder text of "Your Title" for the field.</span>
 					<span><i></i>For the T-Shirt color menu, only display the options that match the design selected in the "Design" menu.</span>
 					<span><i></i>If the user selects a workshop, don't allow selection of a workshop at the same date and time -- you should disable the checkbox and visually indicate that the workshop in the competing time slot isn't available.</span>
@@ -89,7 +90,7 @@
 					</p>
 					
 				<h3 class="noMarginBottom">Extra Credit</h3>
-					<p class="noMarginTop textLeft"><i></i>Hide the "Color" label and select menu until a T-Shirt design is selected from the "Design" menu.
+					<p class="textLeft"><i></i>Hide the "Color" label and select menu until a T-Shirt design is selected from the "Design" menu.
 					<span><i></i>Style the "select" menus (drop down menus) on the form, so they match the styling of the text fields (see Resources links for an article on how to improve the look of select menus using CSS and JavaScript).</span>
 					<span><i></i>Validate the credit card number so that it's a validly formatted credit card number.</span></p>
 			</section>

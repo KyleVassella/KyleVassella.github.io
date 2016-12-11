@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
- 		<meta charset="utf-8"> 
+ 		<meta charset="utf-8">
+<!--  		<meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 	 	<title>Kyle Vassella | Web Developer</title>
+		<!-- <link href="https://fonts.googleapis.com/css?family=Hind:300,600" rel="stylesheet"> -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
-   		<link rel = "stylesheet" href = "css/styles.css">
+   		<link rel = "stylesheet" href = "assets/css/styles.css">
 	</head>
-	<body>
+	<body ng-app="singlePage">
 		<div class="wrap">
-			<header>
 
-				<h1 class="mainHeader"><a class="fw300" href="https://kylevassella.github.io">KYLE <span class="fw700">V</span>ASSELLA</a></h1>
-			<div class ="headerMenu">
-				<div class='nav'>
-					<nav>
-						<ul>
-							<li class="index"><a class="fw300" href="index.html">HOME</a></li>
-							<li class="portfolio"><a class="fw300" href="portfolio.html">PORTFOLIO</a></li>
-							<li class="contact"><a class="fw300" href="contact.html">CONTACT</a></li>
-						</ul>
-					</nav>
+			<header class="group">
+				<h1 id="home" class="mainHeader"><a class="fw300" href="https://kylevassella.github.io">KYLE<span class="fw700">V</span>ASSELLA</a></h1>
+				<div class ="headerMenu">
+					<div class='nav'>
+						<nav>
+							<ul>
+								<li class="index selectedIndex"><a class="smoothScroll animatedLine fw300" href="https://kylevassella.github.io/#home">HOME</a></li>
+								<li class="portfolio"><a class="smoothScroll animatedLine fw300" href="https://kylevassella.github.io/#portfolio">PORTFOLIO</a></li>
+								<li class="contact"><a class="smoothScroll animatedLine fw300" href="https://kylevassella.github.io/#contact">CONTACT</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="socialDiv">
+						<a href="https://github.com/kylevassella" class="socialGithub" alt="Github logo" target="_blank"></a>
+						<a href="http://teamtreehouse.com/kylevassella/" class="socialTreehouse" alt="TeamTreehouse logo" target="_blank"></a>
+						<a href="https://www.linkedin.com/in/kyle-vassella-64619371" class="socialLinkedin" alt="Linkedin logo" target="_blank"></a>
+						<a href="http://stackoverflow.com/users/6647188/kyle-vassella?tab=profile" class="socialStackoverflow" alt="Stackoverflow logo" target="_blank"></a>
+					</div>
 				</div>
-
-				<div class="socialDiv">
-					<a href="https://github.com/kylevassella" class="socialGithub" alt="Github logo" target="_blank"></a>
-					<a href="http://teamtreehouse.com/kylevassella/" class="socialTreehouse" alt="TeamTreehouse logo" target="_blank"></a>
-					<a href="https://www.linkedin.com/in/kyle-vassella-64619371" class="socialLinkedin" alt="Linkedin logo" target="_blank"></a>
-					<a href="http://stackoverflow.com/users/6647188/kyle-vassella?tab=profile" class="socialStackoverflow" alt="Stackoverflow logo" target="_blank"></a>
-				</div>
-			</div>
 			</header>
-						<div class="mobileNav isHidden">
-							<nav>
-								<ul>
-									<li class="indexMobile"><a class="fw300" href="index.html">HOME</a></li>
-									<li class="portfolioMobile"><a class="fw300" href="portfolio.html">PORTFOLIO</a></li>
-									<li class='contactMobile'><a class="fw300" href="contact.html">CONTACT</a></li>
-								</ul>
-							</nav>
-						</div>
+					<div class="mobileNav isHidden">
+						<nav>
+							<ul>
+								<li class="indexMobile selectedIndexMobile"><a class="smoothScroll animatedLine fw300" href="https://kylevassella.github.io/#home">HOME</a></li>
+								<li class="portfolioMobile"><a class="smoothScroll animatedLine fw300" href="https://kylevassella.github.io/#portfolio">PORTFOLIO</a></li>
+								<li class="contactMobile"><a class="smoothScroll animatedLine fw300" href="https://kylevassella.github.io/#contact">CONTACT</a></li>
+							</ul>
+						</nav>
+					</div>
 			
 			<section class="primaryContentWhite">
 				<h1 class="fw300 portfolioPageTitle">Random Quote Generator</h1>
@@ -54,9 +55,9 @@
 				<h3>Tools Used:</h3>
 					<p class="noMarginBottom">
 						<span class="iconSpan">
-							<img class="programIcon" src="media/iconHTML5.png">
-							<img class="programIcon" src="media/iconCSS3.png">
-							<img class="programIcon" src="media/iconJS.png">
+							<img class="programIcon" src="./assets/media/iconHTML5.png">
+							<img class="programIcon" src="./assets/media/iconCSS3.png">
+							<img class="programIcon" src="./assets/media/iconJS.png">
 						</span>
 					</p>
 					<p class="noMarginTop">HTML5, CSS3, JavaScript (vanilla)</p>
@@ -64,10 +65,10 @@
 				<h3 class="inline">Github:</h3> <a class="githubLink" href="https://github.com/KyleVassella/P1_RandomQuoteGenerator" target="_blank">https://github.com/KyleVassella/P1_RandomQuoteGenerator</a>
 
 				<h3 class="noMarginBottom">Project Description:</h3>
-					<p class="noMarginTop textLeft">In this project you’ll create a random quote generator to display quotations on the screen after a button on the page is clicked: for example, display a quote from a famous athlete, politician, or historical figure.</p>
+					<p class="textLeft">In this project you’ll create a random quote generator to display quotations on the screen after a button on the page is clicked: for example, display a quote from a famous athlete, politician, or historical figure.</p>
 				
 				<h3 class="noMarginBottom">Project Requirements:</h3>
-					<p class="noMarginTop noMarginBottom italic bold textLeft">Create an array of JS objects to hold the data for the quotes. Each quote should have the following properties:</p>			
+					<p class="noMarginBottom italic bold textLeft">Create an array of JS objects to hold the data for the quotes. Each quote should have the following properties:</p>			
 						<p class="noMarginTop textLeft"><i></i>A quote property which contains a string: the text of the quote to display on the page.
 						<span><i></i>A source property which contains a string identifying the creator of the quote.</span>
 						<span><i></i>An optional citation property which contains a string identifying the publication the quote appears in.</span>
@@ -94,7 +95,7 @@
 						<span><i></i>printQuote displays the final HTML string to the page. You can use the following JS snippet to accomplish that: <b>document.getElementById('quote-box').innerHTML</b></span></p>
 					
 				<h3 class="noMarginBottom">Extra Credit</h3>
-					<p class="noMarginTop textLeft"><i></i>Add more properties to the quote object. For example, a tags property could include a list of "tags" like -- "humor", "business", "politics" -- to categorize each quote.
+					<p class="textLeft"><i></i>Add more properties to the quote object. For example, a tags property could include a list of "tags" like -- "humor", "business", "politics" -- to categorize each quote.
 					<span><i></i>Randomly change the background color of the page, when the quote changes.</span>
 					<span><i></i>Don't display a random quote more than once until ALL quotes from the array have been displayed.</span>
 					<span><i></i>Refresh the quote after a set amount of time. For example, every 30 seconds, make a new quote appear. (You can use the setInterval() or setTimeout() method to do this -- see the links in the Project Resources listing).</span></p>

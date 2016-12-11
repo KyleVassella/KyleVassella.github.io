@@ -1,4 +1,5 @@
 /*IMPROVEMENTS:
+• Why not just change the background-image property on .parallax on the media query? Why the need to change the script so much? Whoops
 - project tiles anchor tag height needs to be adjusted somehow on browser widths < 600px wide!
 - optimize headshot sticky footer height for ios safari (back button toolbar blocks pic) 
 - optimize sticky footer for Firefox desktop (gap) */
@@ -7,12 +8,28 @@
       font-weight: 400;
 }
 
-html,body        /*fix whitespace on right side*/
+body
 {
   width: 100%;		/* fix Safari viewport ineptitude */
   height: 100%;		/* fix Safari viewport ineptitude */
   overflow-x: hidden; 
 }
+
+body {
+	background-color: rgb(249, 249, 249);
+	font-family: 'Hind', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+body:after {		/* pre-load hover images to avoid first time load delay when hovering over social icons & project tiles */
+ display:none;
+ content: url(../media/socialGithubHOVERWeb.gif) url(../media/socialTreehouseHOVERWeb.gif) url(../media/socialLinkedinHOVERWeb.gif) url(../media/socialStackoverflowHOVERWeb.gif) url(../media/tileJCRealtyHOVERWeb.gif) url(../media/tileProject1HOVERWeb.gif) url(../media/tileProject2HOVERWeb.gif) url(../media/tileProject3HOVERWeb.gif);
+}
+
+/******************************
+Good Class Names Are Like Adjectives!
+******************************/
 
 .fw300 {
 	font-weight: 300;
@@ -42,38 +59,53 @@ html,body        /*fix whitespace on right side*/
     margin: 10px auto 45px auto;
 }
 
-body {
-	background-color: rgb(249, 249, 249);
-	font-family: 'Hind', sans-serif;
-	padding: 0;
-	margin: 0;
+.noMarginTop {
+	margin-top: 0;
 }
 
-body:after {		/* pre-load hover images to avoid first time load delay when hovering over social icons & project tiles */
- display:none;
- content: url(../media/socialGithubHOVERWeb.gif) url(../media/socialTreehouseHOVERWeb.gif) url(../media/socialLinkedinHOVERWeb.gif) url(../media/socialStackoverflowHOVERWeb.gif) url(../media/tileJCRealtyHOVERWeb.gif) url(../media/tileProject1HOVERWeb.gif) url(../media/tileProject2HOVERWeb.gif) url(../media/tileProject3HOVERWeb.gif);
+.noMarginBottom {
+	margin-bottom: 0;
+}
+
+.marginBottom80 {
+	margin-bottom: 80px;
+}
+
+.inline {
+	display: inline;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.textLeft {
+	text-align: left;
+}
+
+.isHidden {
+	display: none;
 }
 
 .wrap {
 	min-height: calc(100vh - 70px);
-	/*background-color: black;*/
 }
-
-.wrapContact {
-	min-height: calc(100vh - 520px);
-}
-
-/*?????*/
-/*.group:after {
-	content: “ “;
-	display: table;
-	clear: both;
-}*/
 
 h2 {
 	text-align: center;
 	font-size: 22px;
 }
+
+h3 {
+	font-weight: bold;
+	margin-top: 30px;
+}
+
+
 
 
 
@@ -92,7 +124,7 @@ h1.mainHeader {
     float: left;
     margin:0;
 	font-weight: 300;
-	font-size: 2.5em;
+	font-size: 3em;  /*3em*/
 	color: #000;
 	white-space: pre;	/* preserves white space (extra spaces in text) in the browser */
 }
@@ -122,89 +154,34 @@ nav ul {
 }
 
 nav ul li {		/* targets all descendant elements of <nav> */
+	position: relative;
 	display: inline;
 	list-style: none;
 	font-weight: lighter;
 	font-size: 1.2em;
 }
 
-li.index:hover:after {		/* nav hover and selected states */
-	position: absolute; 
-	content:''; 
-  	width:46px; 
-  	height:1px; 
-  	background: white; 
-  	top: 27px;
-  	right: 224px;
-}
-
 li.portfolio {
 	padding: 0 11px;
 }
 
-li.portfolio:hover:after {
-	position: absolute; 
-	content:''; 
-  	width:70px; 
-  	height:1px; 
-  	background: white; 
-  	top: 27px;
-  	right: 120px;
+a.animatedLine:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: -1px;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  background: #000;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
 }
 
-li.contact:hover:after {
-	position: absolute; 
-	content:''; 
-  	width:60px; 
-  	height:1px; 
-  	background: white; 
-  	top: 27px;
-  	right: 16px;
+a.animatedLine:hover:after {
+  width: 80%; 
+  left: 9.5%; 
 }
-
-li.selectedIndex:visited:after {
-	position: absolute; 
-	content:''; 
-  	width:45px; 
-  	height:1px; 
-  	background: white; 
-  	top: 27px;
-  	right: 174px;
-}
-
-li.selectedPortfolio:after {
-	position: absolute; 
-	content:''; 
-  	width:70px; 
-  	height:1px; 
-  	background: white; 
-  	top: 27px;
-  	right: 120px;
-}
-
-li.selectedContact:after {
-	position: absolute; 
-	content:''; 
-  	width:60px; 
-  	height:1px; 
-  	background: white; 
-  	top: 27px;
-  	right: 16px;
-}
-
-/*nav ul li a:hover:after {
-	content:''; 
-  	width:60px; 
-  	height:4px; 
-  	background: white; 
-  	position: absolute; 
-  	bottom:-4px;
-}*/
-
-/*	border-bottom: 1px solid white;
-	margin-bottom: -15px;*/
-	/*color: black;
-	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;*/
 
 nav ul li.selected {
 	border-bottom: 1px solid white;
@@ -233,12 +210,12 @@ a {
 	height: 48px;
 	width: 48px;
 	display: inline-block;
-  	background:transparent url(../media/socialGithubWeb.gif) center no-repeat;
+  	background:transparent url(../media/newSocial/socialGithub.gif) center no-repeat;
   	background-size: 48px 48px;
 }
 
 .socialGithub:hover {
-   background-image: url(../media/socialGithubHOVERWeb.gif);
+   background-image: url(../media/newSocial/socialGithubHOVER.gif);
    background-size: 48px 48px;
 }
 
@@ -246,12 +223,12 @@ a {
 	height: 48px;
 	width: 48px;
 	display: inline-block;
-  	background:transparent url(../media/socialTreehouseWeb.gif) center no-repeat;
+  	background:transparent url(../media/newSocial/socialTreehouse.gif) center no-repeat;
   	background-size: 48px 48px;
 }
 
 .socialTreehouse:hover {
-   background-image: url(../media/socialTreehouseHOVERWeb.gif);
+   background-image: url(../media/newSocial/socialTreehouseHOVER.gif);
    background-size: 48px 48px;
 }
 
@@ -259,12 +236,12 @@ a {
 	height: 48px;
 	width: 48px;
 	display: inline-block;
-  	background:transparent url(../media/socialLinkedinWeb2.gif) center no-repeat;
+  	background:transparent url(../media/newSocial/socialLinkedin.gif) center no-repeat;
   	background-size: 48px 48px;
 }
 
 .socialLinkedin:hover {
-   background-image: url(../media/socialLinkedinHOVERWeb.gif);
+   background-image: url(../media/newSocial/socialLinkedinHOVER.gif);
    background-size: 48px 48px;
 }
 
@@ -272,12 +249,12 @@ a {
 	height: 48px;
 	width: 48px;
 	display: inline-block;
-  	background:transparent url(../media/socialStackoverflowWeb.gif) center no-repeat;
+  	background:transparent url(../media/newSocial/socialStackoverflow.gif) center no-repeat;
   	background-size: 48px 48px;
 }
 
 .socialStackoverflow:hover {
-   background-image: url(../media/socialStackoverflowHOVERWeb.gif);
+   background-image: url(../media/newSocial/socialStackoverflowHOVER.gif);
    background-size: 48px 48px;
 }
 
@@ -322,6 +299,10 @@ a {
 /******************************
        	   Page Body
 ******************************/
+/*.portfolioWrap {
+	height: 100vh;
+}*/
+
 .blackBar {
 	height: 200px;
 	background-color: black;		/*#1C1D21*/
@@ -329,7 +310,7 @@ a {
 	text-align: center;
 }
 
-.primaryContent {
+.portfolioContent {
 	text-align: center;
 	width: 100vw;
 	margin: 0 auto 0 auto;
@@ -338,7 +319,7 @@ a {
 
 .primaryContentWhite {
 	text-align: center;
-	width: 100vw;
+	max-width: 80%;
 	margin: 0 auto 0 auto;
 	background-color: rgb(249, 249, 249);
 }
@@ -353,6 +334,7 @@ a {
 
 .contactContent {
 	text-align: center;
+	min-height: calc(100vh - 520px);
 	width: 100vw;
 	margin: 0 auto 0 auto;
 	background-color: rgb(249, 249, 249);	/* offwhite */
@@ -499,7 +481,7 @@ a {
 	margin-left: 5px;
 }
 
-p.noMarginTop span {
+p span {
 	display: block;
 }
 
@@ -517,39 +499,6 @@ i:before {		/*apparently, <i> is may not be ideal for icons but I'm using it her
 .headshot {
 	display: block;
 	margin: 0 auto 0;
-}
-
-
-
-/******************************
-Good Class Names Are Like Adjectives!
-******************************/
-.noMarginTop {
-	margin-top: 0;
-}
-
-.noMarginBottom {
-	margin-bottom: 0;
-}
-
-.inline {
-	display: inline;
-}
-
-.italic {
-	font-style: italic;
-}
-
-.bold {
-	font-weight: bold;
-}
-
-.textLeft {
-	text-align: left;
-}
-
-.isHidden {
-	display: none;
 }
 
 
@@ -574,11 +523,11 @@ footer {
 
 
 
-/******************************
+/************************************************************************************************************************************************************************************
         Media Queries
-******************************/
+************************************************************************************************************************************************************************************/
 @media screen and (min-width: 1562px) {		/*------optimizes Contact page on large screens------*/
-	
+
 	.contactIcon {
 		width: 130px;
 	}
@@ -590,43 +539,22 @@ footer {
 }
 
 
-@media screen and (max-width: 823px) {			/*------Narrow Desktop and iPad (768px)-----*/
+@media screen and (max-width: 865px) {			/*------Narrow Desktop and iPad (768px)-----*/
 
 	.parallax {
-		display: none;
-	}
-
-/*	.heroMobile {
-		display: block;
-		width: 100vw;
-		opacity: .8;
-	}*/
-
-/*	.herobgMobile {
 		background-image: url(../media/dot.svg), url(../media/Hero2CroppedWeb.jpg);
-		background-size: 5px, cover;
-	    min-height: calc(100vh - 69px);
+		min-height: 100vh;
+	}
 
+/*	header {
+		height: 75px;
 	}*/
 
-	.parallaxMobile {
-	display: block;
-
-    background-image: url(../media/dot.svg), url(../media/Hero2CroppedWeb.jpg);
-
-
-    min-height: calc(100vh - 55px);
-
-
-    background-attachment: fixed;
-    background-position: center;
-
-    background-size: 5px, cover;
+	h1.mainHeader {
+		font-size: 2.5em;
 	}
 
-	header {
-		height: 55px;
-	}
+	/* mobile nav */
 
 	.nav {
 		display: none;
@@ -636,10 +564,9 @@ footer {
 		display: block;
 		height: 25px;
 		width: 100vw;
-		background-color: rgba(0, 0, 0, 1);
 		text-align: center;
-		color: #fff;
-		font-size: .8em;
+		color: #000;
+		font-size: 1.25em;
 	}
 
 	.mobileNav ul {
@@ -650,72 +577,16 @@ footer {
 		padding-right: 10px;
 		position: relative;
 		left: 10px;
-		bottom: 1px;
+/*		bottom: 1px;*/
 	}
 
-	.mobileNav li.indexMobile:hover:after {		/* ipad nav hover and selected states */
-		position: absolute; 
-		content:''; 
-	  	width:45px; 
-	  	height:1px; 
-	  	background: white; 
-	  	top: 22px;
-	  	right: 9px;
+	/* ipad nav hover and selected states */
+	a.animatedLine:hover:after {
+	  width: 80%; 
+	  left: 4%; 			/* HOME is out of line */
 	}
 
-	.mobileNav li.portfolioMobile:hover:after {
-		position: absolute; 
-		content:''; 
-	  	width:60px; 
-	  	height:1px; 
-	  	background: white; 
-	  	top: 22px;
-	  	right: 22px;
-	}
-
-	.mobileNav li.contactMobile:hover:after {
-		position: absolute; 
-		content:''; 
-	  	width:55px; 
-	  	height:1px; 
-	  	background: white; 
-	  	top: 22px;
-	  	right: 16.5px;
-	}
-
-/*	.selectedIndexMobile:after {
-			position: absolute; 
-			content:''; 
-		  	width:45px; 
-		  	height:1px; 
-		  	background: white; 
-		  	top: 22px;
-		  	right: 8px;
-	}*/
-
-	.selectedPortfolioMobile:after {
-			position: absolute; 
-			content:''; 
-		  	width:60px; 
-		  	height:1px; 
-		  	background: white; 
-		  	top: 22px;
-		  	right: 22px;
-	}
-
-	.selectedContactMobile:after {
-			position: absolute; 
-			content:''; 
-		  	width:55px; 
-		  	height:1px; 
-		  	background: white; 
-		  	top: 22px;
-		  	right: 16.5px;
-	}
-
-
-
-	.primaryContent {
+	.primaryContentWhite {
 		max-width: 90%;
 	}
 
@@ -730,16 +601,12 @@ footer {
 		display: none;
 	}
 
-
 	.blackBarMobile {
 		display: block;
 		width: 100vw;
 		height: 200px;
 		background-color: black;		/*#1C1D21*/
-/*		margin-bottom: 40px;*/
 		text-align: center;
-		position: relative;		/* sloppy hack to remove mysterious white line. LOOK INTO WHAT THAT LINE IS CAUSED BY - SO ENDLESSLY MYSTERIOUS */
-		bottom: 9px;
 	}
 	
 	.portfolioHeaderMobile {
@@ -798,9 +665,6 @@ footer {
 		margin-bottom: 50px;
 	}
 
-		.primaryContent {		/*------Narrow Browser un-centered tiles fix-----*/
-		max-width: 100%;
-	}
 }
 
 
@@ -881,7 +745,7 @@ footer {
 	}
 
 	nav ul li {
-		font-size: 1.25em;
+		font-size: 1em;
 	}
 
 	.headshot {
@@ -897,15 +761,15 @@ footer {
 
 @media screen and (max-width: 377px) {			/*------Firefox super narrow browser window------*/
 	
-	h1.mainHeader {
-		font-size: 1.40em;
-	}
 
-	header {
+
+/*	header {
 		height: 35px;
 	}
+*/
+	/* mobile nav hover and selected states */
 
-	.mobileNav li.indexMobile:hover:after {		/* mobile nav hover and selected states */
+	/*.mobileNav li.indexMobile:hover:after {		
 		position: absolute; 
 		content:''; 
 	  	width:39px; 
@@ -933,9 +797,9 @@ footer {
 	  	background: white; 
 	  	top: 20px;
 	  	right: 8px;
-	}
+	}*/
 
-	.selectedPortfolioMobile:after {
+/*	.selectedPortfolioMobile:after {
 		position: absolute; 
 		content:''; 
 	  	width:58px; 
@@ -953,20 +817,20 @@ footer {
 	  	background: white; 
 	  	top: 20px;
 	  	right: 8px;
-	}
+	}*/
 
-	.socialGithub, .socialTreehouse, .socialLinkedin, .socialStackoverflow {
+/*	.socialGithub, .socialTreehouse, .socialLinkedin, .socialStackoverflow {
 		width: 25px;
 		height: 25px;
 		background-size: 25px 25px;
-	}
+	}*/
 
-	.socialGithub:hover, .socialTreehouse:hover, .socialLinkedin:hover, .socialStackoverflow:hover {
+/*	.socialGithub:hover, .socialTreehouse:hover, .socialLinkedin:hover, .socialStackoverflow:hover {
 		background-size: 25px 25px;
-	}
+	}*/
 
 	nav ul li {
-		font-size: 1.15em;
+		font-size: 1em;
 		top: 1px;
 	}
 

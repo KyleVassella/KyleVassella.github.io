@@ -3,7 +3,6 @@
 ******* ANGULAR *******
 • You need to create static HTML snapshots specially for search engines (to optomize SEO on Angular)
 • Minify (grunt)
-• How to inject HTML outside of main ng-view scope and only during certain views? Plus opening/closing tag? Use javascript/jquery to inject them maybe? Hide them at first, but then show them if a certain condition is met via angular or the code angular injects. Perhaps ask the question here: http://stackoverflow.com/questions/12506329/how-to-dynamically-change-header-based-on-angularjs-partial-view
 
 
 • Why not just change the background-image property on .parallax on the media query? Why the need to change the script so much? Whoops
@@ -49,29 +48,62 @@ Parallax doesn't work: http://stackoverflow.com/questions/37869410/css-parallax-
 <html lang="en">
 	<head>
  		<meta charset="utf-8">
-<!--  		<meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+ 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	 	<title>Kyle Vassella | Web Developer</title>
 		<!-- <link href="https://fonts.googleapis.com/css?family=Hind:300,600" rel="stylesheet"> -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
-   		<link rel = "stylesheet" href = "assets/css/styles.css">
+<!--    		<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/> -->
+   		<link rel = "stylesheet" href = "css/styles.css">
 	</head>
 	<body ng-app="singlePage">
-		<div>
+		<div class="wrap">
+<!-- 			<header class="group">
+
+
+				<h1 class="mainHeader"><a class="fw300" href="https://kylevassella.github.io">KYLE <span class="fw700">V</span>ASSELLA</a></h1>
+				<div class ="headerMenu">
+					<div class='nav'>
+						<nav>
+							<ul>
+								<li class="index selectedIndex"><a class="fw300" href="index.html">HOME</a></li>
+								<li class="portfolio"><a class="fw300" href="portfolio.html">PORTFOLIO</a></li>
+								<li class="contact"><a class="fw300" href="contact.html">CONTACT</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="socialDiv">
+						<a href="https://github.com/kylevassella" class="socialGithub" alt="Github logo" target="_blank"></a>
+						<a href="http://teamtreehouse.com/kylevassella/" class="socialTreehouse" alt="TeamTreehouse logo" target="_blank"></a>
+						<a href="https://www.linkedin.com/in/kyle-vassella-64619371" class="socialLinkedin" alt="Linkedin logo" target="_blank"></a>
+						<a href="http://stackoverflow.com/users/6647188/kyle-vassella?tab=profile" class="socialStackoverflow" alt="Stackoverflow logo" target="_blank"></a>
+					</div>
+				</div>
+			</header> -->
+					<!-- 	<div class="mobileNav isHidden">
+							<nav>
+								<ul>
+									<li class="indexMobile selectedIndexMobile"><a class="fw300" href="index.html">HOME</a></li>
+									<li class="portfolioMobile"><a class="fw300" href="portfolio.html">PORTFOLIO</a></li>
+									<li class="contactMobile"><a class="fw300" href="contact.html">CONTACT</a></li>
+								</ul>
+							</nav>
+						</div> -->
+
 
 			<section class="parallax">
 							<header class="group">
 
 
-				<h1 id="home" class="mainHeader"><a class="fw300" href="https://kylevassella.github.io">KYLE<span class="fw700">V</span>ASSELLA</a></h1>
+				<h1 class="mainHeader"><a class="fw300" href="https://kylevassella.github.io"><!-- <span class="fw700"> -->K<!-- </span> -->YLE<span class="fw700">V</span>ASSELLA</a><!-- <hello-poppet></hello-poppet> --></h1>
 				<div class ="headerMenu">
 					<div class='nav'>
 						<nav>
 							<ul>
-								<li class="index selectedIndex"><a class="smoothScroll animatedLine fw300" href="#home">HOME</a></li>
-								<li class="portfolio"><a class="smoothScroll animatedLine fw300" href="#portfolio">PORTFOLIO</a></li>
-								<li class="contact"><a class="smoothScroll animatedLine fw300" href="#contact">CONTACT</a></li>
+								<li class="index selectedIndex"><a class="animatedLine fw300" href="index.html">HOME</a></li>
+								<li class="portfolio"><a class="animatedLine fw300" href="portfolio.html">PORTFOLIO</a></li>
+								<li class="contact"><a class="animatedLine fw300" href="contact.html">CONTACT</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -86,12 +118,13 @@ Parallax doesn't work: http://stackoverflow.com/questions/37869410/css-parallax-
 							<div class="mobileNav isHidden">
 							<nav>
 								<ul>
-									<li class="indexMobile selectedIndexMobile"><a class="smoothScroll animatedLine fw300" href="#index">HOME</a></li>
-									<li class="portfolioMobile"><a class="smoothScroll animatedLine fw300" href="#portfolioMobile">PORTFOLIO</a></li>
-									<li class="contactMobile"><a class="smoothScroll animatedLine fw300" href="#contact">CONTACT</a></li>
+									<li class="indexMobile selectedIndexMobile"><a class="animatedLine fw300" href="index.html">HOME</a></li>
+									<li class="portfolioMobile"><a class="animatedLine fw300" href="portfolio.html">PORTFOLIO</a></li>
+									<li class="contactMobile"><a class="animatedLine fw300" href="contact.html">CONTACT</a></li>
 								</ul>
 							</nav>
 						</div>
+			
 			</section>
 			
 
@@ -123,33 +156,24 @@ Parallax doesn't work: http://stackoverflow.com/questions/37869410/css-parallax-
 			</section> -->
 
 
-			<section id="portfolioMobile" class="blackBarMobile isHidden">
+			<section class="blackBarMobile isHidden">
 				<span class="portfolioHeaderMobile"><a style="font-weight: 300;" href="https://kylevassella.github.io/portfolio.html">PROJECTS:</a></span>
 				<span class="underlineWhite"></span>
 			</section>
 
-<!-- <div class="portfolioWrap">	 -->			
-			<section id="portfolio" class="blackBar">
+				
+			<section class="blackBar">
 				<span class="portfolioHeader"><a style="font-weight: 300;" href="https://kylevassella.github.io/portfolio.html">PROJECTS:</a></span>
 				<span class="underlineWhite"></span>
 			</section>
 
 
-			<section class="portfolioContent">
+			<section class="primaryContent">
 				<div class="tileWrap"><a href="https://kylevassella.github.io/jcRealty.html" class="tileJCRealty" alt="J&C Realty tile" target="_blank"></a></div>
 				<div class="tileWrap"><a href="https://kylevassella.github.io/randomQuoteGenerator.html" class="tileProject1" alt="Project 1 tile" target="_blank"></a></div>
 				<div class="tileWrap"><a href="https://kylevassella.github.io/dynamicPaginatedSearch.html" class="tileProject2" alt="Project 2 tile" target="_blank"></a></div>
 				<div class="tileWrap"><a href="https://kylevassella.github.io/interactiveShoppingForm.html" class="tileProject3" alt="Project 3 tile" target="_blank"></a></div>
 			</section>
-<!-- </div> -->
-
-			<section id="contact" class="contactContent">
-					<img class="contactIcon" src="assets/media/contactEmail.png" alt="email icon"><h1 class="inline">kylevassella@gmail.com</h1><br>
-					<img class="contactIcon" src="assets/media/contactPhone.png" alt="phone icon"><h1 class="inline">281-216-2492</h1>
-			</section>
-			<img class="headshot" src="assets/media/KyleVassellaProfile2.gif">
-		
-
 		</div>
 		<footer>
 		 	<p class="fw300 copyright">&copy; 2016 KYLE VASSELLA.</p>
@@ -157,9 +181,10 @@ Parallax doesn't work: http://stackoverflow.com/questions/37869410/css-parallax-
 <!-- 		    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
 			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
 		    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular-resource.min.js"></script>
+		    
 			<script type="text/javascript" src="scripts/app.js"></script>
 		    <script type="text/javascript" src="scripts/hello-poppet.js"></script> -->
-		<script type="text/javascript" src="assets/js/jquery-3.1.1.min.js"></script>
-		<script type="text/javascript" src="assets/js/app.js"></script>
+<!-- 		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script> -->
 	</body>
 </html>
