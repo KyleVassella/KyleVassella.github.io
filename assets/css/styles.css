@@ -317,7 +317,7 @@ a {
 
 .parallax-hero {
 	position:fixed;
-	background-image: url(../media/dot.svg), url(../media/hero2_9.jpg);
+	background-image: url(../media/dot.svg), url(../media/hero3-8.jpg);
     background-position: center;
     background-size: 5px, cover;
         min-height: calc(100vh);
@@ -332,7 +332,7 @@ a {
 
 .parallax {
 	    /* The image used */
-    background-image: url(../media/dot.svg), url(../media/hero2_9.jpg);
+    background-image: url(../media/dot.svg), url(../media/hero3-8.jpg);
     /* Set a specific height */
     min-height: calc(100vh);
 
@@ -452,19 +452,14 @@ h1.hero-h1 {
 	height: 100vh;
 }
 
-.black-bar {
-	height: 200px;
-	background-color: rgba(0, 18, 34, 1);		/*#1C1D21*/
-/*	margin-bottom: 8px;*/
-	text-align: center;
-}
-
 .portfolio-content {
 	text-align: center;
 	width: 100vw;
-	min-height: calc(100vh - 200px);
+	min-height: calc(100vh);
 	margin: 0 auto 0 auto;
-	background-color: rgba(0, 18, 34, 1);  /*rgba(18, 28, 36, 1)*/
+	/*background-color: rgba(0, 18, 34, 1); */ /*rgba(18, 28, 36, 1)*/
+	    /*background: radial-gradient(circle farthest-corner at 100% 100%,#46b8cd,#276073 50%,#182e4a);*/
+	    background: radial-gradient(circle farthest-corner at 100% 100%,#6E768C, #2D3449 50%, #0B132B);
 }
 
 .primary-content-white {
@@ -892,9 +887,6 @@ footer {
 		font-size: 1.75em;
 	}
 
-	header {
-		height: 40px;
-	}
 
 	.social-github, .social-treehouse, .social-linkedin, .social-stackoverflow {
 		width: 35px;
