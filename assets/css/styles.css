@@ -44,7 +44,7 @@ body {
 
 body:after {		/* pre-load hover images to avoid first time load delay when hovering over social icons & project tiles */
  display:none;
- content: url(../media/newSocial/socialGithubHOVER.gif) url(../media/newSocial/socialTreehouseHOVER.gif) url(../media/newSocial/socialLinkedinHOVER.gif) url(../media/newSocial/socialStackoverflowHOVER.gif) url(../media/tileJCRealtyHOVERWeb.gif) url(../media/tileProject1HOVERWeb.gif) url(../media/tileProject2HOVERWeb.gif) url(../media/tileProject3HOVERWeb.gif);
+ content: url(../media/newSocial/socialGithubHOVER.gif) url(../media/newSocial/socialTreehouseHOVER.gif) url(../media/newSocial/socialLinkedinHOVER.gif) url(../media/newSocial/socialStackoverflowHOVER.gif) url(../media/tileJCRealtyHOVERWeb.gif) url(../media/tileProject1HOVERWeb.gif) url(../media/tileProject2HOVERWeb.gif) url(../media/tileProject3HOVERWeb.gif) url('../media/hero-chevron-2HOVER.png');
 }
 
 /***********************************************************
@@ -308,6 +308,14 @@ a {
 	top: 13px;
 }
 
+.contact-container {
+    display: inline-block;
+    /* padding: 40px 20px; */
+    background-color: rgba(255, 245, 253, .1);
+    border-radius: 15px;
+    padding: 0 20px 0 20px;
+    margin-top: 40px;
+}
 
 
 /***********************************************************
