@@ -1,12 +1,29 @@
 <!-- IMPROVEMENTS:
 
+• Optimize file names (-, lowercase)
+• Extra floating hero (mobile?) behind portfolioContent (make background transparent to see)
+• If keeping navy portfolio background, change tile hover state to orange.
+• Refactor to change camelCase CSS selectors to dashes, all lower case
+• Offset parallax breaks smoothscroll
+• Chagne parallaxed hero scroll offset
+• ROOT mobile state
+• No scrolling overflow on bottom? (so you cant scroll past the footer image, not even bounce past)
+• Make smoothscrolling increase in speed as time goes on (not one static scroll speed)
+• Parallaxed footer content! (avita)
+• '100vh' bug on portfolio black bg if you make window shorter than the height of the project tiles. Flexbox instead?
+
 ******* ANGULAR *******
+• To stop page reloads AND keep URL's clean use the second answer on http://stackoverflow.com/questions/14712223/how-to-handle-anchor-hash-linking-in-angularjs?rq=1
+• Pretty sure that target="_self" solution causes page to reload (defeats purpose of SPA). CHECK THIS
 • You need to create static HTML snapshots specially for search engines (to optomize SEO on Angular)
 • Minify (grunt)
 • How to inject HTML outside of main ng-view scope and only during certain views? Plus opening/closing tag? Use javascript/jquery to inject them maybe? Hide them at first, but then show them if a certain condition is met via angular or the code angular injects. Perhaps ask the question here: http://stackoverflow.com/questions/12506329/how-to-dynamically-change-header-based-on-angularjs-partial-view
 
 
 • Why not just change the background-image property on .parallax on the media query? Why the need to change the script so much? Whoops
+
+******* ALL BROWSERS *******
+Fix extra whitespace if you force scroll up while already at top of page, and on bottom of page too.
 
 ******* FIREFOX *******
 Parallax doesn't work: http://stackoverflow.com/questions/37869410/css-parallax-working-in-chrome-not-working-in-safari-or-firefox
@@ -18,10 +35,18 @@ Parallax doesn't work: http://stackoverflow.com/questions/37869410/css-parallax-
 
 ******* CHROME *******
 
+
 ******* IPAD *******
 
-******* IPHONE (4) *******
+******* WINDOWS PHONE (IE) *******
 
+• HeroMobile needs no-repeat
+• Smoothscroll navigation to Portfolio leaves 1px white line at top (1px of hero is showing)
+
+******* IPHONE (4) (safari)*******
+
+• Hero image is very zoomed in (giant foot)
+• Try a different parallax speed for hero2 other than 0 so that it slightly scrolls down/up too.
 • Use the offwhite color from your hero as the background color or fullscreen/repeating image for the rest of your pages.
 • Sticky header on homepage, ends when portfolio bar reached.
 • Mobile header dissapears now :(
@@ -58,108 +83,78 @@ Parallax doesn't work: http://stackoverflow.com/questions/37869410/css-parallax-
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
    		<link rel = "stylesheet" href = "assets/css/styles.css">
 	</head>
-	<body ng-app="singlePage">
-		<div>
+	<body ng-app="singlePage" ng-controller="routeController">
+		<div class="wrap">
 
-			<section class="parallax">
-							<header class="group">
-
-
-				<h1 id="home" class="mainHeader"><a class="fw300" href="https://kylevassella.github.io">KYLE<span class="fw700">V</span>ASSELLA</a></h1>
-				<div class ="headerMenu">
-					<div class='nav'>
-						<nav>
-							<ul>
-								<li class="index selectedIndex"><a class="smoothScroll animatedLine fw300" href="#home">HOME</a></li>
-								<li class="portfolio"><a class="smoothScroll animatedLine fw300" href="#portfolio">PORTFOLIO</a></li>
-								<li class="contact"><a class="smoothScroll animatedLine fw300" href="#contact">CONTACT</a></li>
-							</ul>
-						</nav>
-					</div>
-					<div class="socialDiv">
-						<a alt="StackOverflow" title="StackOverflow" href="http://stackoverflow.com/users/6647188/kyle-vassella?tab=profile" class="socialStackoverflow" alt="Stackoverflow logo" target="_blank"></a>
-						<a alt="GitHub" title="GitHub" href="https://github.com/kylevassella" class="socialGithub" alt="Github logo" target="_blank"></a>
-						<a alt="TeamTreehouse Profile" title="TeamTreehouse Profile" href="http://teamtreehouse.com/kylevassella/" class="socialTreehouse" alt="TeamTreehouse logo" target="_blank"></a>
-						<a alt="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/kyle-vassella-64619371" class="socialLinkedin" alt="Linkedin logo" target="_blank"></a>
-					</div>
-				</div>
-			</header>
-							<div class="mobileNav isHidden">
-							<nav>
-								<ul>
-									<li class="indexMobile selectedIndexMobile"><a class="smoothScroll animatedLine fw300" href="#index">HOME</a></li>
-									<li class="portfolioMobile"><a class="smoothScroll animatedLine fw300" href="#portfolioMobile">PORTFOLIO</a></li>
-									<li class="contactMobile"><a class="smoothScroll animatedLine fw300" href="#contact">CONTACT</a></li>
-								</ul>
-							</nav>
-						</div>
-			</section>
-			
-
-
-
-<!-- MOBILE PARALLAXED HERO AND HEADER -->
-			
-			<!-- <section class="parallaxMobile isHidden">
+			<section ng-hide="showPortfolioHeader" class="parallax-hero">
 				<header>
-					<h1 class="mainHeader"><a class="fw300" href="https://kylevassella.github.io">KYLE<span class="fw700">V</span>ASSELLA</a></h1>
-					<div class ="headerMenu">
-						<div class="mobileNav" isHidden>
+					<h1 id="home" class="main-header"><a class="fw-300" href="/" target="_self"">KYLE<span class="fw-700">V</span>ASSELLA</a></h1>
+					<div class ="header-menu">
+						<div class='nav'>
 							<nav>
 								<ul>
-									<li class="indexMobile selectedIndexMobile"><a class="animatedLine fw300" href="index.html">HOME</a></li>
-									<li class="portfolioMobile"><a class="animatedLine fw300" href="portfolio.html">PORTFOLIO</a></li>
-									<li class="contactMobile"><a class="animatedLine fw300" href="contact.html">CONTACT</a></li>
+									<li class="index selected-index"><a class="smooth-scroll animated-line fw-300" href="#home">HOME</a></li>
+									<li class="portfolio"><a class="smooth-scroll animated-line fw-300" href="#portfolio">PORTFOLIO</a></li>
+									<li class="contact"><a class="smooth-scroll animated-line fw-300" href="#contact">CONTACT</a></li>
 								</ul>
 							</nav>
 						</div>
-						<div class="socialDiv">
-							<a href="https://github.com/kylevassella" class="socialGithub" alt="Github logo" target="_blank"></a>
-							<a href="http://teamtreehouse.com/kylevassella/" class="socialTreehouse" alt="TeamTreehouse logo" target="_blank"></a>
-							<a href="https://www.linkedin.com/in/kyle-vassella-64619371" class="socialLinkedin" alt="Linkedin logo" target="_blank"></a>
-							<a href="http://stackoverflow.com/users/6647188/kyle-vassella?tab=profile" class="socialStackoverflow" alt="Stackoverflow logo" target="_blank"></a>
+						<div class="social-div">
+							<a alt="StackOverflow" title="StackOverflow" href="http://stackoverflow.com/users/6647188/kyle-vassella?tab=profile" class="social-stackoverflow" alt="Stackoverflow logo" target="_blank"></a>
+							<a alt="GitHub" title="GitHub" href="https://github.com/kylevassella" class="social-github" alt="Github logo" target="_blank"></a>
+							<a alt="TeamTreehouse Profile" title="TeamTreehouse Profile" href="http://teamtreehouse.com/kylevassella/" class="social-treehouse" alt="TeamTreehouse logo" target="_blank"></a>
+							<a alt="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/kyle-vassella-64619371" class="social-linkedin" alt="Linkedin logo" target="_blank"></a>
 						</div>
 					</div>
 				</header>
-			</section> -->
+				<section class="hero-container-section">
+					<div class="hero-container">
+						<h1>JavaScript web development.</h1>
+						<a class="hero-chevron" href="#portfolio"></a>
+					</div>
 
-
-			<section id="portfolioMobile" class="blackBarMobile isHidden">
-				<span class="fw300 portfolioHeaderMobile">PROJECTS:</span>
-				<span class="underlineWhite"></span>
+				</section>
+				
 			</section>
 
-<!-- <div class="portfolioWrap">	 -->			
-			<section id="portfolio" class="blackBar">
-				<span class="fw300 portfolioHeader">PROJECTS:</span>
-				<span class="underlineWhite"></span>
+			
+			<section ng-show="showPortfolioHeader">
+				<header class="portfolio-header">
+					<h1 id="home" class="main-header"><a class="fw-300" href="/" target="_self">KYLE<span class="fw700">V</span>ASSELLA</a></h1>
+					<div class ="header-menu">
+						<div class='nav'>
+							<nav>
+								<ul>
+									<li class="index selected-index"><a class="smooth-scroll animated-line fw-300" href="#!/" target="_self">HOME</a></li>		<!-- Doesn't work on local  -->
+									<li class="portfolio"><a class="smooth-scroll animated-line fw-300" href="#/?scrollTo=portfolio" target="_self">PORTFOLIO</a></li>	<!-- Doesn't work on local -->
+									<li class="contact"><a class="smooth-scroll animated-line fw-300" href="/?scrollTo=contact" target="_self">CONTACT</a></li>	<!-- Redirects to home view, but doesn't scroll -->
+								</ul>
+							</nav>
+						</div>
+						<div class="social-div">
+							<a alt="StackOverflow" title="StackOverflow" href="http://stackoverflow.com/users/6647188/kyle-vassella?tab=profile" class="social-stackoverflow" alt="Stackoverflow logo" target="_blank"></a>
+							<a alt="GitHub" title="GitHub" href="https://github.com/kylevassella" class="social-github" alt="Github logo" target="_blank"></a>
+							<a alt="TeamTreehouse Profile" title="TeamTreehouse Profile" href="http://teamtreehouse.com/kylevassella/" class="social-treehouse" alt="TeamTreehouse logo" target="_blank"></a>
+							<a alt="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/kyle-vassella-64619371" class="social-linkedin" alt="Linkedin logo" target="_blank"></a>
+						</div>
+					</div>
+				</header>
 			</section>
 
 
-			<section class="portfolioContent">
-				<div class="tileWrap"><a href="https://kylevassella.github.io/jcRealty.html" class="tileJCRealty" alt="J&C Realty tile" target="_blank"></a></div>
-				<div class="tileWrap"><a href="https://kylevassella.github.io/randomQuoteGenerator.html" class="tileProject1" alt="Project 1 tile" target="_blank"></a></div>
-				<div class="tileWrap"><a href="https://kylevassella.github.io/dynamicPaginatedSearch.html" class="tileProject2" alt="Project 2 tile" target="_blank"></a></div>
-				<div class="tileWrap"><a href="https://kylevassella.github.io/interactiveShoppingForm.html" class="tileProject3" alt="Project 3 tile" target="_blank"></a></div>
-			</section>
-<!-- </div> -->
-
-			<section id="contact" class="contactContent">
-					<img class="contactIcon" src="assets/media/contactEmail.png" alt="email icon"><h1 class="inline">kylevassella@gmail.com</h1><br>
-					<img class="contactIcon" src="assets/media/contactPhone.png" alt="phone icon"><h1 class="inline">281-216-2492</h1>
-			</section>
-			<img class="headshot" src="assets/media/KyleVassellaProfile2.gif">
+			<div ng-view></div>
+			{{scrollTo}}
 		
 
 		</div>
-		<footer>
+<!-- 		<footer>
 		 	<p class="fw300 copyright">&copy; 2016 KYLE VASSELLA.</p>
-		</footer>
-<!-- 		    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
-			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
-		    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular-resource.min.js"></script>
-			<script type="text/javascript" src="scripts/app.js"></script>
-		    <script type="text/javascript" src="scripts/hello-poppet.js"></script> -->
+		</footer> -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular-resource.min.js"></script>
+		<script type="text/javascript" src="scripts/app.js"></script>
+	    <script type="text/javascript" src="scripts/hello-poppet.js"></script>
 		<script type="text/javascript" src="assets/js/jquery-3.1.1.min.js"></script>
 		<script type="text/javascript" src="assets/js/app.js"></script>
 	</body>

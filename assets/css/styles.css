@@ -3,16 +3,36 @@
 - project tiles anchor tag height needs to be adjusted somehow on browser widths < 600px wide!
 - optimize headshot sticky footer height for ios safari (back button toolbar blocks pic) 
 - optimize sticky footer for Firefox desktop (gap) */
+
+
+
+/*html {   						//removes overflow white space but breaks smooth scrolling! https://github.com/cferdinandi/smooth-scroll/issues/8
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    overflow: auto;
+}*/
+
+
+/*body
+{
+  width: 100%;		 fix Safari viewport ineptitude 
+  height: 100%;		 fix Safari viewport ineptitude 
+  overflow-x: hidden; 
+}*/
+
+/*html, body {
+	overflow: auto;
+	width: 100%;
+	height: 100%;
+}*/
+
 * {
   font-family: 'Open Sans', sans-serif;     /* raleway was original font */
       font-weight: 400;
-}
-
-body
-{
-  width: 100%;		/* fix Safari viewport ineptitude */
-  height: 100%;		/* fix Safari viewport ineptitude */
-  overflow-x: hidden; 
 }
 
 body {
@@ -27,19 +47,25 @@ body:after {		/* pre-load hover images to avoid first time load delay when hover
  content: url(../media/newSocial/socialGithubHOVER.gif) url(../media/newSocial/socialTreehouseHOVER.gif) url(../media/newSocial/socialLinkedinHOVER.gif) url(../media/newSocial/socialStackoverflowHOVER.gif) url(../media/tileJCRealtyHOVERWeb.gif) url(../media/tileProject1HOVERWeb.gif) url(../media/tileProject2HOVERWeb.gif) url(../media/tileProject3HOVERWeb.gif);
 }
 
-/******************************
-Good Class Names Are Like Adjectives!
-******************************/
-
-.fw300 {
+/***********************************************************
+        	Descriptive Class Names
+************************************************************/
+.fw-300 {
 	font-weight: 300;
 }
 
-.fw700 {
+.fw-700 {
 	font-weight: 700;
 }
 
-.whiteBG {
+.six-em {
+	display: block;
+	padding-top: 17px;
+	color: rgb(249, 249, 249);
+	font-size: 6em;
+}
+
+.white-bg {
 	background-color: rgb(249, 249, 249);
 }
 
@@ -51,7 +77,7 @@ Good Class Names Are Like Adjectives!
     margin: 10px auto 45px auto;
 }
 
-.underlineWhite {
+.underline-white {
     display: block;
     width: 100px;
     height: 2px;
@@ -59,16 +85,21 @@ Good Class Names Are Like Adjectives!
     margin: 10px auto 45px auto;
 }
 
-.noMarginTop {
+.no-margin-top {
 	margin-top: 0;
 }
 
-.noMarginBottom {
+.no-margin-bottom {
 	margin-bottom: 0;
 }
 
-.marginBottom80 {
+.margin-bottom-80 {
 	margin-bottom: 80px;
+}
+
+.padding-top-bottom {
+	padding-top: 75px;
+	padding-bottom: 75px;
 }
 
 .inline {
@@ -83,16 +114,24 @@ Good Class Names Are Like Adjectives!
 	font-weight: bold;
 }
 
-.textLeft {
+.white {
+	color: rgb(250, 240, 248);
+}
+
+.text-left {
 	text-align: left;
 }
 
-.isHidden {
+.is-hidden {
 	display: none;
 }
 
 .wrap {
 	min-height: calc(100vh - 70px);
+}
+
+.off-white {
+	background-color: rgb(250, 240, 248);
 }
 
 h2 {
@@ -109,16 +148,17 @@ h3 {
 
 
 
-/******************************
-        	Heading
-******************************/
+/***********************************************************
+        	Header
+************************************************************/
 header {
 	height: 55px;
 /*	background-color: #090302;*/
 	overflow: hidden;
+	position: relative;		/* lets you set position: absolute; on your .nav when screen gets to mobile size so you can position .nav outside of header so .social-div isn't affected */
 }
 
-h1.mainHeader {
+h1.main-header {
 	position: relative;
 	left: 20px;
     float: left;
@@ -127,17 +167,18 @@ h1.mainHeader {
 	font-size: 3em;  /*3em*/
 	color: #000;
 	white-space: pre;	/* preserves white space (extra spaces in text) in the browser */
+	letter-spacing: 2.5px;
 }
 
-.headerMenu {
+.header-menu {
 	float: right;
 }
 
 
 
-/******************************
-        Navigation
-******************************/
+/***********************************************************
+        	Navigation
+************************************************************/
 .nav {
 	position: relative;
 	bottom: 6.5px;
@@ -146,6 +187,7 @@ h1.mainHeader {
 	list-style: none;
 	margin-right: 10px;
 	margin-top: 0;
+	letter-spacing: 3px;
 }
 
 nav ul {
@@ -165,7 +207,7 @@ li.portfolio {
 	padding: 0 11px;
 }
 
-a.animatedLine:after {
+a.animated-line:after {
   background: none repeat scroll 0 0 transparent;
   bottom: -1px;
   content: "";
@@ -178,9 +220,9 @@ a.animatedLine:after {
   width: 0;
 }
 
-a.animatedLine:hover:after {
+a.animated-line:hover:after {
   width: 80%; 
-  left: 9.5%; 
+  left: 8.8%; /* alignment */
 }
 
 nav ul li.selected {
@@ -197,16 +239,16 @@ a {
 
 
 
-/******************************
-        Social Media
-******************************/
-.socialDiv {
+/***********************************************************
+        	Social Media
+************************************************************/
+.social-div {
 	display: inline-block;
 	margin-right: 10px;
 	margin-top: 3px;
 }
 
-.socialGithub {
+.social-github {
 	height: 48px;
 	width: 48px;
 	display: inline-block;
@@ -214,12 +256,12 @@ a {
   	background-size: 48px 48px;
 }
 
-.socialGithub:hover {
+.social-github:hover {
    background-image: url(../media/newSocial/socialGithubHOVER.gif);
    background-size: 48px 48px;
 }
 
- .socialTreehouse {
+ .social-treehouse {
 	height: 48px;
 	width: 48px;
 	display: inline-block;
@@ -227,12 +269,12 @@ a {
   	background-size: 48px 48px;
 }
 
-.socialTreehouse:hover {
+.social-treehouse:hover {
    background-image: url(../media/newSocial/socialTreehouseHOVER.gif);
    background-size: 48px 48px;
 }
 
-.socialLinkedin {
+.social-linkedin {
 	height: 48px;
 	width: 48px;
 	display: inline-block;
@@ -240,12 +282,12 @@ a {
   	background-size: 48px 48px;
 }
 
-.socialLinkedin:hover {
+.social-linkedin:hover {
    background-image: url(../media/newSocial/socialLinkedinHOVER.gif);
    background-size: 48px 48px;
 }
 
-.socialStackoverflow {
+.social-stackoverflow {
 	height: 48px;
 	width: 48px;
 	display: inline-block;
@@ -253,12 +295,12 @@ a {
   	background-size: 48px 48px;
 }
 
-.socialStackoverflow:hover {
+.social-stackoverflow:hover {
    background-image: url(../media/newSocial/socialStackoverflowHOVER.gif);
    background-size: 48px 48px;
 }
 
-.contactIcon {
+.contact-icon {
 	display: inline;
 	margin-right: 30px;
 	width: 8vw;
@@ -268,86 +310,227 @@ a {
 
 
 
+/***********************************************************
+        	Hero/Parallax
+************************************************************/
 
-/******************************
-       Desktop Portfolio
-******************************/
-/*.hero {
-    background-image: url(../media/Desk4Web.gif);       background-image: linear-gradient(140deg,rgba(24,46,74,.8),rgba(70,174,195,.5)),url(../media/Desk2.jpg); 
-    background-repeat: no-repeat;
-    background-size: cover;
+
+.parallax-hero {
+	position:fixed;
+	background-image: url(../media/dot.svg), url(../media/hero2_9.jpg);
     background-position: center;
-    min-height: calc(100vh - 55px);
-}*/
+    background-size: 5px, cover;
+        min-height: calc(100vh);
+        width: 100%;
+}
+
+.parallax-stationary {
+	position: relative;
+	top: 100vh;
+
+}
 
 .parallax {
 	    /* The image used */
-    background-image: url(../media/dot.svg), url(../media/hero2.jpg);
-
+    background-image: url(../media/dot.svg), url(../media/hero2_9.jpg);
     /* Set a specific height */
     min-height: calc(100vh);
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
-   /* background-repeat: no-repeat;*/
     background-size: 5px, cover;
+    /*    background-repeat: no-repeat;*/
+
 }
 
+h1.hero-h1 {
+	margin: 0 auto;
+}
 
+.hero-container-section {
+	text-align: center;
+}
 
-/******************************
-       	   Page Body
-******************************/
-/*.portfolioWrap {
+.hero-container {
+	display: inline-block;
+	margin: 35vh auto 15vh auto;
+	/*padding: 40px 20px;*/
+	padding: 0 20px;
+
+	background-color: rgba(255, 245, 253, .1);  /*2C302E **0B132B **1C2541 89, 101, 111, .9*/
+	border-radius: 15px;
+}
+
+.hero-container h1 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 70px;
+	font-weight: bolder;
+	color: rgb(255, 245, 253);
+	text-shadow: 1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0px 1px 0 #000,
+    0px -1px 0 #000,
+    -1px 0px 0 #000,
+    1px 0px 0 #000,
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0px 2px 0 #000,
+    0px -2px 0 #000,
+    -2px 0px 0 #000,
+    2px 0px 0 #000,
+    1px 2px 0 #000,
+    -1px 2px 0 #000,
+    1px -2px 0 #000,
+    -1px -2px 0 #000,
+    2px 1px 0 #000,
+    -2px 1px 0 #000,
+    2px -1px 0 #000,
+    -2px -1px 0 #000;
+/*	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;*/
+}
+
+.hero-container p {
+	font-size: 30px;
+	font-weight: bolder;
+	color: rgb(255, 245, 253);
+	text-shadow: 1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0px 1px 0 #000,
+    0px -1px 0 #000,
+    -1px 0px 0 #000,
+    1px 0px 0 #000,
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0px 2px 0 #000,
+    0px -2px 0 #000,
+    -2px 0px 0 #000,
+    2px 0px 0 #000,
+    1px 2px 0 #000,
+    -1px 2px 0 #000,
+    1px -2px 0 #000,
+    -1px -2px 0 #000,
+    2px 1px 0 #000,
+    -2px 1px 0 #000,
+    2px -1px 0 #000,
+    -2px -1px 0 #000;
+/*	    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+}
+
+.hero-chevron {
+	width: 200px;
+	height: 150px;
+	margin: auto;
+	margin-top: -25px;
+	display: block;
+	background:transparent url('../media/hero-chevron-2.png') center no-repeat;
+
+}
+
+.hero-chevron:hover {
+	background-image: url('../media/hero-chevron-2HOVER.png');
+
+}
+
+.hero-chevron-img {
+	width: 100%;
+}
+
+/***********************************************************
+        	Page Body
+************************************************************/
+.portfolio-wrap {
 	height: 100vh;
-}*/
+}
 
-.blackBar {
+.black-bar {
 	height: 200px;
-	background-color: black;		/*#1C1D21*/
+	background-color: rgba(0, 18, 34, 1);		/*#1C1D21*/
 /*	margin-bottom: 8px;*/
 	text-align: center;
 }
 
-.portfolioContent {
+.portfolio-content {
 	text-align: center;
 	width: 100vw;
+	min-height: calc(100vh - 200px);
 	margin: 0 auto 0 auto;
-	background-color: black;
+	background-color: rgba(0, 18, 34, 1);  /*rgba(18, 28, 36, 1)*/
 }
 
-.primaryContentWhite {
+.primary-content-white {
 	text-align: center;
 	max-width: 80%;
 	margin: 0 auto 0 auto;
 	background-color: rgb(249, 249, 249);
 }
 
-.portfolioHeader {
-	font-size: 6.5em;
-	letter-spacing: 6px;
+.portfolio-header {
 	display: block;
-	padding-top: 17px;
 	color: rgb(249, 249, 249);
 }
 
-.contactContent {
+.contact-content {
 	text-align: center;
-	min-height: calc(100vh - 520px);
+	height: calc(100vh - 353px);
 	width: 100vw;
 	margin: 0 auto 0 auto;
-	background-color: rgb(249, 249, 249);	/* offwhite */
-	padding-top: 75px;
+/*	background-color: rgb(250, 240, 248);*/	/* offwhite */
+	/*padding-top: 75px;*/
 	font-size: 4vw;
 }
 
+.contact-info {
+	display: block;
+	font-weight: bolder;
+	text-shadow: 1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0px 1px 0 #000,
+    0px -1px 0 #000,
+    -1px 0px 0 #000,
+    1px 0px 0 #000,
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0px 2px 0 #000,
+    0px -2px 0 #000,
+    -2px 0px 0 #000,
+    2px 0px 0 #000,
+    1px 2px 0 #000,
+    -1px 2px 0 #000,
+    1px -2px 0 #000,
+    -1px -2px 0 #000,
+    2px 1px 0 #000,
+    -2px 1px 0 #000,
+    2px -1px 0 #000,
+    -2px -1px 0 #000;
+}
 
+.macbook-hero {
+	background: url(../media/dot.svg), url(../media/macbook-hero-3-9.jpg);
+	background-size: 8px, cover;
+}
 
+.headshot {
+	display: block;
+	margin: 0 auto 0;
+}
 
 /*-------Project JC Realty-------*/
 
-.tileJCRealty {
+.tile-jcrealty {
 	width: 600px;
 	height: 423px;
 	display: inline-block;
@@ -355,14 +538,14 @@ a {
   	background-size: 100% auto;
 }
 
-.tileJCRealty:hover {
+.tile-jcrealty:hover {
    background-image: url(../media/tileJCRealtyHOVERWeb.gif);
    background-size: 100% auto;
 }
 
 /*-------Project 1-------*/
 
-.tileProject1 {
+.tile-project-1 {
 	width: 600px;
 	height: 423px;
 	display: inline-block;
@@ -370,14 +553,14 @@ a {
   	background-size: 100% auto;
 }
 
-.tileProject1:hover {
+.tile-project-1:hover {
    background-image: url(../media/tileProject1HOVERWeb.gif);
    background-size: 100% auto;
 }
 
 /*-------Project 2-------*/
 
-.tileProject2 {
+.tile-project-2 {
 	width: 600px;
 	height: 423px;
 	display: inline-block;
@@ -385,19 +568,19 @@ a {
   	background-size: 100% auto;
 }
 
-.tileProject2:hover {
+.tile-project-2:hover {
    background-image: url(../media/tileProject2HOVERWeb.gif);
    background-size: 100% auto;
 }
 
-.tileWrap {
+.tile-wrap {
 	width: 25vw;
 	display: inline;
 }
 
 /*-------Project 3-------*/
 
-.tileProject3 {
+.tile-project-3 {
 	width: 600px;
 	height: 423px;
 	display: inline-block;
@@ -405,18 +588,18 @@ a {
   	background-size: 100% auto;
 }
 
-.tileProject3:hover {
+.tile-project-3:hover {
    background-image: url(../media/tileProject3HOVERWeb.gif);
    background-size: 100% auto;
 }
 
 
 
-/******************************
-		Project Pages
-******************************/
+/***********************************************************
+        	Project Pages
+************************************************************/
 
-.portfolioPageTitle {
+.portfolio-page-title {
 	font-size: 6.5em;
 	letter-spacing: 4px;
 	display: block;
@@ -425,13 +608,13 @@ a {
 	margin-bottom: 0;
 }
 
-.projectH2 {
+.project-h2 {
 	margin-top: 0;
 	margin-bottom: 100px;
 }
 
 
-.demoButton {
+.demo-button {
 	-moz-box-shadow:inset 0px 1px 0px 0px #cf866c;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #cf866c;
 	box-shadow:inset 0px 1px 0px 0px #cf866c;
@@ -457,7 +640,7 @@ a {
 	text-shadow:0px 1px 0px #854629;
 	margin-bottom: 50px;
 }
-.demoButton:hover {
+.demo-button:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #d0451b));
 	background:-moz-linear-gradient(top, #bc3315 5%, #d0451b 100%);
 	background:-webkit-linear-gradient(top, #bc3315 5%, #d0451b 100%);
@@ -467,16 +650,16 @@ a {
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc3315', endColorstr='#d0451b',GradientType=0);
 	background-color:#bc3315;
 }
-.demoButton:active {
+.demo-button:active {
 	position:relative;
 	top:1px;
 }
 
-.programIcon {
+.program-icon {
 	margin-left: 15px;
 }
 
-.githubLink {
+.github-link {
 	color: blue;
 	margin-left: 5px;
 }
@@ -485,7 +668,7 @@ p span {
 	display: block;
 }
 
-.textboxHTML {
+.textbox-html {
 	height: 135px;
 	width: 275px;
 }
@@ -496,16 +679,13 @@ i:before {		/*apparently, <i> is may not be ideal for icons but I'm using it her
 	margin-right: 13px;
 }
 
-.headshot {
-	display: block;
-	margin: 0 auto 0;
-}
 
 
 
-/******************************
+
+/***********************************************************
         	Footer
-******************************/
+************************************************************/
 footer {
 	background-color: black;
 	height: 70px;
@@ -528,40 +708,42 @@ footer {
 ************************************************************************************************************************************************************************************/
 @media screen and (min-width: 1562px) {		/*------optimizes Contact page on large screens------*/
 
-	.contactIcon {
+	.contact-icon {
 		width: 130px;
 	}
 
-	.contactContent {
-		padding-top: 75px;
+	.contact-content {
+		/*min-height: calc(100vh - 270px);*/
+		/*padding-top: 75px;*/
 		font-size: 60px;
+
 	}
 }
 
 
-@media screen and (max-width: 865px) {			/*------Narrow Desktop and iPad (768px)-----*/
+@media screen and (max-width: 961px) {			/*------Narrow Desktop and iPad (768px)-----*/
 
 	.parallax {
 		background-image: url(../media/dot.svg), url(../media/Hero2CroppedWeb.jpg);
 		min-height: 100vh;
 	}
 
-/*	header {
-		height: 75px;
-	}*/
+	header {
+		height: 90px;
+	}
 
-	h1.mainHeader {
+	h1.main-header {
 		font-size: 2.5em;
 	}
 
-	/* mobile nav */
+	/* mobile .nav */
+
 
 	.nav {
-		display: none;
-	}
-
-	.mobileNav {
-		display: block;
+		
+		position: absolute;
+		left: 0%;
+		top: 60%;
 		height: 25px;
 		width: 100vw;
 		text-align: center;
@@ -569,11 +751,11 @@ footer {
 		font-size: 1.25em;
 	}
 
-	.mobileNav ul {
+	.nav ul {
 		padding: 0;
 	}
 
-	.mobileNav li {
+	.nav li {
 		padding-right: 10px;
 		position: relative;
 		left: 10px;
@@ -581,43 +763,23 @@ footer {
 	}
 
 	/* ipad nav hover and selected states */
-	a.animatedLine:hover:after {
+	a.animated-line:hover:after {
 	  width: 80%; 
 	  left: 4%; 			/* HOME is out of line */
 	}
 
-	.primaryContentWhite {
+	.primary-content-white {
 		max-width: 90%;
 	}
 
-	.projectH1 {
+	.project-h1 {
 		font-size: 4em;
 		font-weight: 600;
 		margin-top: 30px;
 		margin-bottom: 0;
 	}
 
-	.blackBar {
-		display: none;
-	}
-
-	.blackBarMobile {
-		display: block;
-		width: 100vw;
-		height: 200px;
-		background-color: black;		/*#1C1D21*/
-		text-align: center;
-	}
-	
-	.portfolioHeaderMobile {
-		display: block;
-		font-size: 4em;
-		padding-top: 45px;
-		font-weight: 600;
-		color: rgb(249, 249, 249);
-	}
-
-	.tileWrap {
+	.tile-wrap {
 		width: 100%;
 		display: block;
 		margin: 0 auto;
@@ -628,17 +790,17 @@ footer {
 
 @media screen and (max-width: 667px) {	/* ---- Iphone 6 ---- */
 
-	.projectH1 {
+	.project-h1 {
 		font-size: 3.5em;
 		margin-top: 30px;
 		margin-bottom: 0;
 	}
 
-	.projectH2 {
+	.project-h2 {
 		margin-bottom: 70px;
 	}
 
-	.demoButton{
+	.demo-button{
 		-moz-box-shadow:inset 0px 1px 0px 0px #cf866c;
 		-webkit-box-shadow:inset 0px 1px 0px 0px #cf866c;
 		box-shadow:inset 0px 1px 0px 0px #cf866c;
@@ -670,50 +832,50 @@ footer {
 
 @media screen and (max-width: 599px) {			/*------THIS NEEDS FIXING & UNIT CONSISTENCY - dynamic project tile sizes for when browser becomes less wide than static 600px project tiles------*/
 		
-	.tileJCRealty {
+	.tile-jcrealty {
 		width: 100vw;
 		display: inline-block;
 	  	background:transparent url(../media/tileJCRealtyWeb.gif) center no-repeat;
 	  	background-size: 100vw;
 	}
 
-	.tileJCRealty:hover {
+	.tile-jcrealty:hover {
 	   background-image: url(../media/tileJCRealtyHOVERWeb.gif);
 	   background-size: 100vw;
 	}
 
-	.tileProject1 {
+	.tile-project-1 {
 		width: 100vw;
 		display: inline-block;
 	  	background:transparent url(../media/tileProject1Web.gif) center no-repeat;
 	  	background-size: 100vw;
 		}
 
-	.tileProject1:hover {
+	.tile-project-1:hover {
 	   background-image: url(../media/tileProject1HOVERWeb.gif);
 	   background-size: 100vw;
 	}
 
-	.tileProject2 {
+	.tile-project-2 {
 		width: 100%;
 		display: inline-block;
 	  	background:transparent url(../media/tileProject2Web.gif) center no-repeat;
 	  	background-size: 100vw;
 	}
 
-	.tileProject2:hover {
+	.tile-project-2:hover {
 	   background-image: url(../media/tileProject2HOVERWeb.gif);
 	   background-size: 100vw;
 	}
 
-	.tileProject3 {
+	.tile-project-3 {
 		width: 100%;
 		display: inline-block;
 	  	background:transparent url(../media/tileProject3Web.gif) center no-repeat;
 	  	background-size: 100vw;
 	}
 
-	.tileProject3:hover {
+	.tile-project-3:hover {
 	   background-image: url(../media/tileProject3HOVERWeb.gif);
 	   background-size: 100vw;
 	}
@@ -722,11 +884,11 @@ footer {
 
 @media screen and (max-width: 532px) {			/*------Narrow browser, Iphone 4 (320px), other small viewport widths------*/
 	
-	.herobgMobile {
+	.hero-bg-mobile {
 		min-height: calc(100vh - 55px);
 	}
 
-	h1.mainHeader {
+	h1.main-header {
 		font-size: 1.75em;
 	}
 
@@ -734,13 +896,13 @@ footer {
 		height: 40px;
 	}
 
-	.socialGithub, .socialTreehouse, .socialLinkedin, .socialStackoverflow {
+	.social-github, .social-treehouse, .social-linkedin, .social-stackoverflow {
 		width: 35px;
 		height: 35px;
 		background-size: 35px 35px;
 	}
 
-	.socialGithub:hover, .socialTreehouse:hover, .socialLinkedin:hover, .socialStackoverflow:hover {
+	.social-github:hover, .social-treehouse:hover, .social-linkedin:hover, .social-stackoverflow:hover {
 		background-size: 35px 35px;
 	}
 
@@ -752,7 +914,7 @@ footer {
 		width: 300px;
 	}
 
-	.wrapContact {
+	.wrap-contact {
 		min-height: calc(100vh - 340px);
 	}
 
@@ -761,73 +923,6 @@ footer {
 
 @media screen and (max-width: 377px) {			/*------Firefox super narrow browser window------*/
 	
-
-
-/*	header {
-		height: 35px;
-	}
-*/
-	/* mobile nav hover and selected states */
-
-	/*.mobileNav li.indexMobile:hover:after {		
-		position: absolute; 
-		content:''; 
-	  	width:39px; 
-	  	height:1px; 
-	  	background: white; 
-	  	top: 20px;
-	  	right: 9px;
-	}
-
-	.mobileNav li.portfolioMobile:hover:after {
-		position: absolute; 
-		content:''; 
-	  	width:58px; 
-	  	height:1px; 
-	  	background: white; 
-	  	top: 20px;
-	  	right: 8px;
-	}
-
-	.mobileNav li.contactMobile:hover:after {
-		position: absolute; 
-		content:''; 
-	  	width:53px; 
-	  	height:1px; 
-	  	background: white; 
-	  	top: 20px;
-	  	right: 8px;
-	}*/
-
-/*	.selectedPortfolioMobile:after {
-		position: absolute; 
-		content:''; 
-	  	width:58px; 
-	  	height:1px; 
-	  	background: white; 
-	  	top: 20px;
-	  	right: 8px;
-	}
-
-	.selectedContactMobile:after {
-		position: absolute; 
-		content:''; 
-	  	width:53px; 
-	  	height:1px; 
-	  	background: white; 
-	  	top: 20px;
-	  	right: 8px;
-	}*/
-
-/*	.socialGithub, .socialTreehouse, .socialLinkedin, .socialStackoverflow {
-		width: 25px;
-		height: 25px;
-		background-size: 25px 25px;
-	}*/
-
-/*	.socialGithub:hover, .socialTreehouse:hover, .socialLinkedin:hover, .socialStackoverflow:hover {
-		background-size: 25px 25px;
-	}*/
 
 	nav ul li {
 		font-size: 1em;
