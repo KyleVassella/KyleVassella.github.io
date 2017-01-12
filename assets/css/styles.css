@@ -315,7 +315,7 @@ a {
 	background-image: url(../media/dot.svg), url(../media/hero3-8.jpg);
     background-position: center;
     background-size: 5px, cover;
-        min-height: calc(100vh);
+        min-height: calc(150vh);
         width: 100%;
 }
 
@@ -454,7 +454,9 @@ h1.hero-h1 {
 	margin: 0 auto 0 auto;
 	/*background-color: rgba(0, 18, 34, 1); */ /*rgba(18, 28, 36, 1)*/
 	    /*background: radial-gradient(circle farthest-corner at 100% 100%,#46b8cd,#276073 50%,#182e4a);*/
-	    background: radial-gradient(circle farthest-corner at 100% 100%,#6E768C, #2D3449 50%, #0B132B);
+/*	    background: radial-gradient(circle farthest-corner at 100% 100%,#6E768C, #2D3449 50%, #0B132B);*/
+	    background: radial-gradient(circle farthest-corner at 100% 100%,rgba(110, 118, 140, .8), rgba(45, 52, 73, .8) 50%, rgba(11, 19, 43, .8));
+
 }
 
 .primary-content-white {
