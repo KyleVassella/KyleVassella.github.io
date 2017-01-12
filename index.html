@@ -1,29 +1,27 @@
-<!-- IMPROVEMENTS:
+<!-- index.html -->
 
-• Optimize file names (-, lowercase)
+<!--
+******* TO-DO *******
+• Apply Bootstrap (Normalize.css, Reboot ASAP)
+• Improve ugly Portfolio section background
+• Minify files
+• Optimize media file names (-, lowercase)
 • Extra floating hero (mobile?) behind portfolioContent (make background transparent to see)
-• If keeping navy portfolio background, change tile hover state to orange.
-• Refactor to change camelCase CSS selectors to dashes, all lower case
-• Offset parallax breaks smoothscroll
-• Chagne parallaxed hero scroll offset
+• Change parallaxed scroll offset
 • ROOT mobile state
-• No scrolling overflow on bottom? (so you cant scroll past the footer image, not even bounce past)
-• Make smoothscrolling increase in speed as time goes on (not one static scroll speed)
-• Parallaxed footer content! (avita)
+• Remove scrolling overflow
+• Parallaxed footer! (avita)
 • '100vh' bug on portfolio black bg if you make window shorter than the height of the project tiles. Flexbox instead?
+• Cool Colors: #1C1D21  - dark steel
+• Refactor
+
 
 ******* ANGULAR *******
 • To stop page reloads AND keep URL's clean use the second answer on http://stackoverflow.com/questions/14712223/how-to-handle-anchor-hash-linking-in-angularjs?rq=1
-• Pretty sure that target="_self" solution causes page to reload (defeats purpose of SPA). CHECK THIS
-• You need to create static HTML snapshots specially for search engines (to optomize SEO on Angular)
+• Pretty sure target="_self", or something, is causing page to reload. CHECK THIS
+• Create static HTML snapshots specially for search engines (to optomize SEO on Angular)
 • Minify (grunt)
-• How to inject HTML outside of main ng-view scope and only during certain views? Plus opening/closing tag? Use javascript/jquery to inject them maybe? Hide them at first, but then show them if a certain condition is met via angular or the code angular injects. Perhaps ask the question here: http://stackoverflow.com/questions/12506329/how-to-dynamically-change-header-based-on-angularjs-partial-view
 
-
-• Why not just change the background-image property on .parallax on the media query? Why the need to change the script so much? Whoops
-
-******* ALL BROWSERS *******
-Fix extra whitespace if you force scroll up while already at top of page, and on bottom of page too.
 
 ******* FIREFOX *******
 Parallax doesn't work: http://stackoverflow.com/questions/37869410/css-parallax-working-in-chrome-not-working-in-safari-or-firefox
@@ -33,18 +31,12 @@ Parallax doesn't work: http://stackoverflow.com/questions/37869410/css-parallax-
 • 1px white bottom border on Safari mobile
 • Jerky parallax scrolling in Safari only!
 
-******* CHROME *******
-
-
-******* IPAD *******
 
 ******* WINDOWS PHONE (IE) *******
-
 • HeroMobile needs no-repeat
 • Smoothscroll navigation to Portfolio leaves 1px white line at top (1px of hero is showing)
 
 ******* IPHONE (4) (safari)*******
-
 • Hero image is very zoomed in (giant foot)
 • Try a different parallax speed for hero2 other than 0 so that it slightly scrolls down/up too.
 • Use the offwhite color from your hero as the background color or fullscreen/repeating image for the rest of your pages.
@@ -61,13 +53,6 @@ Parallax doesn't work: http://stackoverflow.com/questions/37869410/css-parallax-
 • optomize images for web (load time)
 • Use a Fonts folder and upload fonts rather than online google fonts (load time?)
 • Find a nicer looking font
-
-• Upload minified files eventually
-• Hover & current page state for header nav
-• Refactor all, JSHINT/HTML/CSS equivalents
-
-• Cool Colors:
-#1C1D21  - dark steel
 -->
 
 
@@ -83,6 +68,8 @@ Parallax doesn't work: http://stackoverflow.com/questions/37869410/css-parallax-
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
    		<link rel = "stylesheet" href = "assets/css/styles.css">
 	</head>
+
+
 	<body ng-app="singlePage" ng-controller="routeController">
 		<div class="wrap">
 
@@ -112,9 +99,7 @@ Parallax doesn't work: http://stackoverflow.com/questions/37869410/css-parallax-
 						<h1>JavaScript web development.</h1>
 						<a class="hero-chevron" href="#portfolio"></a>
 					</div>
-
 				</section>
-				
 			</section>
 
 			
@@ -147,9 +132,13 @@ Parallax doesn't work: http://stackoverflow.com/questions/37869410/css-parallax-
 		
 
 		</div>
-<!-- 		<footer>
+
+
+<!-- 	<footer>
 		 	<p class="fw300 copyright">&copy; 2016 KYLE VASSELLA.</p>
 		</footer> -->
+
+
 	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
 	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular-resource.min.js"></script>
