@@ -85,6 +85,10 @@ body:after {		/* pre-load hover images to avoid first time load delay when hover
     margin: 10px auto 45px auto;
 }
 
+.padding-top-50 {
+	padding-top: 50px;
+}
+
 .no-margin-top {
 	margin-top: 0;
 }
@@ -300,23 +304,6 @@ a {
    background-size: 48px 48px;
 }
 
-.contact-icon {
-	display: inline;
-	margin-right: 30px;
-	width: 8vw;
-	position: relative;
-	top: 13px;
-}
-
-.contact-container {
-    display: inline-block;
-    /* padding: 40px 20px; */
-    background-color: rgba(255, 245, 253, .1);
-    border-radius: 15px;
-    padding: 0 20px 0 20px;
-    margin-top: 40px;
-}
-
 
 /***********************************************************
         	Hero/Parallax
@@ -482,6 +469,24 @@ h1.hero-h1 {
 	color: rgb(249, 249, 249);
 }
 
+/*.contact-icon {
+	display: inline;
+	margin-right: 30px;
+	width: 8vw;
+	position: relative;
+	top: 13px;
+}*/
+
+.contact-container {
+    display: inline-block;
+    /* padding: 40px 20px; */
+    background-color: rgba(255, 245, 253, .1);
+    min-height: 100vh;
+    min-width: 100vw;
+    border-radius: 15px;
+/*    margin-top: 40px;*/
+}
+
 .contact-content {
 	text-align: center;
 	height: calc(100vh - 353px);
@@ -523,7 +528,7 @@ h1.hero-h1 {
 
 .macbook-hero {
 	background: url(../media/dot.svg), url(../media/macbook-hero-3-9.jpg);
-	background-size: 8px, cover;
+	background-size: 5px, cover;
 }
 
 .headshot {
