@@ -1,12 +1,7 @@
-/*IMPROVEMENTS:
-• Why not just change the background-image property on .parallax on the media query? Why the need to change the script so much? Whoops
-- project tiles anchor tag height needs to be adjusted somehow on browser widths < 600px wide!
-- optimize headshot sticky footer height for ios safari (back button toolbar blocks pic) 
-- optimize sticky footer for Firefox desktop (gap) */
+/*TO-DO:
+- Bootstrap the project tiles
 
-
-
-/*html {   						//removes overflow white space but breaks smooth scrolling! https://github.com/cferdinandi/smooth-scroll/issues/8
+/*html {   						//removes overflow white space in Chrome but breaks smooth scrolling! https://github.com/cferdinandi/smooth-scroll/issues/8
     overflow: hidden;
     height: 100%;
 }
@@ -24,15 +19,19 @@ body {
   overflow-x: hidden; 
 }*/
 
+
 /*html, body {
 	overflow: auto;
 	width: 100%;
 	height: 100%;
 }*/
 
+
+
 * {
-  font-family: 'Open Sans', sans-serif;     /* raleway was original font */
-      font-weight: 400;
+	font-family: 'Open Sans', sans-serif;
+	/* raleway was original font */
+	font-weight: 400;
 }
 
 body {
@@ -42,14 +41,17 @@ body {
 	margin: 0;
 }
 
-body:after {		/* pre-load hover images to avoid first time load delay when hovering over social icons & project tiles */
- display:none;
- content: url(../media/newSocial/socialGithubHOVER.gif) url(../media/newSocial/socialTreehouseHOVER.gif) url(../media/newSocial/socialLinkedinHOVER.gif) url(../media/newSocial/socialStackoverflowHOVER.gif) url(../media/tileJCRealtyHOVERWeb.gif) url(../media/tileProject1HOVERWeb.gif) url(../media/tileProject2HOVERWeb.gif) url(../media/tileProject3HOVERWeb.gif) url('../media/hero-chevron-2HOVER.png');
+body:after {
+	/* pre-load hover images to avoid first time load delay when hovering over social icons & project tiles */
+	display: none;
+	content: url(../media/newSocial/socialGithubHOVER.gif) url(../media/newSocial/socialTreehouseHOVER.gif) url(../media/newSocial/socialLinkedinHOVER.gif) url(../media/newSocial/socialStackoverflowHOVER.gif) url(../media/tileJCRealtyHOVERWeb.gif) url(../media/tileProject1HOVERWeb.gif) url(../media/tileProject2HOVERWeb.gif) url(../media/tileProject3HOVERWeb.gif) url('../media/hero-chevron-2HOVER.png');
 }
 
+
 /***********************************************************
-        	Descriptive Class Names
+        	Descriptive Classes
 ************************************************************/
+
 .fw-300 {
 	font-weight: 300;
 }
@@ -70,19 +72,19 @@ body:after {		/* pre-load hover images to avoid first time load delay when hover
 }
 
 .underline {
-    display: block;
-    width: 100px;
-    height: 2px;
-    background: #000000;
-    margin: 10px auto 45px auto;
+	display: block;
+	width: 100px;
+	height: 2px;
+	background: #000000;
+	margin: 10px auto 45px auto;
 }
 
 .underline-white {
-    display: block;
-    width: 100px;
-    height: 2px;
-    background: rgb(249, 249, 249);
-    margin: 10px auto 45px auto;
+	display: block;
+	width: 100px;
+	height: 2px;
+	background: rgb(249, 249, 249);
+	margin: 10px auto 45px auto;
 }
 
 .padding-top-50 {
@@ -149,28 +151,29 @@ h3 {
 }
 
 
-
-
-
 /***********************************************************
         	Header
 ************************************************************/
+
 header {
 	height: 55px;
-/*	background-color: #090302;*/
+	/*	background-color: #090302;*/
 	overflow: hidden;
-	position: relative;		/* lets you set position: absolute; on your .nav when screen gets to mobile size so you can position .nav outside of header so .social-div isn't affected */
+	position: relative;
+	/* lets you set position: absolute; on your .nav when screen gets to mobile size so you can position .nav outside of header so .social-div isn't affected */
 }
 
 h1.main-header {
 	position: relative;
 	left: 20px;
-    float: left;
-    margin:0;
+	float: left;
+	margin: 0;
 	font-weight: 300;
-	font-size: 3em;  /*3em*/
+	font-size: 3em;
+	/*3em*/
 	color: #000;
-	white-space: pre;	/* preserves white space (extra spaces in text) in the browser */
+	white-space: pre;
+	/* preserves white space (extra spaces in text) in the browser */
 	letter-spacing: 2.5px;
 }
 
@@ -179,10 +182,10 @@ h1.main-header {
 }
 
 
-
 /***********************************************************
         	Navigation
 ************************************************************/
+
 .nav {
 	position: relative;
 	bottom: 6.5px;
@@ -199,7 +202,8 @@ nav ul {
 	padding-right: 5px;
 }
 
-nav ul li {		/* targets all descendant elements of <nav> */
+nav ul li {
+	/* targets all descendant elements of <nav> */
 	position: relative;
 	display: inline;
 	list-style: none;
@@ -212,40 +216,41 @@ li.portfolio {
 }
 
 a.animated-line:after {
-  background: none repeat scroll 0 0 transparent;
-  bottom: -1px;
-  content: "";
-  display: block;
-  height: 1px;
-  left: 50%;
-  position: absolute;
-  background: #000;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 0;
+	background: none repeat scroll 0 0 transparent;
+	bottom: -1px;
+	content: "";
+	display: block;
+	height: 1px;
+	left: 50%;
+	position: absolute;
+	background: #000;
+	transition: width 0.3s ease 0s, left 0.3s ease 0s;
+	width: 0;
 }
 
 a.animated-line:hover:after {
-  width: 80%; 
-  left: 8.8%; /* alignment */
+	width: 80%;
+	left: 8.8%;
+	/* alignment */
 }
 
 nav ul li.selected {
 	border-bottom: 1px solid white;
 	margin-bottom: -10px;
-/*	color: black;
+	/*	color: black;
 	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;*/
 }
 
 a {
 	text-decoration: none;
- 	color: inherit;
+	color: inherit;
 }
-
 
 
 /***********************************************************
         	Social Media
 ************************************************************/
+
 .social-div {
 	display: inline-block;
 	margin-right: 10px;
@@ -256,52 +261,52 @@ a {
 	height: 48px;
 	width: 48px;
 	display: inline-block;
-  	background:transparent url(../media/newSocial/socialGithub.gif) center no-repeat;
-  	background-size: 48px 48px;
+	background: transparent url(../media/newSocial/socialGithub.gif) center no-repeat;
+	background-size: 48px 48px;
 }
 
 .social-github:hover {
-   background-image: url(../media/newSocial/socialGithubHOVER.gif);
-   background-size: 48px 48px;
+	background-image: url(../media/newSocial/socialGithubHOVER.gif);
+	background-size: 48px 48px;
 }
 
- .social-treehouse {
+.social-treehouse {
 	height: 48px;
 	width: 48px;
 	display: inline-block;
-  	background:transparent url(../media/newSocial/socialTreehouse.gif) center no-repeat;
-  	background-size: 48px 48px;
+	background: transparent url(../media/newSocial/socialTreehouse.gif) center no-repeat;
+	background-size: 48px 48px;
 }
 
 .social-treehouse:hover {
-   background-image: url(../media/newSocial/socialTreehouseHOVER.gif);
-   background-size: 48px 48px;
+	background-image: url(../media/newSocial/socialTreehouseHOVER.gif);
+	background-size: 48px 48px;
 }
 
 .social-linkedin {
 	height: 48px;
 	width: 48px;
 	display: inline-block;
-  	background:transparent url(../media/newSocial/socialLinkedin.gif) center no-repeat;
-  	background-size: 48px 48px;
+	background: transparent url(../media/newSocial/socialLinkedin.gif) center no-repeat;
+	background-size: 48px 48px;
 }
 
 .social-linkedin:hover {
-   background-image: url(../media/newSocial/socialLinkedinHOVER.gif);
-   background-size: 48px 48px;
+	background-image: url(../media/newSocial/socialLinkedinHOVER.gif);
+	background-size: 48px 48px;
 }
 
 .social-stackoverflow {
 	height: 48px;
 	width: 48px;
 	display: inline-block;
-  	background:transparent url(../media/newSocial/socialStackoverflow.gif) center no-repeat;
-  	background-size: 48px 48px;
+	background: transparent url(../media/newSocial/socialStackoverflow.gif) center no-repeat;
+	background-size: 48px 48px;
 }
 
 .social-stackoverflow:hover {
-   background-image: url(../media/newSocial/socialStackoverflowHOVER.gif);
-   background-size: 48px 48px;
+	background-image: url(../media/newSocial/socialStackoverflowHOVER.gif);
+	background-size: 48px 48px;
 }
 
 
@@ -309,21 +314,20 @@ a {
         	Hero/Parallax
 ************************************************************/
 
-
 .parallax-hero {
-	position:fixed;
+	position: fixed;
 	background-image: url(../media/dot.svg), url(../media/hero3-8.jpg);
-    background-position: center;
-    background-size: 5px, cover;
-        min-height: calc(150vh);
-        width: 100%;
+	background-position: center;
+	background-size: 5px, cover;
+	min-height: calc(150vh);
+	width: 100%;
 }
 
 .parallax-stationary {
 	position: relative;
 	top: 100vh;
-
 }
+
 
 /*.parallax {
 	     The image used 
@@ -352,8 +356,8 @@ h1.hero-h1 {
 	margin: 35vh auto 15vh auto;
 	/*padding: 40px 20px;*/
 	padding: 0 20px;
-
-	background-color: rgba(255, 245, 253, .1);  /*2C302E **0B132B **1C2541 89, 101, 111, .9*/
+	background-color: rgba(255, 245, 253, .1);
+	/*2C302E **0B132B **1C2541 89, 101, 111, .9*/
 	border-radius: 15px;
 }
 
@@ -363,62 +367,16 @@ h1.hero-h1 {
 	font-size: 70px;
 	font-weight: bolder;
 	color: rgb(255, 245, 253);
-	text-shadow: 1px 1px 0 #000,
-    -1px 1px 0 #000,
-    1px -1px 0 #000,
-    -1px -1px 0 #000,
-    0px 1px 0 #000,
-    0px -1px 0 #000,
-    -1px 0px 0 #000,
-    1px 0px 0 #000,
-    2px 2px 0 #000,
-    -2px 2px 0 #000,
-    2px -2px 0 #000,
-    -2px -2px 0 #000,
-    0px 2px 0 #000,
-    0px -2px 0 #000,
-    -2px 0px 0 #000,
-    2px 0px 0 #000,
-    1px 2px 0 #000,
-    -1px 2px 0 #000,
-    1px -2px 0 #000,
-    -1px -2px 0 #000,
-    2px 1px 0 #000,
-    -2px 1px 0 #000,
-    2px -1px 0 #000,
-    -2px -1px 0 #000;
-/*	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;*/
+	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000, -1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000, 0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000, 1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
+	/*	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;*/
 }
 
 .hero-container p {
 	font-size: 30px;
 	font-weight: bolder;
 	color: rgb(255, 245, 253);
-	text-shadow: 1px 1px 0 #000,
-    -1px 1px 0 #000,
-    1px -1px 0 #000,
-    -1px -1px 0 #000,
-    0px 1px 0 #000,
-    0px -1px 0 #000,
-    -1px 0px 0 #000,
-    1px 0px 0 #000,
-    2px 2px 0 #000,
-    -2px 2px 0 #000,
-    2px -2px 0 #000,
-    -2px -2px 0 #000,
-    0px 2px 0 #000,
-    0px -2px 0 #000,
-    -2px 0px 0 #000,
-    2px 0px 0 #000,
-    1px 2px 0 #000,
-    -1px 2px 0 #000,
-    1px -2px 0 #000,
-    -1px -2px 0 #000,
-    2px 1px 0 #000,
-    -2px 1px 0 #000,
-    2px -1px 0 #000,
-    -2px -1px 0 #000;
-/*	    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000, -1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000, 0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000, 1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
+	/*	    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
 }
 
 .hero-chevron {
@@ -427,22 +385,22 @@ h1.hero-h1 {
 	margin: auto;
 	margin-top: -25px;
 	display: block;
-	background:transparent url('../media/hero-chevron-2.png') center no-repeat;
-
+	background: transparent url('../media/hero-chevron-2.png') center no-repeat;
 }
 
 .hero-chevron:hover {
 	background-image: url('../media/hero-chevron-2HOVER.png');
-
 }
 
 .hero-chevron-img {
 	width: 100%;
 }
 
+
 /***********************************************************
         	Page Body
 ************************************************************/
+
 .portfolio-wrap {
 	height: 100vh;
 }
@@ -452,11 +410,11 @@ h1.hero-h1 {
 	width: 100vw;
 	min-height: calc(100vh);
 	margin: 0 auto 0 auto;
-	/*background-color: rgba(0, 18, 34, 1); */ /*rgba(18, 28, 36, 1)*/
-	    /*background: radial-gradient(circle farthest-corner at 100% 100%,#46b8cd,#276073 50%,#182e4a);*/
-/*	    background: radial-gradient(circle farthest-corner at 100% 100%,#6E768C, #2D3449 50%, #0B132B);*/
-	    background: radial-gradient(circle farthest-corner at 100% 100%,rgba(110, 118, 140, .65), rgba(45, 52, 73, .65) 50%, rgba(11, 19, 43, .65));
-
+	/*background-color: rgba(0, 18, 34, 1); */
+	/*rgba(18, 28, 36, 1)*/
+	/*background: radial-gradient(circle farthest-corner at 100% 100%,#46b8cd,#276073 50%,#182e4a);*/
+	/*	    background: radial-gradient(circle farthest-corner at 100% 100%,#6E768C, #2D3449 50%, #0B132B);*/
+	background: radial-gradient(circle farthest-corner at 100% 100%, rgba(110, 118, 140, .65), rgba(45, 52, 73, .65) 50%, rgba(11, 19, 43, .65));
 }
 
 .primary-content-white {
@@ -471,29 +429,14 @@ h1.hero-h1 {
 	color: rgb(249, 249, 249);
 }
 
-/*.contact-icon {
-	display: inline;
-	margin-right: 30px;
-	width: 8vw;
-	position: relative;
-	top: 13px;
-}*/
-
-/*.contact-wrap {
-    display: inline-block;
-    background-color: rgba(255, 245, 253, .1);
-    min-height: 100vh;
-    min-width: 100vw;
-    border-radius: 15px;
-}*/
-
 .contact-wrap {
 	text-align: center;
-/*	height: calc(100vh - 353px);*/
+	/*	height: calc(100vh - 353px);*/
 	height: 100vh;
 	width: 100vw;
 	margin: 0 auto 0 auto;
-/*	background-color: rgb(250, 240, 248);*/	/* offwhite */
+	/*	background-color: rgb(250, 240, 248);*/
+	/* offwhite */
 	/*padding-top: 75px;*/
 	font-size: 4vw;
 }
@@ -505,30 +448,7 @@ h1.hero-h1 {
 .contact-info {
 	display: block;
 	font-weight: bolder;
-	text-shadow: 1px 1px 0 #000,
-    -1px 1px 0 #000,
-    1px -1px 0 #000,
-    -1px -1px 0 #000,
-    0px 1px 0 #000,
-    0px -1px 0 #000,
-    -1px 0px 0 #000,
-    1px 0px 0 #000,
-    2px 2px 0 #000,
-    -2px 2px 0 #000,
-    2px -2px 0 #000,
-    -2px -2px 0 #000,
-    0px 2px 0 #000,
-    0px -2px 0 #000,
-    -2px 0px 0 #000,
-    2px 0px 0 #000,
-    1px 2px 0 #000,
-    -1px 2px 0 #000,
-    1px -2px 0 #000,
-    -1px -2px 0 #000,
-    2px 1px 0 #000,
-    -2px 1px 0 #000,
-    2px -1px 0 #000,
-    -2px -1px 0 #000;
+	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000, -1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000, 0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000, 1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
 }
 
 .macbook-hero {
@@ -542,20 +462,22 @@ h1.hero-h1 {
 	margin: 0 auto 0;
 }
 
+
 /*-------Project JC Realty-------*/
 
 .tile-jcrealty {
 	width: 600px;
 	height: 423px;
 	display: inline-block;
-  	background:transparent url(../media/tileJCRealtyWeb.gif) center no-repeat;
-  	background-size: 100% auto;
+	background: transparent url(../media/tileJCRealtyWeb.gif) center no-repeat;
+	background-size: 100% auto;
 }
 
 .tile-jcrealty:hover {
-   background-image: url(../media/tileJCRealtyHOVERWeb.gif);
-   background-size: 100% auto;
+	background-image: url(../media/tileJCRealtyHOVERWeb.gif);
+	background-size: 100% auto;
 }
+
 
 /*-------Project 1-------*/
 
@@ -563,14 +485,15 @@ h1.hero-h1 {
 	width: 600px;
 	height: 423px;
 	display: inline-block;
-  	background:transparent url(../media/tileProject1Web.gif) center no-repeat;
-  	background-size: 100% auto;
+	background: transparent url(../media/tileProject1Web.gif) center no-repeat;
+	background-size: 100% auto;
 }
 
 .tile-project-1:hover {
-   background-image: url(../media/tileProject1HOVERWeb.gif);
-   background-size: 100% auto;
+	background-image: url(../media/tileProject1HOVERWeb.gif);
+	background-size: 100% auto;
 }
+
 
 /*-------Project 2-------*/
 
@@ -578,13 +501,13 @@ h1.hero-h1 {
 	width: 600px;
 	height: 423px;
 	display: inline-block;
-  	background:transparent url(../media/tileProject2Web.gif) center no-repeat;
-  	background-size: 100% auto;
+	background: transparent url(../media/tileProject2Web.gif) center no-repeat;
+	background-size: 100% auto;
 }
 
 .tile-project-2:hover {
-   background-image: url(../media/tileProject2HOVERWeb.gif);
-   background-size: 100% auto;
+	background-image: url(../media/tileProject2HOVERWeb.gif);
+	background-size: 100% auto;
 }
 
 .tile-wrap {
@@ -592,21 +515,21 @@ h1.hero-h1 {
 	display: inline;
 }
 
+
 /*-------Project 3-------*/
 
 .tile-project-3 {
 	width: 600px;
 	height: 423px;
 	display: inline-block;
-  	background:transparent url(../media/tileProject3Web.gif) center no-repeat;
-  	background-size: 100% auto;
+	background: transparent url(../media/tileProject3Web.gif) center no-repeat;
+	background-size: 100% auto;
 }
 
 .tile-project-3:hover {
-   background-image: url(../media/tileProject3HOVERWeb.gif);
-   background-size: 100% auto;
+	background-image: url(../media/tileProject3HOVERWeb.gif);
+	background-size: 100% auto;
 }
-
 
 
 /***********************************************************
@@ -627,92 +550,108 @@ h1.hero-h1 {
 	margin-bottom: 100px;
 }
 
-
 .demo-button {
-	-moz-box-shadow:inset 0px 1px 0px 0px #cf866c;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #cf866c;
-	box-shadow:inset 0px 1px 0px 0px #cf866c;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315));
-	background:-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%);
-	background:-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%);
-	background:-o-linear-gradient(top, #d0451b 5%, #bc3315 100%);
-	background:-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%);
-	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0);
-	background-color:#d0451b;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	border-radius:3px;
-	border:1px solid #942911;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:5em;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #854629;
+	-moz-box-shadow: inset 0px 1px 0px 0px #cf866c;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #cf866c;
+	box-shadow: inset 0px 1px 0px 0px #cf866c;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315));
+	background: -moz-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background: -webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background: -o-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background: -ms-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background: linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315', GradientType=0);
+	background-color: #d0451b;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #942911;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 5em;
+	padding: 6px 24px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #854629;
 	margin-bottom: 50px;
 }
+
 .demo-button:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #d0451b));
-	background:-moz-linear-gradient(top, #bc3315 5%, #d0451b 100%);
-	background:-webkit-linear-gradient(top, #bc3315 5%, #d0451b 100%);
-	background:-o-linear-gradient(top, #bc3315 5%, #d0451b 100%);
-	background:-ms-linear-gradient(top, #bc3315 5%, #d0451b 100%);
-	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc3315', endColorstr='#d0451b',GradientType=0);
-	background-color:#bc3315;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #d0451b));
+	background: -moz-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background: -webkit-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background: -o-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background: -ms-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background: linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#bc3315', endColorstr='#d0451b', GradientType=0);
+	background-color: #bc3315;
 }
+
 .demo-button:active {
-	position:relative;
-	top:1px;
+	position: relative;
+	top: 1px;
 }
 
 .resume-button {
-	-moz-box-shadow:inset 0px 1px 0px 0px #cf866c;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #cf866c;
-	box-shadow:inset 0px 1px 0px 0px #cf866c;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315));
-	background:-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%);
-	background:-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%);
-	background:-o-linear-gradient(top, #d0451b 5%, #bc3315 100%);
-	background:-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%);
-	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0);
-	background-color:#d0451b;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	border-radius:3px;
-	border:1px solid #942911;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-size:1em;
+	-moz-box-shadow: inset 0px 1px 0px 0px #cf866c;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #cf866c;
+	box-shadow: inset 0px 1px 0px 0px #cf866c;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315));
+	background: -moz-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background: -webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background: -o-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background: -ms-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background: linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315', GradientType=0);
+	background-color: #d0451b;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #942911;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-size: 1em;
 	font-weight: bolder;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #854629;
+	padding: 6px 24px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #854629;
 }
 
 .resume-button:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #d0451b));
-	background:-moz-linear-gradient(top, #bc3315 5%, #d0451b 100%);
-	background:-webkit-linear-gradient(top, #bc3315 5%, #d0451b 100%);
-	background:-o-linear-gradient(top, #bc3315 5%, #d0451b 100%);
-	background:-ms-linear-gradient(top, #bc3315 5%, #d0451b 100%);
-	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc3315', endColorstr='#d0451b',GradientType=0);
-	background-color:#bc3315;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #d0451b));
+	background: -moz-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background: -webkit-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background: -o-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background: -ms-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background: linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#bc3315', endColorstr='#d0451b', GradientType=0);
+	background-color: #bc3315;
 }
 
-.program-icon {
-	margin-left: 15px;
+.language-icon {
+	height: 150px;
+	margin: 0 10px 0 10px;
+}
+
+.github-section {
+	margin-top: 20px;
 }
 
 .github-link {
 	color: blue;
 	margin-left: 5px;
+}
+
+.project-header {
+	margin-bottom: -10px;
+	text-align: left;
+}
+
+.project-description {
+	margin-top: 10px;
+	text-align: left;
 }
 
 p span {
@@ -724,19 +663,18 @@ p span {
 	width: 275px;
 }
 
-i:before {		/*apparently, <i> is may not be ideal for icons but I'm using it here because it's natively inline and my p.noMarginTop span selector prevents me from using span*/
+i:before {
+	/* checkboxes: apparently, <i> may not be ideal for icons but I'm using it here because it's natively inline and my p.noMarginTop span selector prevents me from using span*/
 	content: "\2705";
 	font-style: normal;
 	margin-right: 13px;
 }
 
 
-
-
-
 /***********************************************************
         	Footer
 ************************************************************/
+
 footer {
 	background-color: black;
 	height: 70px;
@@ -753,54 +691,43 @@ footer {
 }
 
 
-
 /************************************************************************************************************************************************************************************
         Media Queries
 ************************************************************************************************************************************************************************************/
-@media screen and (min-width: 1562px) {		/*------optimizes Contact page on large screens------*/
 
+@media screen and (min-width: 1562px) {
+	/*------optimizes Contact page on large screens------*/
 	.contact-icon {
 		width: 130px;
 	}
-
 	.contact-content {
 		/*min-height: calc(100vh - 270px);*/
 		/*padding-top: 75px;*/
 		font-size: 60px;
-
 	}
 }
 
-
-@media screen and (max-width: 1204px) {			/*------Temporary hero height fix until Bootstrap applied to project thumbs-----*/
+@media screen and (max-width: 1204px) {
+	/*------Temporary hero height fix until Bootstrap applied to project thumbs-----*/
 	.parallax-hero {
 		min-height: calc(190vh);
 	}
 }
 
-
-@media screen and (max-width: 961px) {			/*------Narrow Desktop and iPad (768px)-----*/
-
-/*	.parallax {
+@media screen and (max-width: 961px) {
+	/*------Narrow Desktop and iPad (768px)-----*/
+	/*	.parallax {
 		background-image: url(../media/dot.svg), url(../media/Hero2CroppedWeb.jpg);
 		min-height: 100vh;
 	}*/
-
-
-
 	header {
 		height: 90px;
 	}
-
 	h1.main-header {
 		font-size: 2.5em;
 	}
-
 	/* mobile .nav */
-
-
 	.nav {
-		
 		position: absolute;
 		left: 0%;
 		top: 60%;
@@ -810,182 +737,150 @@ footer {
 		color: #000;
 		font-size: 1.25em;
 	}
-
 	.nav ul {
 		padding: 0;
 	}
-
 	.nav li {
 		padding-right: 10px;
 		position: relative;
 		left: 10px;
-/*		bottom: 1px;*/
+		/*		bottom: 1px;*/
 	}
-
 	/* ipad nav hover and selected states */
 	a.animated-line:hover:after {
-	  width: 80%; 
-	  left: 4%; 			/* HOME is out of line */
+		width: 80%;
+		left: 4%;
+		/* HOME is out of line */
 	}
-
 	.primary-content-white {
 		max-width: 90%;
 	}
-
 	.project-h1 {
 		font-size: 4em;
 		font-weight: 600;
 		margin-top: 30px;
 		margin-bottom: 0;
 	}
-
 	.tile-wrap {
 		width: 100%;
 		display: block;
 		margin: 0 auto;
 	}
-
 }
 
-
-@media screen and (max-width: 667px) {	/* ---- Iphone 6 ---- */
-
+@media screen and (max-width: 667px) {
+	/* ---- Iphone 6 ---- */
 	.project-h1 {
 		font-size: 3.5em;
 		margin-top: 30px;
 		margin-bottom: 0;
 	}
-
 	.project-h2 {
 		margin-bottom: 70px;
 	}
-
-	.demo-button{
-		-moz-box-shadow:inset 0px 1px 0px 0px #cf866c;
-		-webkit-box-shadow:inset 0px 1px 0px 0px #cf866c;
-		box-shadow:inset 0px 1px 0px 0px #cf866c;
-		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315));
-		background:-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%);
-		background:-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%);
-		background:-o-linear-gradient(top, #d0451b 5%, #bc3315 100%);
-		background:-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%);
-		background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
-		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0);
-		background-color:#d0451b;
-		-moz-border-radius:3px;
-		-webkit-border-radius:3px;
-		border-radius:3px;
-		border:1px solid #942911;
-		display:inline-block;
-		cursor:pointer;
-		color:#ffffff;
-		font-family:Arial;
-		font-size:3em;
-		padding:6px 24px;
-		text-decoration:none;
-		text-shadow:0px 1px 0px #854629;
+	.demo-button {
+		-moz-box-shadow: inset 0px 1px 0px 0px #cf866c;
+		-webkit-box-shadow: inset 0px 1px 0px 0px #cf866c;
+		box-shadow: inset 0px 1px 0px 0px #cf866c;
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315));
+		background: -moz-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+		background: -webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+		background: -o-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+		background: -ms-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+		background: linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+		filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315', GradientType=0);
+		background-color: #d0451b;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		border: 1px solid #942911;
+		display: inline-block;
+		cursor: pointer;
+		color: #ffffff;
+		font-family: Arial;
+		font-size: 3em;
+		padding: 6px 24px;
+		text-decoration: none;
+		text-shadow: 0px 1px 0px #854629;
 		margin-bottom: 50px;
 	}
-
 }
 
-
-@media screen and (max-width: 599px) {			/*------THIS NEEDS FIXING & UNIT CONSISTENCY - dynamic project tile sizes for when browser becomes less wide than static 600px project tiles------*/
-		
+@media screen and (max-width: 599px) {
+	/*------THIS NEEDS FIXING & UNIT CONSISTENCY - dynamic project tile sizes for when browser becomes less wide than static 600px project tiles------*/
 	.tile-jcrealty {
 		width: 100vw;
 		display: inline-block;
-	  	background:transparent url(../media/tileJCRealtyWeb.gif) center no-repeat;
-	  	background-size: 100vw;
+		background: transparent url(../media/tileJCRealtyWeb.gif) center no-repeat;
+		background-size: 100vw;
 	}
-
 	.tile-jcrealty:hover {
-	   background-image: url(../media/tileJCRealtyHOVERWeb.gif);
-	   background-size: 100vw;
+		background-image: url(../media/tileJCRealtyHOVERWeb.gif);
+		background-size: 100vw;
 	}
-
 	.tile-project-1 {
 		width: 100vw;
 		display: inline-block;
-	  	background:transparent url(../media/tileProject1Web.gif) center no-repeat;
-	  	background-size: 100vw;
-		}
-
-	.tile-project-1:hover {
-	   background-image: url(../media/tileProject1HOVERWeb.gif);
-	   background-size: 100vw;
+		background: transparent url(../media/tileProject1Web.gif) center no-repeat;
+		background-size: 100vw;
 	}
-
+	.tile-project-1:hover {
+		background-image: url(../media/tileProject1HOVERWeb.gif);
+		background-size: 100vw;
+	}
 	.tile-project-2 {
 		width: 100%;
 		display: inline-block;
-	  	background:transparent url(../media/tileProject2Web.gif) center no-repeat;
-	  	background-size: 100vw;
+		background: transparent url(../media/tileProject2Web.gif) center no-repeat;
+		background-size: 100vw;
 	}
-
 	.tile-project-2:hover {
-	   background-image: url(../media/tileProject2HOVERWeb.gif);
-	   background-size: 100vw;
+		background-image: url(../media/tileProject2HOVERWeb.gif);
+		background-size: 100vw;
 	}
-
 	.tile-project-3 {
 		width: 100%;
 		display: inline-block;
-	  	background:transparent url(../media/tileProject3Web.gif) center no-repeat;
-	  	background-size: 100vw;
+		background: transparent url(../media/tileProject3Web.gif) center no-repeat;
+		background-size: 100vw;
 	}
-
 	.tile-project-3:hover {
-	   background-image: url(../media/tileProject3HOVERWeb.gif);
-	   background-size: 100vw;
+		background-image: url(../media/tileProject3HOVERWeb.gif);
+		background-size: 100vw;
 	}
 }
 
-
-@media screen and (max-width: 532px) {			/*------Narrow browser, Iphone 4 (320px), other small viewport widths------*/
-	
+@media screen and (max-width: 532px) {
+	/*------Narrow browser, Iphone 4 (320px), other small viewport widths------*/
 	.hero-bg-mobile {
 		min-height: calc(100vh - 55px);
 	}
-
 	h1.main-header {
 		font-size: 1.75em;
 	}
-
-
 	.social-github, .social-treehouse, .social-linkedin, .social-stackoverflow {
 		width: 35px;
 		height: 35px;
 		background-size: 35px 35px;
 	}
-
 	.social-github:hover, .social-treehouse:hover, .social-linkedin:hover, .social-stackoverflow:hover {
 		background-size: 35px 35px;
 	}
-
 	nav ul li {
 		font-size: 1em;
 	}
-
 	.headshot {
 		width: 300px;
 	}
-
 	.wrap-contact {
 		min-height: calc(100vh - 340px);
 	}
-
 }
 
-
-@media screen and (max-width: 377px) {			/*------Firefox super narrow browser window------*/
-	
-
+@media screen and (max-width: 377px) {
+	/*------Firefox super narrow browser window------*/
 	nav ul li {
 		font-size: 1em;
 		top: 1px;
 	}
-
 }
-
-
