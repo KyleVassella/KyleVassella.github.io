@@ -2,41 +2,42 @@
 
 <!--
 ******* TO-DO *******
+• Apply Bootstrap (Normalize.css, Reboot ASAP)
+• Re enable meta-viewport when ready.
 * Firefox/safari bug with paralax hero scrolling! (has to do with 150vh on .parallax-hero, most likely. Ask stackoverflow)
 • Resume download works on Chrome, no response on Firefox and on Safari navigates to my actual file rather than downloading. 
-• Apply Bootstrap (Normalize.css, Reboot ASAP)
-• Minify files
 • Optimize media file names (-, lowercase)
-• Extra floating hero (mobile?) behind portfolioContent (make background transparent to see)
-• Change parallaxed scroll offset
+• Adjust parallaxed scroll offset
 • ROOT mobile state
-• Remove scrolling overflow
 • Parallaxed footer! (avita)
-• '100vh' bug on portfolio black bg if you make window shorter than the height of the project tiles. Flexbox instead?
 • Cool Colors: #1C1D21  - dark steel
+• Minify
 • Refactor
 
 
 ******* ANGULAR *******
+• Optomize for SEO via Google's guidelines for AJAX driven pages.
 • To stop page reloads AND keep URL's clean use the second answer on http://stackoverflow.com/questions/14712223/how-to-handle-anchor-hash-linking-in-angularjs?rq=1
-• Pretty sure target="_self", or something, is causing page to reload. CHECK THIS
+• target="_self" may be causing page to briefly reload. CHECK THIS
 • Create static HTML snapshots specially for search engines (to optomize SEO on Angular)
 • Minify (grunt)
-• Remove hashbang from URL
+• Remove hashbang/prettify URL
 
+******* CHROME ********
+• Stop page overflow without breaking parallax or smoothscroll. 
 
 ******* FIREFOX *******
-• Parallax doesn't work: http://stackoverflow.com/questions/37869410/css-parallax-working-in-chrome-not-working-in-safari-or-firefox
-• Fix fast scroll white-space appearing just above "portfolio" section near top of parallax. 
+• Parallax is choppier: http://stackoverflow.com/questions/37869410/css-parallax-working-in-chrome-not-working-in-safari-or-firefox
 
 ******* SAFARI *******
 • 1px white bottom border on Safari mobile
-• Jerky parallax scrolling in Safari only!
+• Jerky parallax scrolling!
 
 
 ******* WINDOWS PHONE (IE) *******
 • HeroMobile needs no-repeat
 • Smoothscroll navigation to Portfolio leaves 1px white line at top (1px of hero is showing)
+• 1px white line on bottom of IE mobile
 
 ******* IPAD ********
 - Hero image cuts out halfway down
@@ -46,20 +47,12 @@
 ******* IPHONE (4) (safari)*******
 • Hero image is very zoomed in (giant foot)
 • Try a different parallax speed for hero2 other than 0 so that it slightly scrolls down/up too.
-• Use the offwhite color from your hero as the background color or fullscreen/repeating image for the rest of your pages.
-• Sticky header on homepage, ends when portfolio bar reached.
-• Mobile header dissapears now :(
 • Fix social icons - treehouse logo cut off, all need black outlines, circular icons are different sizes.
-• Ipad scrolling still out of whack somehow. 55px is measuring as more than 55px, maybe bc ipad pixel is scaled differently than a desktop pixel. 
-• 15px descrepancy and display differences on ipad? Nav is displaying on Ipad like its larger than my first media query, WTF!
-• OPTIMIZE FOR IOS AND SAFARI
+• Ipad scrolling is out of wack.
 • FIX MOBILE PARALLAXING OR REMOVE IT
-• Clickable down arrow (CHEVRON) at bottom of slick slides!
-• SINLE PAGE APP LIKE DAN OLSAVSKY - Angular 1
 • project tiles height need adjusting on iphone 4, and anything < 600px wide! */
-• optomize images for web (load time)
+• further optomize images for web (load time)
 • Use a Fonts folder and upload fonts rather than online google fonts (load time?)
-• Find a nicer looking font
 -->
 
 
@@ -150,7 +143,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
 	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular-resource.min.js"></script>
 		<script type="text/javascript" src="scripts/app.js"></script>
-		<script type="text/javascript" src="assets/js/jquery-3.1.1.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="assets/js/app.js"></script>
 	</body>
 </html>
