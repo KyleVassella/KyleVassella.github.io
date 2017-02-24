@@ -478,6 +478,36 @@ h1.hero-h1 {
 	background-size: 100% auto;
 }
 
+/*-------Project Cubicles-------*/
+
+.tile-cubicles {
+	width: 600px;
+	height: 423px;
+	display: inline-block;
+	background: transparent url(../media/tile-cubicles.jpg) center no-repeat;
+	background-size: 100% auto;
+}
+
+.tile-cubicles:hover {
+	background-image: url(../media/tile-cubicles-hover.jpg);
+	background-size: 100% auto;
+}
+
+/*-------Project This Portfolio-------*/
+
+.tile-portfolio {
+	width: 600px;
+	height: 423px;
+	display: inline-block;
+	background: transparent url(../media/tile-portfolio.jpg) center no-repeat;
+	background-size: 100% auto;
+}
+
+.tile-portfolio:hover {
+	background-image: url(../media/tile-portfolio-hover.jpg);
+	background-size: 100% auto;
+}
+
 
 /*-------Project 1-------*/
 
@@ -647,11 +677,13 @@ h1.hero-h1 {
 .project-header {
 	margin-bottom: -10px;
 	text-align: left;
+	font-size: 25px;
 }
 
 .project-description {
 	margin-top: 10px;
 	text-align: left;
+	font-size: 18px;
 }
 
 p span {
@@ -710,7 +742,7 @@ footer {
 @media screen and (max-width: 1204px) {
 	/*------Temporary hero height fix until Bootstrap applied to project thumbs-----*/
 	.parallax-hero {
-		min-height: calc(190vh);
+		min-height: calc(226.5vh);
 	}
 }
 
@@ -811,41 +843,52 @@ footer {
 	.tile-jcrealty {
 		width: 100vw;
 		display: inline-block;
-		background: transparent url(../media/tileJCRealtyWeb.gif) center no-repeat;
 		background-size: 100vw;
 	}
 	.tile-jcrealty:hover {
-		background-image: url(../media/tileJCRealtyHOVERWeb.gif);
 		background-size: 100vw;
 	}
+
+	.tile-cubicles {
+		width: 100vw;
+		display: inline-block;
+		background-size: 100vw;
+	}
+	.tile-cubicles:hover {
+		background-size: 100vw;
+	}
+
+	.tile-portfolio {
+		width: 100vw;
+		display: inline-block;
+		background-size: 100vw;
+	}
+	.tile-portfolio:hover {
+		background-size: 100vw;
+	}
+
 	.tile-project-1 {
 		width: 100vw;
 		display: inline-block;
-		background: transparent url(../media/tileProject1Web.gif) center no-repeat;
 		background-size: 100vw;
 	}
 	.tile-project-1:hover {
-		background-image: url(../media/tileProject1HOVERWeb.gif);
 		background-size: 100vw;
 	}
 	.tile-project-2 {
 		width: 100%;
 		display: inline-block;
-		background: transparent url(../media/tileProject2Web.gif) center no-repeat;
 		background-size: 100vw;
 	}
 	.tile-project-2:hover {
-		background-image: url(../media/tileProject2HOVERWeb.gif);
 		background-size: 100vw;
 	}
 	.tile-project-3 {
 		width: 100%;
 		display: inline-block;
-		background: transparent url(../media/tileProject3Web.gif) center no-repeat;
 		background-size: 100vw;
 	}
 	.tile-project-3:hover {
-		background-image: url(../media/tileProject3HOVERWeb.gif);
 		background-size: 100vw;
 	}
 }

@@ -18,6 +18,16 @@ app.config(function($routeProvider) {
 		controller : 'routeController'
 	})
 
+	.when('/cubicles', {
+	templateUrl : 'views/cubicles.html',
+	controller : 'routeController'
+	})
+
+	.when('/portfolio', {
+	templateUrl : 'views/portfolio.html',
+	controller : 'routeController'
+	})
+
 	.when('/randomQuoteGenerator', {
 		templateUrl : 'views/randomQuoteGenerator.html',
 		controller : 'routeController'
