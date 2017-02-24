@@ -44,7 +44,7 @@ body {
 body:after {
 	/* pre-load hover images to avoid first time load delay when hovering over social icons & project tiles */
 	display: none;
-	content: url(../media/newSocial/socialGithubHOVER.gif) url(../media/newSocial/socialTreehouseHOVER.gif) url(../media/newSocial/socialLinkedinHOVER.gif) url(../media/newSocial/socialStackoverflowHOVER.gif) url(../media/tileJCRealtyHOVERWeb.gif) url(../media/tileProject1HOVERWeb.gif) url(../media/tileProject2HOVERWeb.gif) url(../media/tileProject3HOVERWeb.gif) url('../media/hero-chevron-2HOVER.png');
+	content: url(../media/newSocial/socialGithubHOVER.gif) url(../media/newSocial/socialTreehouseHOVER.gif) url(../media/newSocial/socialLinkedinHOVER.gif) url(../media/newSocial/socialStackoverflowHOVER.gif) url(../media/tileJCRealtyHOVERWeb.gif) url(../media/tile-cubicles-hover.jpg) url(../media/tile-portfolio-hover.jpg) url(../media/tileProject1HOVERWeb.gif) url(../media/tileProject2HOVERWeb.gif) url(../media/tileProject3HOVERWeb.gif) url('../media/hero-chevron-2HOVER.png');
 }
 
 
