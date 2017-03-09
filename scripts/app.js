@@ -43,6 +43,11 @@ app.config(function($routeProvider) {
 		controller : 'routeController'
 	})
 
+	.when('/tictactoe', {
+		templateUrl : 'views/tictactoe.html',
+		controller : 'routeController'
+	})
+
 	.otherwise({redirectTo: '/'});
 });
 

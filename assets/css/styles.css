@@ -44,7 +44,7 @@ body {
 body:after {
 	/* pre-load hover images to avoid first time load delay when hovering over social icons & project tiles */
 	display: none;
-	content: url(../media/newSocial/socialGithubHOVER.gif) url(../media/newSocial/socialTreehouseHOVER.gif) url(../media/newSocial/socialLinkedinHOVER.gif) url(../media/newSocial/socialStackoverflowHOVER.gif) url(../media/tileJCRealtyHOVERWeb.gif) url(../media/tile-cubicles-hover.jpg) url(../media/tile-portfolio-hover.jpg) url(../media/tileProject1HOVERWeb.gif) url(../media/tileProject2HOVERWeb.gif) url(../media/tileProject3HOVERWeb.gif) url('../media/hero-chevron-2HOVER.png');
+	content: url(../media/newSocial/socialGithubHOVER.gif) url(../media/newSocial/socialTreehouseHOVER.gif) url(../media/newSocial/socialLinkedinHOVER.gif) url(../media/newSocial/socialStackoverflowHOVER.gif) url(../media/tileJCRealtyHOVERWeb.gif) url(../media/tile-cubicles-hover.jpg) url(../media/tile-portfolio-hover.jpg) url(../media/tileProject1HOVERWeb.gif) url(../media/tileProject2HOVERWeb.gif) url(../media/tileProject3HOVERWeb.gif) url(../media/tile-tic-tac-toe-hover.jpg) url('../media/hero-chevron-2HOVER.png');
 }
 
 
@@ -408,7 +408,8 @@ h1.hero-h1 {
 .portfolio-content {
 	text-align: center;
 	width: 100vw;
-	min-height: calc(100vh);
+	max-height: calc(100vh);
+	/*overflow-y: scroll;*/
 	margin: 0 auto 0 auto;
 	/*background-color: rgba(0, 18, 34, 1); */
 	/*rgba(18, 28, 36, 1)*/
@@ -558,6 +559,21 @@ h1.hero-h1 {
 
 .tile-project-3:hover {
 	background-image: url(../media/tileProject3HOVERWeb.gif);
+	background-size: 100% auto;
+}
+
+/*-------Project 4 (tic-tac-toe)-------*/
+
+.tile-project-4 {
+	width: 600px;
+	height: 423px;
+	display: inline-block;
+	background: transparent url(../media/tile-tic-tac-toe.jpg) center no-repeat;
+	background-size: 100% auto;
+}
+
+.tile-project-4:hover {
+	background-image: url(../media/tile-tic-tac-toe-hover.jpg);
 	background-size: 100% auto;
 }
 
