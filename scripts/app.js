@@ -66,8 +66,27 @@ app.run(function($rootScope, $location, $anchorScroll, $routeParams) {
 
 app.controller('routeController', function($scope, $rootScope, $location, $anchorScroll, $routeParams) {
 	$rootScope.showPortfolioHeader = $location.path() !== '/';
+		$scope.load = $(function(){   // eventually remove this and place it in the app.run() function - this way adds unnecessary logic into the scope. https://www.w3schools.com/angular/ng_ng-init.asp http://stackoverflow.com/questions/13059284/window-onload-does-not-work-in-angularjs
+		    var $portfolioContent = $('.portfolio-content');
+		    var itemOffset = $portfolioContent.offset().top;
 
+		    $(window).scroll(function(){
+		        var scrollTop = $(window).scrollTop();
+		        if(scrollTop >= itemOffset){
+		            console.log("item has reached the top");
+		            $('.portfolio-content').css('overflow-y','scroll');
+		            } else {
+		              $('.portfolio-content').css('overflow-y', '');
+		            }
+		    });
+		});
 });
+
+// app.controller('myController', function($scope){
+//     $scope.load = function () {
+//         alert("load event detected!");
+//     }
+// });
 
 // app.controller('scrollController', function($scope, $rootScope, $location, $anchorScroll, $routeParams) {
 // 	$scope.scrollTo = function (id) {

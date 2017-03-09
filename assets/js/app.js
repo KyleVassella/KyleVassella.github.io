@@ -35,19 +35,37 @@ $(document).ready(function(){
 
 // interval delay OR do an event listener for when the user has scrolled down almost to portfolio section, THEN enable window.scroll() , then disable otherwise. 
 
-$(function(){   
-  var itemOffset = $('.portfolio-content').offset().top;
 
-  $(window).scroll(function(){
-      var scrollTop = $(window).scrollTop();
-      if(scrollTop >= itemOffset){
-          console.log("item has reached the top");
-          $('.portfolio-content').css('overflow-y','scroll');
-          } else {
-            $('.portfolio-content').css('overflow-y', '');
-          }
-  });
-});
+  // $(function(){   
+  //   var $portfolioContent = $('.portfolio-content');
+  //   var itemOffset = $portfolioContent.offset().top;
+
+  //   $(window).scroll(function(){
+  //       var scrollTop = $(window).scrollTop();
+  //       if(scrollTop >= itemOffset){
+  //           console.log("item has reached the top");
+  //           $('.portfolio-content').css('overflow-y','scroll');
+  //           } else {
+  //             $('.portfolio-content').css('overflow-y', '');
+  //           }
+  //   });
+  // });
+
+
+
+// $(function(){   
+//   var itemOffset = $('.portfolio-content').offset().top;
+
+//   $(window).scroll(function(){
+//       var scrollTop = $(window).scrollTop();
+//       if(scrollTop >= itemOffset){
+//           console.log("item has reached the top");
+//           $('.portfolio-content').css('overflow-y','scroll');
+//           } else {
+//             $('.portfolio-content').css('overflow-y', '');
+//           }
+//   });
+// });
 
 // this works:
 // $(function(){   
