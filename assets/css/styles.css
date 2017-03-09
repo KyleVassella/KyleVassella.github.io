@@ -907,6 +907,15 @@ footer {
 	.tile-project-3:hover {
 		background-size: 100vw;
 	}
+
+	.tile-project-4 {
+		width: 100%;
+		display: inline-block;
+		background-size: 100vw;
+	}
+	.tile-project-4:hover {
+		background-size: 100vw;
+	}
 }
 
 @media screen and (max-width: 532px) {
