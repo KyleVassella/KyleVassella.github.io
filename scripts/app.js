@@ -76,7 +76,7 @@ app.controller('routeController', function($scope, $rootScope, $location, $ancho
 		            console.log("item has reached the top");
 		            $('.portfolio-content').css('overflow-y','scroll');
 		            } else {
-		              $('.portfolio-content').css('overflow-y', '');
+		              $('.portfolio-content').css('overflow-y', 'auto');
 		            }
 		    });
 		});
