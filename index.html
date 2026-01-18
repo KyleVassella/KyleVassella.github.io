@@ -64,13 +64,28 @@
 <html lang="en">
 	<head>
  		<meta charset="utf-8">
-<!--  		<meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	 	<title>Kyle Vassella | Web Developer</title>
 		<!-- <link href="https://fonts.googleapis.com/css?family=Hind:300,600" rel="stylesheet"> -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
    		<link rel = "stylesheet" href = "assets/css/styles.css">
+		<!-- Preload hover images to prevent delay on first hover -->
+		<link rel="preload" as="image" href="assets/media/newSocial/socialGithubHOVER.gif">
+		<link rel="preload" as="image" href="assets/media/newSocial/socialTreehouseHOVER.gif">
+		<link rel="preload" as="image" href="assets/media/newSocial/socialLinkedinHOVER.gif">
+		<link rel="preload" as="image" href="assets/media/newSocial/socialStackoverflowHOVER.gif">
+		<!-- Chevron hover -->
+		<link rel="preload" as="image" href="assets/media/hero-chevron-2HOVER.png">
+		<!-- Project tile hovers -->
+		<link rel="preload" as="image" href="assets/media/tileJCRealtyHOVERWeb.gif">
+		<link rel="preload" as="image" href="assets/media/tile-cubicles-hover.jpg">
+		<link rel="preload" as="image" href="assets/media/tile-portfolio-hover.jpg">
+		<link rel="preload" as="image" href="assets/media/tileProject1HOVERWeb.gif">
+		<link rel="preload" as="image" href="assets/media/tileProject2HOVERWeb.gif">
+		<link rel="preload" as="image" href="assets/media/tileProject3HOVERWeb.gif">
+		<link rel="preload" as="image" href="assets/media/tile-tic-tac-toe-hover.jpg">
 	</head>
 
 
@@ -80,8 +95,8 @@
 			<section ng-hide="showPortfolioHeader" class="parallax-hero">
 				<header>
 					<h1 id="home" class="main-header"><a class="fw-300" href="/" target="_self"">KYLE<span class="fw-700">V</span>ASSELLA</a></h1>
-					<div class ="header-menu">
-						<div class='nav'>
+					<div class="header-menu">
+						<div class="nav">
 							<nav>
 								<ul>
 									<li class="index selected-index"><a class="smooth-scroll animated-line fw-300" href="#home">HOME</a></li>
@@ -96,6 +111,11 @@
 							<a alt="TeamTreehouse Profile" title="TeamTreehouse Profile" href="http://teamtreehouse.com/kylevassella/" class="social-treehouse" alt="TeamTreehouse logo" target="_blank"></a>
 							<a alt="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/kyle-vassella-64619371" class="social-linkedin" alt="Linkedin logo" target="_blank"></a>
 						</div>
+						<button class="hamburger" aria-label="Toggle menu">
+							<span class="hamburger-line"></span>
+							<span class="hamburger-line"></span>
+							<span class="hamburger-line"></span>
+						</button>
 					</div>
 				</header>
 				<section class="hero-container-section">
@@ -110,12 +130,12 @@
 			<section ng-show="showPortfolioHeader">
 				<header class="portfolio-header">
 					<h1 id="home" class="main-header"><a class="fw-300" href="/" target="_self">KYLE<span class="fw-700">V</span>ASSELLA</a></h1>
-					<div class ="header-menu">
-						<div class='nav'>
+					<div class="header-menu">
+						<div class="nav">
 							<nav>
 								<ul>
-									<li class="index selected-index"><a class="smooth-scroll animated-line fw-300" href="/" target="_self">HOME</a></li>		
-									<li class="portfolio"><a class="smooth-scroll animated-line fw-300" href="/?scrollTo=portfolio" target="_self">PORTFOLIO</a></li>	
+									<li class="index selected-index"><a class="smooth-scroll animated-line fw-300" href="/" target="_self">HOME</a></li>
+									<li class="portfolio"><a class="smooth-scroll animated-line fw-300" href="/?scrollTo=portfolio" target="_self">PORTFOLIO</a></li>
 									<li class="contact"><a class="smooth-scroll animated-line fw-300" href="/?scrollTo=contact" target="_self">CONTACT</a></li>
 								</ul>
 							</nav>
@@ -126,6 +146,11 @@
 							<a alt="TeamTreehouse Profile" title="TeamTreehouse Profile" href="http://teamtreehouse.com/kylevassella/" class="social-treehouse" alt="TeamTreehouse logo" target="_blank"></a>
 							<a alt="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/kyle-vassella-64619371" class="social-linkedin" alt="Linkedin logo" target="_blank"></a>
 						</div>
+						<button class="hamburger" aria-label="Toggle menu">
+							<span class="hamburger-line"></span>
+							<span class="hamburger-line"></span>
+							<span class="hamburger-line"></span>
+						</button>
 					</div>
 				</header>
 			</section>

@@ -68,7 +68,7 @@ $(document).ready(function(){
 // });
 
 // this works:
-// $(function(){   
+// $(function(){
 //   var itemOffset = $('.portfolio-content').offset().top;
 
 //   $(window).scroll(function(){
@@ -79,3 +79,18 @@ $(document).ready(function(){
 //           }
 //   });
 // });
+
+/* ----- Hamburger Menu Toggle ----- */
+
+$(document).ready(function(){
+    $('.hamburger').on('click', function(){
+        $(this).toggleClass('active');
+        $(this).siblings('.nav').toggleClass('mobile-open');
+    });
+
+    // Close menu when a nav link is clicked
+    $('.nav a').on('click', function(){
+        $('.hamburger').removeClass('active');
+        $('.nav').removeClass('mobile-open');
+    });
+});
