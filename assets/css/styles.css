@@ -156,10 +156,11 @@ h3 {
 ************************************************************/
 
 header {
-	height: 55px;
+	height: 65px;
 	/*	background-color: #090302;*/
-	overflow: hidden;
+	overflow: visible;
 	position: relative;
+	z-index: 1001;
 	/* lets you set position: absolute; on your .nav when screen gets to mobile size so you can position .nav outside of header so .social-div isn't affected */
 }
 
@@ -179,6 +180,106 @@ h1.main-header {
 
 .header-menu {
 	float: right;
+}
+
+/***********************************************************
+        	Hamburger Menu
+************************************************************/
+
+.hamburger {
+	display: none;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 10px;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+.hamburger-line {
+	display: block;
+	width: 25px;
+	height: 3px;
+	background-color: #000;
+	margin: 5px 0;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hamburger animation when menu is open */
+.hamburger.active .hamburger-line:nth-child(1) {
+	transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+	opacity: 0;
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+	transform: rotate(-45deg) translate(6px, -7px);
+}
+
+/* Mobile menu overlay */
+.nav.mobile-open {
+	display: block !important;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: rgba(249, 249, 249, 0.98);
+	z-index: 999;
+	text-align: center;
+	padding: 80px 0 20px 0;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav.mobile-open ul {
+	display: block;
+	padding: 0;
+}
+
+.nav.mobile-open ul li {
+	display: block;
+	padding: 15px 0;
+}
+
+.nav.mobile-open ul li a {
+	font-size: 1.4em;
+}
+
+/* Show social icons inside mobile menu */
+.nav.mobile-open ~ .social-div {
+	display: block !important;
+	position: fixed;
+	top: calc(215px);
+	left: 0;
+	width: 100%;
+	text-align: center;
+	background: rgba(249, 249, 249, 0.98);
+	padding: 25px 0 25px 0;
+	z-index: 999;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Space out social icons in mobile menu for easier tapping */
+.nav.mobile-open ~ .social-div a {
+	margin: 0 12px;
+}
+
+/* Touch/active states for social icons (mobile tap feedback) */
+.social-github:active {
+	background-image: url(../media/newSocial/socialGithubHOVER.gif);
+}
+
+.social-treehouse:active {
+	background-image: url(../media/newSocial/socialTreehouseHOVER.gif);
+}
+
+.social-linkedin:active {
+	background-image: url(../media/newSocial/socialLinkedinHOVER.gif);
+}
+
+.social-stackoverflow:active {
+	background-image: url(../media/newSocial/socialStackoverflowHOVER.gif);
 }
 
 
@@ -316,7 +417,7 @@ a {
 
 .parallax-hero {
 	position: fixed;
-	background-image: url(../media/dot.svg), url(../media/hero3-8.jpg);
+	background-image: url(../media/dot.svg), url(../media/hero2_9.jpg);
 	background-position: center;
 	background-size: 5px, cover;
 	min-height: calc(150vh);
@@ -764,41 +865,80 @@ footer {
 
 @media screen and (max-width: 961px) {
 	/*------Narrow Desktop and iPad (768px)-----*/
-	/*	.parallax {
-		background-image: url(../media/dot.svg), url(../media/Hero2CroppedWeb.jpg);
-		min-height: 100vh;
-	}*/
 	header {
-		height: 90px;
+		height: 65px;
+		background: rgba(249, 249, 249, 0.98);
 	}
 	h1.main-header {
 		font-size: 2.5em;
-	}
-	/* mobile .nav */
-	.nav {
-		position: absolute;
-		left: 0%;
-		top: 60%;
-		height: 25px;
-		width: 100vw;
-		text-align: center;
-		color: #000;
-		font-size: 1.25em;
-	}
-	.nav ul {
-		padding: 0;
-	}
-	.nav li {
-		padding-right: 10px;
+		top: 8px;
 		position: relative;
-		left: 10px;
-		/*		bottom: 1px;*/
+		z-index: 1002;
 	}
-	/* ipad nav hover and selected states */
+	/* Show hamburger, hide nav and social by default */
+	.hamburger {
+		display: inline-block;
+		position: relative;
+		z-index: 1002;
+	}
+	.nav {
+		display: none;
+	}
+	.social-div {
+		display: none;
+	}
+	/* Hero text responsive */
+	.hero-container h1 {
+		font-size: 38px;
+		word-wrap: break-word;
+		padding: 0 10px;
+	}
+	/* PORTFOLIO text responsive */
+	.six-em {
+		font-size: 2.5em;
+	}
+	/* LinkedIn contact button - make it obvious it's clickable */
+	.contact-info {
+		font-size: 1.5em;
+		display: inline-block;
+		padding: 15px 30px;
+		background: linear-gradient(to bottom, #0077b5 5%, #005582 100%);
+		border-radius: 8px;
+		text-shadow: 0px 1px 0px #004466;
+		margin-top: 20px;
+	}
+	.contact-info:active {
+		background: linear-gradient(to bottom, #005582 5%, #0077b5 100%);
+	}
+	/* Project page title responsive */
+	.portfolio-page-title {
+		font-size: 2.2em;
+		letter-spacing: 1px;
+		padding: 10px 15px;
+		word-wrap: break-word;
+	}
+	/* GitHub link - prevent overflow */
+	.github-link {
+		word-break: break-all;
+		font-size: 0.85em;
+	}
+	.github-section {
+		padding: 0 10px;
+	}
+	/* Language icons smaller on mobile */
+	.language-icon {
+		height: 80px;
+		margin: 0 5px;
+	}
+	/* Project descriptions readable on mobile */
+	.project-header,
+	.project-description {
+		padding: 0 15px;
+	}
+	/* iPad nav hover states (when menu is open) */
 	a.animated-line:hover:after {
 		width: 80%;
-		left: 4%;
-		/* HOME is out of line */
+		left: 10%;
 	}
 	.primary-content-white {
 		max-width: 90%;
@@ -814,10 +954,26 @@ footer {
 		display: block;
 		margin: 0 auto;
 	}
+	/* Project tiles - add visual separation on mobile */
+	.tile-jcrealty,
+	.tile-cubicles,
+	.tile-portfolio,
+	.tile-project-1,
+	.tile-project-2,
+	.tile-project-3,
+	.tile-project-4 {
+		height: 280px;
+		border: 3px solid rgba(255, 255, 255, 0.8);
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+		margin-bottom: 15px;
+	}
 }
 
 @media screen and (max-width: 667px) {
 	/* ---- Iphone 6 ---- */
+	.hero-container h1 {
+		font-size: 32px;
+	}
 	.project-h1 {
 		font-size: 3.5em;
 		margin-top: 30px;
